@@ -14,7 +14,7 @@ on:
   roles: [admin, maintainer, write]
   permissions: {}
 
-if: ${{ !github.event.repository.fork }}
+if: ${{ github.event.repository.fork != true }}
 
 permissions:
   contents: read
