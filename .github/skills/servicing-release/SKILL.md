@@ -43,6 +43,19 @@ It is used in two execution contexts that share all of the core logic below:
 4. **Determinism & isolation.** Install SDKs with `--install-dir` + `--no-path` (no global machine
    changes). Set `DOTNET_CLI_TELEMETRY_OPTOUT=1`, `DOTNET_NOLOGO=1`,
    `DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1`. Never modify the runtime repo or global SDK.
+5. **Sandbox-robust commands (workflow context).** When running inside an agentic workflow, the bash
+   harness gates ad-hoc network and complex shell, even for allow-listed tools: a bare `curl <url>`,
+   `;`-chained compound commands, and pipelines may be **denied**. Therefore:
+   - **Read GitHub-hosted data via the `github` MCP**, not `curl`: commit existence/ancestry
+     (`get_commit`, compare) and raw files such as `dotnet/dotnet`'s `src/source-manifest.json`
+     (`get_file_contents`). This is the robust primary path for fix-flow detection.
+   - **Check pre-provisioned SDKs first** (`dotnet --list-sdks`); the runner usually already has the
+     latest GA of each major, which is exactly the baseline. Only install when a needed SDK is absent.
+   - **Run installs through the script, not bare curl:** invoke `bash "$WORKDIR/dotnet-install.sh" …`
+     (a single, simple command); its internal downloads reach the firewall-allowed dotnet domains.
+   - Prefer **one simple command per step**; avoid `;`-chaining, inline `$(…)` you can replace by
+     writing to a file and reading it back, and long pipelines.
+   Interactively (Copilot CLI), these gates do not apply -- use whatever commands you need.
 
 ---
 
@@ -136,8 +149,9 @@ Inputs: a release/* PR number (and its target major.minor, e.g. `8.0`).
    could not be reproduced and what you tried, then stop.
 7. **Report.** Produce: which repro **form** was used, the isolating **code snippet**, the **Expected**
    result, the **Actual** result (quoted from `output.log`), and the list of local artifacts
-   (`$WORKDIR` contents incl. `output.log`). In a workflow this becomes the `GITHUB_STEP_SUMMARY` and
-   the PR comment body; interactively it is reported to the user. **Never post anything yourself.**
+   (`$WORKDIR` contents incl. `output.log`). In a workflow this becomes the step summary and the PR
+   comment body; interactively it is reported to the user. Also save this report as
+   `"$WORKDIR/step-summary.md"` so it travels with the artifact. **Never post anything yourself.**
 
 ---
 
@@ -167,32 +181,47 @@ commit SHA (the PR's merge commit), and the existing repro (reuse it unchanged).
    exhibit the bug -- baseline selection may be off).
 6. **Report.** Produce: a reference to the repro used, the **Expected** result, the **Actual before**
    (with the baseline SDK version), the **Actual after** (with the fixed SDK version), and the
-   **verdict**, plus the artifact list (both version-named logs + the repro). This becomes the
-   workflow's step summary and verdict comment, or the interactive report. **Never post anything.**
+   **verdict**, plus the artifact list (both version-named logs + the repro). Save this report as
+   `"$WORKDIR/step-summary.md"` too. This becomes the workflow's step summary and verdict comment, or
+   the interactive report. **Never post anything.**
 
 ---
 
 ## Reference: SDK installation
 
-Use the official `dotnet-install` script; install side-by-side, never globally:
+Use the official `dotnet-install` script; install side-by-side, never globally. **First check whether
+a suitable SDK is already pre-provisioned** -- in a workflow the runner usually already has the latest
+GA of each major (that GA is the baseline), so no download is needed:
+
+```bash
+dotnet --list-sdks            # is the baseline GA already here?
+```
+
+If you must install, fetch the script once and run installs **through `bash`** (a single simple
+command -- the agentic harness gates bare `curl <url>`):
 
 ```bash
 curl -fsSL https://builds.dotnet.microsoft.com/dotnet/scripts/v1/dotnet-install.sh -o "$WORKDIR/dotnet-install.sh"
 chmod +x "$WORKDIR/dotnet-install.sh"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 DOTNET_NOLOGO=1 DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 
-# Baseline = latest public GA of the target major (still has the bug):
+# Baseline = latest public GA of the target major (still has the bug). If not pre-provisioned:
 GA_VERSION="$(curl -fsSL https://builds.dotnet.microsoft.com/dotnet/Sdk/${MAJOR}.${MINOR}/latest.version)"
-"$WORKDIR/dotnet-install.sh" --version "$GA_VERSION" --install-dir "$WORKDIR/sdk-baseline" --no-path
+bash "$WORKDIR/dotnet-install.sh" --version "$GA_VERSION" --install-dir "$WORKDIR/sdk-baseline" --no-path
 
 # Fixed = latest daily build of the servicing feature band (may contain the just-merged fix):
 #   band: 8 -> 8.0.4xx, 9 -> 9.0.3xx, 10 -> 10.0.1xx
-"$WORKDIR/dotnet-install.sh" --channel "$BAND" --quality daily --install-dir "$WORKDIR/sdk-fixed" --no-path
+bash "$WORKDIR/dotnet-install.sh" --channel "$BAND" --quality daily --install-dir "$WORKDIR/sdk-fixed" --no-path
 
 # Use a specific SDK for a run:
 export DOTNET_ROOT="$WORKDIR/sdk-baseline"; export PATH="$DOTNET_ROOT:$PATH"
 dotnet --version
 ```
+
+> In a workflow, if `curl` to fetch the script is itself denied, use a pre-provisioned baseline GA SDK
+> (which covers the producer entirely). The **fixed daily** SDK is only needed by the fix-tester; if the
+> runner cannot install it, the run should defer (report "fixed SDK not installable in this
+> environment") rather than fabricate a result.
 
 Notes: the install script and SDK tarballs are served from `builds.dotnet.microsoft.com`; daily
 builds resolve via `aka.ms` → `ci.dot.net`. The runner is **linux-x64** in the workflows.
@@ -209,6 +238,14 @@ builds resolve via `aka.ms` → `ci.dot.net`. The runner is **linux-x64** in the
 Goal: given a fix commit `C` on `release/$MAJOR.0`, decide whether the **latest daily SDK** for the
 band already contains it, and identify that SDK version.
 
+**Sandbox-robust ordering.** First confirm `C` even exists in the repo via the `github` MCP
+(`get_commit`); a release-branch PR whose merge commit is unknown to the product repo (e.g. a mirror
+or simulated repo) can never have flowed -- report "not flowed" and stop. Resolve `dotnet/dotnet`'s
+`src/source-manifest.json` with the `github` MCP `get_file_contents`, and run the ancestry check with
+`gh api .../compare` (or the MCP compare). The only step that needs a non-GitHub fetch is reading the
+daily build's `productCommit` from `ci.dot.net`; keep that as a single simple `curl` and, if it is
+denied, treat the fix as "not yet verifiable in this environment" rather than guessing.
+
 ```bash
 case "$MAJOR" in 8) BAND=8.0.4xx;; 9) BAND=9.0.3xx;; 10) BAND=10.0.1xx;; esac
 
@@ -222,13 +259,15 @@ FIXED_SDK="${FULL_VER%%-*}"                                                     
 PRODUCT="$(curl -fsSL "https://ci.dot.net/public/Sdk/${FULL_VER}/productCommit-linux-x64.txt")"
 RUNTIME_COMMIT="$(printf '%s' "$PRODUCT" | grep -oE 'runtime_commit="[0-9a-f]{40}"' | head -1 | grep -oE '[0-9a-f]{40}')"
 
-# 3) For .NET 10 (VMR), runtime_commit is a dotnet/dotnet SHA -> resolve the real dotnet/runtime commit:
+# 3) For .NET 10 (VMR), runtime_commit is a dotnet/dotnet SHA -> resolve the real dotnet/runtime commit.
+#    Prefer the github MCP get_file_contents for dotnet/dotnet@${RUNTIME_COMMIT}:src/source-manifest.json;
+#    repositories[path=="runtime"].commitSha is the dotnet/runtime commit. (curl shown as the fallback.)
 if [ "$MAJOR" = 10 ]; then
   RUNTIME_COMMIT="$(curl -fsSL "https://raw.githubusercontent.com/dotnet/dotnet/${RUNTIME_COMMIT}/src/source-manifest.json" \
     | jq -r '.repositories[] | select(.path=="runtime") | .commitSha')"
 fi
 
-# 4) Has fix C flowed in? Use the GitHub compare API (no full clone needed):
+# 4) Has fix C flowed in? Prefer the github MCP compare; the gh api form is equivalent:
 #    status "behind"/"identical" => C is included in RUNTIME_COMMIT (fix HAS flowed); "ahead" => not yet.
 STATUS="$(gh api "repos/${OWNER}/${REPO}/compare/${RUNTIME_COMMIT}...${C}" --jq '.status' 2>/dev/null || echo unknown)"
 # behind|identical -> flowed: proceed to Procedure B. ahead -> not yet: skip and retry on a later run.

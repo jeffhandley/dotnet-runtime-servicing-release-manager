@@ -165,6 +165,8 @@ with a one-line summary instead of creating an empty dashboard.
 
 ## Finish
 
-Write a `GITHUB_STEP_SUMMARY` noting how many rule-in fixes were tracked, how many had repros, how many
-had verdicts, and whether the dashboard issue was created or updated (with its number). If you took no
-action, call `noop` with a one-line reason.
+Provide a clear final summary noting how many rule-in fixes were tracked, how many had repros, how many
+had verdicts, and whether the dashboard issue was created or updated (with its number) -- gh-aw
+surfaces your final report as the run summary. Also write it to `$GITHUB_STEP_SUMMARY` best-effort; if
+the sandbox makes that file unwritable, that is expected -- rely on the final report and do **not**
+report it as a missing tool. If you took no action, call `noop` with a one-line reason.
