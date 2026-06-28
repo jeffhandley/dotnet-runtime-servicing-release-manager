@@ -124,9 +124,9 @@ Determine the target `MAJOR.MINOR` from the PR's base branch (`release/MAJOR.MIN
    If it is ruled out (code-flow, infrastructure, branding, test-only, missing
    `Servicing-approved`/`Servicing-consider`, etc.), do **not** build a repro: call `noop` with a
    one-line reason and stop.
-2. **Dedup.** Read the PR's comments (integrity-gated). If a prior repro comment from this workflow
-   already exists (it contains the marker `<!-- servicing-repro -->`), call `noop` ("repro already
-   posted") and stop.
+2. **Dedup.** Read the PR's comments (integrity-gated). If this workflow has already posted a repro
+   comment for this PR -- identify it by the gh-aw footer that every posted comment carries, which
+   contains `workflow_id: servicing-repro-producer` -- call `noop` ("repro already posted") and stop.
 3. **Produce + verify** the repro per Procedure A on the **baseline GA SDK** for the target major.
    Capture combined output to `$WORKDIR/output.log`. Confirm the bug reproduces; if it does not,
    report that (step summary) and `noop` ("could not reproduce") -- do not post a comment.
@@ -138,16 +138,12 @@ Determine the target `MAJOR.MINOR` from the PR's base branch (`release/MAJOR.MIN
 6. **Comment (unless dry-run).** If the bug reproduced and
    `${{ github.event.inputs.suppress_output }}` is not `true`, post **one** comment on PR
    #${{ github.event.inputs.pr_number }} via `add-comment` (set `pull_request_number` to that PR).
-   Begin the body with the hidden marker on its own line:
-
-   ```
-   <!-- servicing-repro -->
-   ```
-
-   Then include, in this order: (1) a 1-2 sentence description of the issue; (2) which minimum repro
-   approach was used (unit test / file-based app / csproj); (3) the code snippet that isolates the
-   repro call site; (4) **Expected Result**; (5) **Actual Result** (quoted from the captured
-   `output.log`); (6) a link to the uploaded workflow artifact for the repro and its output.
+   The comment body must include, in this order: (1) a 1-2 sentence description of the issue;
+   (2) which minimum repro approach was used (unit test / file-based app / csproj); (3) the code
+   snippet that isolates the repro call site; (4) **Expected Result**; (5) **Actual Result** (quoted
+   from the captured `output.log`); (6) a link to the uploaded workflow artifact for the repro and
+   its output. (gh-aw automatically appends a footer identifying this workflow, which is used for
+   dedup -- you do not need to add your own marker.)
 
    If `suppress_output` is `true`, skip the comment entirely (the artifact + step summary are the
    only outputs).

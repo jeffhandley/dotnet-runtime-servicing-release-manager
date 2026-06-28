@@ -121,9 +121,10 @@ commit** SHA) via the GitHub API.
 
 1. **Preconditions.** Confirm PR #${{ github.event.inputs.pr_number }} is **merged** and is a
    rule-in product fix (skill classification). Read the PR's comments (integrity-gated): there must
-   be a prior repro comment containing `<!-- servicing-repro -->`. If there is no repro comment, or a
-   verdict comment containing `<!-- servicing-fix-verdict -->` already exists, call `noop` with the
-   reason and stop.
+   be a prior repro comment from `servicing-repro-producer` (identify it by the gh-aw footer
+   containing `workflow_id: servicing-repro-producer`). If there is no such repro comment, or this
+   workflow already posted a verdict comment (gh-aw footer `workflow_id: servicing-fix-tester`), call
+   `noop` with the reason and stop.
 2. **Confirm the fix has flowed** into a daily SDK build for the target band (skill's *fix-flow
    detection*). If it has **not** flowed yet (common for servicing -- e.g. before Patch Tuesday),
    call `noop` ("fix not yet in a daily build; will retry") and stop. Otherwise resolve
@@ -146,16 +147,12 @@ commit** SHA) via the GitHub API.
    the Actual result **after** the fix (with `FIXED_SDK` version).
 8. **Comment (unless dry-run).** If `${{ github.event.inputs.suppress_output }}` is not `true`, post
    **one** comment on PR #${{ github.event.inputs.pr_number }} via `add-comment` (set
-   `pull_request_number`). Begin the body with the hidden marker on its own line:
-
-   ```
-   <!-- servicing-fix-verdict -->
-   ```
-
-   Then include, in this order: (1) a reference to the repro used, linking the prior
-   `<!-- servicing-repro -->` comment when possible; (2) the **Expected Result**; (3) the **Actual
-   result before the fix**, showing the `BASELINE_SDK` version used; (4) the **Actual result with the
-   new SDK bits**, showing the `FIXED_SDK` version used; (5) the **verdict** on whether the fix is
-   verified. If `suppress_output` is `true`, skip the comment entirely.
+   `pull_request_number`). The comment body must include, in this order: (1) a reference to the repro
+   used, linking the prior `servicing-repro-producer` repro comment when possible; (2) the **Expected
+   Result**; (3) the **Actual result before the fix**, showing the `BASELINE_SDK` version used;
+   (4) the **Actual result with the new SDK bits**, showing the `FIXED_SDK` version used; (5) the
+   **verdict** on whether the fix is verified. (gh-aw automatically appends a footer identifying this
+   workflow, used for dedup -- you do not need to add your own marker.) If `suppress_output` is
+   `true`, skip the comment entirely.
 
 Do not modify the repository. All work happens under `$WORKDIR`.
