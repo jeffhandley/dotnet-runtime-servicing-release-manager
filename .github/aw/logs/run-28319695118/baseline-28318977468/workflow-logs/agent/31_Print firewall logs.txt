@@ -1,0 +1,54 @@
+﻿2026-06-28T10:25:42.5059062Z ##[group]Run # Fix permissions on firewall logs/audit dirs so they can be uploaded as artifacts
+2026-06-28T10:25:42.5059391Z [36;1m# Fix permissions on firewall logs/audit dirs so they can be uploaded as artifacts[0m
+2026-06-28T10:25:42.5059544Z [36;1m# AWF runs with sudo, creating files owned by root[0m
+2026-06-28T10:25:42.5059754Z [36;1msudo chmod -R a+rX /tmp/gh-aw/sandbox/firewall 2>/dev/null || true[0m
+2026-06-28T10:25:42.5060099Z [36;1m# Only run awf logs summary if awf command exists (it may not be installed if workflow failed before install step)[0m
+2026-06-28T10:25:42.5060235Z [36;1mif command -v awf &> /dev/null; then[0m
+2026-06-28T10:25:42.5060389Z [36;1m  awf logs summary | tee -a "$GITHUB_STEP_SUMMARY"[0m
+2026-06-28T10:25:42.5060477Z [36;1melse[0m
+2026-06-28T10:25:42.5060664Z [36;1m  echo 'AWF binary not installed, skipping firewall log summary'[0m
+2026-06-28T10:25:42.5060751Z [36;1mfi[0m
+2026-06-28T10:25:42.5091122Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:25:42.5091212Z env:
+2026-06-28T10:25:42.5091337Z   DEFAULT_BRANCH: main
+2026-06-28T10:25:42.5091435Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:25:42.5091525Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:25:42.5091615Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:25:42.5091874Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:25:42.5092128Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:25:42.5092391Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:42.5092628Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: bcb24487f741a264
+2026-06-28T10:25:42.5092826Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641761389
+2026-06-28T10:25:42.5093025Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-06-28T10:25:42.5093124Z   GH_AW_AIC: 251.115
+2026-06-28T10:25:42.5093224Z   GH_AW_AMBIENT_CONTEXT: 6781
+2026-06-28T10:25:42.5093348Z   AWF_LOGS_DIR: /tmp/gh-aw/sandbox/firewall/logs
+2026-06-28T10:25:42.5093447Z ##[endgroup]
+2026-06-28T10:25:43.1835082Z <details>
+2026-06-28T10:25:43.1835538Z <summary>Firewall Activity</summary>
+2026-06-28T10:25:43.1835925Z 
+2026-06-28T10:25:43.1836454Z ▼ 72 requests | 72 allowed | 0 blocked | 1 unique domain
+2026-06-28T10:25:43.1836873Z 
+2026-06-28T10:25:43.1836995Z | Domain | Allowed | Denied |
+2026-06-28T10:25:43.1837301Z |--------|---------|--------|
+2026-06-28T10:25:43.1837588Z | api.githubcopilot.com | 72 | 0 |
+2026-06-28T10:25:43.1837803Z 
+2026-06-28T10:25:43.1837895Z <details>
+2026-06-28T10:25:43.1838121Z <summary>Policy Rules</summary>
+2026-06-28T10:25:43.1838329Z 
+2026-06-28T10:25:43.1838442Z | Rule | Action | Hits | Description |
+2026-06-28T10:25:43.1838755Z |------|--------|------|-------------|
+2026-06-28T10:25:43.1839523Z | deny-unsafe-ports | 🚫 deny | 0 | Deny requests to ports not in Safe_ports ACL (only 80, 443, and user-specified ports allowed) |
+2026-06-28T10:25:43.1840739Z | deny-connect-unsafe-ports | 🚫 deny | 0 | Deny CONNECT (HTTPS) to ports not in Safe_ports ACL |
+2026-06-28T10:25:43.1842325Z | allow-api-proxy-ip | ✅ allow | 0 | Allow connections to the AWF api-proxy sidecar IP before raw-IP deny rules |
+2026-06-28T10:25:43.1844170Z | allow-from-api-proxy | ✅ allow | 0 | Allow unrestricted outbound from api-proxy sidecar (trusted AWF component, not subject to agent domain ACL) |
+2026-06-28T10:25:43.1846254Z | deny-raw-ipv4 | 🚫 deny | 0 | Deny requests to raw IPv4 addresses (bypasses domain filtering) |
+2026-06-28T10:25:43.1847543Z | deny-raw-ipv6 | 🚫 deny | 0 | Deny requests to raw IPv6 addresses (bypasses domain filtering) |
+2026-06-28T10:25:43.1849111Z | allow-both-plain | ✅ allow | 72 | Allow HTTP and HTTPS traffic to these domains |
+2026-06-28T10:25:43.1850353Z | allow-both-regex | ✅ allow | 0 | Allow HTTP and HTTPS traffic matching these patterns |
+2026-06-28T10:25:43.1851409Z | deny-default | 🚫 deny | 0 | Deny all traffic not matching any allow rule (default deny) |
+2026-06-28T10:25:43.1852011Z 
+2026-06-28T10:25:43.1852144Z </details>
+2026-06-28T10:25:43.1852329Z 
+2026-06-28T10:25:43.1852457Z </details>
+2026-06-28T10:25:43.1852630Z 

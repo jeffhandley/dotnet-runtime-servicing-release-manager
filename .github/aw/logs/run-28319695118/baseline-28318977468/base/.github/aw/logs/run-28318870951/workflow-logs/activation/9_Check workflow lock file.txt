@@ -1,0 +1,36 @@
+﻿2026-06-28T10:11:15.9431157Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:11:15.9432026Z with:
+2026-06-28T10:11:15.9433833Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/check_workflow_timestamp_api.cjs');
+await main();
+
+2026-06-28T10:11:15.9440852Z   github-token: ***
+2026-06-28T10:11:15.9441352Z   debug: false
+2026-06-28T10:11:15.9441819Z   user-agent: actions/github-script
+2026-06-28T10:11:15.9442401Z   result-encoding: json
+2026-06-28T10:11:15.9442892Z   retries: 0
+2026-06-28T10:11:15.9443402Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:11:15.9444019Z env:
+2026-06-28T10:11:15.9444449Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-06-28T10:11:15.9445141Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:15.9445878Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 33bce7cd8d07cf1f
+2026-06-28T10:11:15.9446565Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641473363
+2026-06-28T10:11:15.9447261Z   GH_AW_WORKFLOW_FILE: servicing-repro-producer.lock.yml
+2026-06-28T10:11:15.9448696Z   GH_AW_CONTEXT_WORKFLOW_REF: jeffhandley/dotnet-runtime-servicing-release-manager/.github/workflows/servicing-repro-producer.lock.yml@refs/heads/main
+2026-06-28T10:11:15.9450268Z ##[endgroup]
+2026-06-28T10:11:16.0710911Z Checking for stale lock file using frontmatter hash:
+2026-06-28T10:11:16.0725900Z   Source: .github/workflows/servicing-repro-producer.md
+2026-06-28T10:11:16.0730233Z   Lock file: .github/workflows/servicing-repro-producer.lock.yml
+2026-06-28T10:11:16.0733906Z Env workflow ref already identifies this workflow, skipping referenced_workflows API lookup
+2026-06-28T10:11:16.0736729Z GITHUB_WORKFLOW_REF: jeffhandley/dotnet-runtime-servicing-release-manager/.github/workflows/servicing-repro-producer.lock.yml@refs/heads/main
+2026-06-28T10:11:16.0740413Z GH_AW_CONTEXT_WORKFLOW_REF: jeffhandley/dotnet-runtime-servicing-release-manager/.github/workflows/servicing-repro-producer.lock.yml@refs/heads/main (available as env fallback)
+2026-06-28T10:11:16.0743372Z GITHUB_REPOSITORY: jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:11:16.0745530Z Resolved source repo: jeffhandley/dotnet-runtime-servicing-release-manager @ refs/heads/main
+2026-06-28T10:11:16.0748607Z Same-repo invocation: checking out jeffhandley/dotnet-runtime-servicing-release-manager @ refs/heads/main
+2026-06-28T10:11:16.4204229Z GET /repos/jeffhandley/dotnet-runtime-servicing-release-manager/contents/.github%2Fworkflows%2Fuses%3A%20shared%2Fpat_pool.md?ref=refs%2Fheads%2Fmain - 404 with id 1341:13369:A4E8BF:251181F:6A40F344 in 62ms
+2026-06-28T10:11:16.4215891Z Frontmatter hash comparison:
+2026-06-28T10:11:16.4219229Z   Lock file hash:    2bc6f2357bb930438988edd588d96d7205df937ca8766435d9f391f41e60dcf3
+2026-06-28T10:11:16.4223013Z   Recomputed hash:   2bc6f2357bb930438988edd588d96d7205df937ca8766435d9f391f41e60dcf3
+2026-06-28T10:11:16.4226335Z   Status: ✅ Hashes match
+2026-06-28T10:11:16.4229650Z ✅ Lock file is up to date (hashes match)

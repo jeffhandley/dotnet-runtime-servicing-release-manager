@@ -1,0 +1,24 @@
+﻿2026-06-28T10:45:58.8231315Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:45:58.8232151Z with:
+2026-06-28T10:45:58.8236683Z   github-token: ***
+2026-06-28T10:45:58.8238316Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/check_membership.cjs');
+await main();
+
+2026-06-28T10:45:58.8241949Z   debug: false
+2026-06-28T10:45:58.8242476Z   user-agent: actions/github-script
+2026-06-28T10:45:58.8243284Z   result-encoding: json
+2026-06-28T10:45:58.8243731Z   retries: 0
+2026-06-28T10:45:58.8244194Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:45:58.8244778Z env:
+2026-06-28T10:45:58.8245402Z   GITHUB_AW_OTEL_TRACE_ID: 361ce444dcb2341a383830cc39172b4c
+2026-06-28T10:45:58.8246154Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: c54141cf134c61c3
+2026-06-28T10:45:58.8246776Z   GITHUB_AW_OTEL_JOB_START_MS: 1782643558803
+2026-06-28T10:45:58.8247425Z   GH_AW_REQUIRED_ROLES: admin,maintainer,write
+2026-06-28T10:45:58.8247999Z ##[endgroup]
+2026-06-28T10:45:58.9598433Z Event workflow_dispatch requires validation
+2026-06-28T10:45:58.9606074Z Checking if user 'github-actions[bot]' has required permissions for jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:45:58.9608285Z Required permissions: admin, maintainer, write
+2026-06-28T10:45:59.2044502Z Repository permission level: none
+2026-06-28T10:45:59.2094408Z ##[warning]User permission 'none' does not meet requirements: admin, maintainer, write

@@ -1,0 +1,31 @@
+﻿2026-06-28T10:12:33.1824353Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:12:33.1825423Z with:
+2026-06-28T10:12:33.1830729Z   github-token: ***
+2026-06-28T10:12:33.1833197Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/handle_noop_message.cjs');
+await main();
+
+2026-06-28T10:12:33.1837949Z   debug: false
+2026-06-28T10:12:33.1838569Z   user-agent: actions/github-script
+2026-06-28T10:12:33.1839270Z   result-encoding: json
+2026-06-28T10:12:33.1839818Z   retries: 0
+2026-06-28T10:12:33.1840394Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:12:33.1841097Z env:
+2026-06-28T10:12:33.1842060Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:12:33.1843069Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7cc20d9c19d6443a
+2026-06-28T10:12:33.1843904Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641549395
+2026-06-28T10:12:33.1844832Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-06-28T10:12:33.1845585Z   GH_AW_NOOP_MAX: 1
+2026-06-28T10:12:33.1846181Z   GH_AW_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:12:33.1847912Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/blob/main/.github/workflows/servicing-repro-producer.md
+2026-06-28T10:12:33.1850189Z   GH_AW_RUN_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318870951
+2026-06-28T10:12:33.1851481Z   GH_AW_AGENT_CONCLUSION: failure
+2026-06-28T10:12:33.1852357Z   GH_AW_NOOP_REPORT_AS_ISSUE: true
+2026-06-28T10:12:33.1853055Z   GH_AW_AIC: 
+2026-06-28T10:12:33.1853601Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-06-28T10:12:33.1854209Z   GH_AW_AMBIENT_CONTEXT: 
+2026-06-28T10:12:33.1854844Z   GH_AW_WORKFLOW_ID: servicing-repro-producer
+2026-06-28T10:12:33.1855564Z ##[endgroup]
+2026-06-28T10:12:33.3318294Z Agent output content length: 13
+2026-06-28T10:12:33.3319269Z No noop items found in agent output

@@ -1,0 +1,28 @@
+﻿2026-06-28T10:11:11.7451326Z ##[group]Run github/gh-aw-actions/setup@8c7d04ebf1ece56cd381446125da3e0f6896294a
+2026-06-28T10:11:11.7452638Z with:
+2026-06-28T10:11:11.7453191Z   destination: /home/runner/work/_temp/gh-aw/actions
+2026-06-28T10:11:11.7453867Z   job-name: activation
+2026-06-28T10:11:11.7454424Z   trace-id: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:11.7455079Z   parent-span-id: 1d675cdfee3acbd0
+2026-06-28T10:11:11.7455689Z   safe-output-artifact-client: true
+2026-06-28T10:11:11.7457155Z env:
+2026-06-28T10:11:11.7457663Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-06-28T10:11:11.7458345Z   GH_AW_SETUP_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:11:11.7461749Z   GH_AW_CURRENT_WORKFLOW_REF: jeffhandley/dotnet-runtime-servicing-release-manager/.github/workflows/servicing-repro-producer.lock.yml@refs/heads/main
+2026-06-28T10:11:11.7463194Z   GH_AW_INFO_VERSION: 1.0.63
+2026-06-28T10:11:11.7463767Z   GH_AW_INFO_AWF_VERSION: v0.27.7
+2026-06-28T10:11:11.7464375Z   GH_AW_INFO_ENGINE_ID: copilot
+2026-06-28T10:11:11.7464958Z ##[endgroup]
+2026-06-28T10:11:13.0988794Z Successfully copied 429 files to /home/runner/work/_temp/gh-aw/actions
+2026-06-28T10:11:13.2562457Z Successfully copied 26 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+2026-06-28T10:11:13.3441841Z Successfully copied 79 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+2026-06-28T10:11:13.3568796Z [otlp] INPUT_TRACE_ID=1c5a07ae801b1b49b68535e5c1a426e9 (will reuse activation trace)
+2026-06-28T10:11:13.3575687Z [otlp] INPUT_PARENT_SPAN_ID=1d675cdfee3acbd0 (will parent setup span)
+2026-06-28T10:11:13.3580130Z [otlp] GH_AW_OTLP_ENDPOINTS not set, skipping setup span
+2026-06-28T10:11:13.3603225Z [otlp] resolved trace-id=1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:13.3607984Z [otlp] trace-id=1c5a07ae801b1b49b68535e5c1a426e9 written to GITHUB_OUTPUT
+2026-06-28T10:11:13.3613389Z [otlp] span-id=33bce7cd8d07cf1f written to GITHUB_OUTPUT
+2026-06-28T10:11:13.3618464Z [otlp] parent-span-id=1d675cdfee3acbd0 written to GITHUB_OUTPUT
+2026-06-28T10:11:13.3622899Z [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+2026-06-28T10:11:13.3627271Z [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+2026-06-28T10:11:13.3633441Z [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV

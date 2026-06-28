@@ -1,0 +1,34 @@
+﻿2026-06-28T10:30:14.7649307Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:30:14.7650277Z with:
+2026-06-28T10:30:14.7655926Z   github-token: ***
+2026-06-28T10:30:14.7657845Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/handle_detection_runs.cjs');
+await main();
+
+2026-06-28T10:30:14.7659924Z   debug: false
+2026-06-28T10:30:14.7660491Z   user-agent: actions/github-script
+2026-06-28T10:30:14.7661151Z   result-encoding: json
+2026-06-28T10:30:14.7661748Z   retries: 0
+2026-06-28T10:30:14.7662336Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:30:14.7663045Z env:
+2026-06-28T10:30:14.7663657Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:30:14.7664727Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 76bf3a2227258318
+2026-06-28T10:30:14.7665486Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642610276
+2026-06-28T10:30:14.7666292Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-06-28T10:30:14.7667068Z   GH_AW_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:30:14.7668570Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/blob/main/.github/workflows/servicing-repro-producer.md
+2026-06-28T10:30:14.7670477Z   GH_AW_RUN_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318977468
+2026-06-28T10:30:14.7671627Z   GH_AW_DETECTION_CONCLUSION: failure
+2026-06-28T10:30:14.7672303Z   GH_AW_DETECTION_REASON: parse_error
+2026-06-28T10:30:14.7673148Z ##[endgroup]
+2026-06-28T10:30:14.9478903Z Detection conclusion: failure
+2026-06-28T10:30:14.9484893Z Detection reason: parse_error
+2026-06-28T10:30:14.9488109Z Workflow name: Servicing Repro Producer
+2026-06-28T10:30:14.9491512Z Run URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318977468
+2026-06-28T10:30:14.9495484Z Detection problem detected (failure), posting to tracking issue
+2026-06-28T10:30:14.9500936Z Searching for detection runs issue: "[aw] Detection Runs"
+2026-06-28T10:30:15.2257648Z No detection runs issue found, creating one
+2026-06-28T10:30:15.6654850Z [@octokit/request] "POST https://api.github.com/repos/jeffhandley/dotnet-runtime-servicing-release-manager/issues" is deprecated. It is scheduled to be removed on Fri, 10 Mar 2028 00:00:00 GMT. See https://docs.github.com/en/rest/about-the-rest-api/api-versions
+2026-06-28T10:30:15.6679839Z ✓ Created detection runs issue #3: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/issues/3
+2026-06-28T10:30:16.1336783Z ✓ Posted detection run comment to issue #3

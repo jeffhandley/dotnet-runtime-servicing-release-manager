@@ -1,0 +1,25 @@
+﻿2026-06-28T10:30:10.3149088Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+2026-06-28T10:30:10.3150190Z with:
+2026-06-28T10:30:10.3150661Z   name: agent
+2026-06-28T10:30:10.3151136Z   path: /tmp/gh-aw/
+2026-06-28T10:30:10.3151627Z   merge-multiple: false
+2026-06-28T10:30:10.3152315Z   repository: jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:30:10.3153074Z   run-id: 28318977468
+2026-06-28T10:30:10.3153566Z   skip-decompress: false
+2026-06-28T10:30:10.3154079Z   digest-mismatch: error
+2026-06-28T10:30:10.3155785Z env:
+2026-06-28T10:30:10.3156378Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:30:10.3157163Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 76bf3a2227258318
+2026-06-28T10:30:10.3157820Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642610276
+2026-06-28T10:30:10.3158420Z ##[endgroup]
+2026-06-28T10:30:10.7005332Z Downloading single artifact
+2026-06-28T10:30:10.8955603Z Preparing to download the following artifacts:
+2026-06-28T10:30:10.8963980Z - agent (ID: 7933663254, Size: 3379775, Expected Digest: sha256:639fbfe6596c9c485c508a02e5b347a9228445b39881130fcddacab67154edf9)
+2026-06-28T10:30:11.1019958Z (node:1307) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-06-28T10:30:11.1025680Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-06-28T10:30:11.3559068Z Redirecting to blob download url: https://productionresultssa11.blob.core.windows.net/actions-results/d679feb2-69ba-42ef-b231-6b698fed5442/workflow-job-run-d9674c04-b12c-5753-8f21-043c3e97b651/artifacts/d4f0bc5a29de06b510f9aa428f1eedba926012b591fef7a518e776a7c9bd1824.zip
+2026-06-28T10:30:11.3561447Z Starting download of artifact to: /tmp/gh-aw
+2026-06-28T10:30:11.3563238Z SHA256 digest of downloaded artifact is 639fbfe6596c9c485c508a02e5b347a9228445b39881130fcddacab67154edf9
+2026-06-28T10:30:11.3564546Z Artifact download completed successfully.
+2026-06-28T10:30:11.3565231Z Total of 1 artifact(s) downloaded
+2026-06-28T10:30:11.3565845Z Download artifact has finished successfully

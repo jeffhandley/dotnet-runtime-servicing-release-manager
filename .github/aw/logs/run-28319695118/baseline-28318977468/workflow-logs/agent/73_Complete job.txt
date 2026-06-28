@@ -1,0 +1,18 @@
+﻿2026-06-28T10:25:44.9945820Z Evaluate and set job outputs
+2026-06-28T10:25:44.9952727Z Set output 'agentic_engine_timeout'
+2026-06-28T10:25:44.9954500Z Set output 'ai_credits_rate_limit_error'
+2026-06-28T10:25:44.9955512Z Set output 'aic'
+2026-06-28T10:25:44.9955851Z Set output 'ambient_context'
+2026-06-28T10:25:44.9956212Z Set output 'checkout_pr_success'
+2026-06-28T10:25:44.9956571Z Set output 'has_patch'
+2026-06-28T10:25:44.9956915Z Set output 'inference_access_error'
+2026-06-28T10:25:44.9957284Z Set output 'mcp_policy_error'
+2026-06-28T10:25:44.9957644Z Set output 'model'
+2026-06-28T10:25:44.9957966Z Set output 'model_not_supported_error'
+2026-06-28T10:25:44.9965789Z Set output 'output'
+2026-06-28T10:25:44.9966163Z Set output 'output_types'
+2026-06-28T10:25:44.9966530Z Set output 'setup-parent-span-id'
+2026-06-28T10:25:44.9966907Z Set output 'setup-span-id'
+2026-06-28T10:25:44.9967274Z Set output 'setup-trace-id'
+2026-06-28T10:25:44.9967626Z Set output 'unknown_model_ai_credits'
+2026-06-28T10:25:44.9968604Z Cleaning up orphan processes

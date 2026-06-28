@@ -1,0 +1,10 @@
+=== Baseline GA SDK for .NET 9 (target major.minor 9.0) ===
+dotnet --version: 9.0.315
+runtime: Microsoft.NETCore.App 9.0.17 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+
+=== dotnet run ===
+Call:     Math.Round(2.5)
+Expected: 3
+Actual:   2
+REPRO CONFIRMED: Math.Round(2.5) returned 2, expected 3.
+exit=1

@@ -1,0 +1,130 @@
+﻿2026-06-28T10:15:46.1679960Z ##[group]Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+2026-06-28T10:15:46.1680774Z with:
+2026-06-28T10:15:46.1681198Z   persist-credentials: false
+2026-06-28T10:15:46.1681998Z   sparse-checkout: .github
+.agents
+.antigravity
+.claude
+.codex
+.crush
+.gemini
+.opencode
+.pi
+
+2026-06-28T10:15:46.1682883Z   sparse-checkout-cone-mode: true
+2026-06-28T10:15:46.1683409Z   fetch-depth: 1
+2026-06-28T10:15:46.1684002Z   repository: jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:46.1689860Z   token: ***
+2026-06-28T10:15:46.1692177Z   ssh-strict: true
+2026-06-28T10:15:46.1693178Z   ssh-user: git
+2026-06-28T10:15:46.1693612Z   clean: true
+2026-06-28T10:15:46.1694034Z   fetch-tags: false
+2026-06-28T10:15:46.1694472Z   show-progress: true
+2026-06-28T10:15:46.1694915Z   lfs: false
+2026-06-28T10:15:46.1695315Z   submodules: false
+2026-06-28T10:15:46.1695755Z   set-safe-directory: true
+2026-06-28T10:15:46.1697002Z   allow-unsafe-pr-checkout: false
+2026-06-28T10:15:46.1697517Z env:
+2026-06-28T10:15:46.1697975Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-06-28T10:15:46.1698591Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:15:46.1699533Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 2256f46e35a2a592
+2026-06-28T10:15:46.1700152Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641744950
+2026-06-28T10:15:46.1700713Z ##[endgroup]
+2026-06-28T10:15:48.1376874Z Syncing repository: jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:48.1430536Z ##[group]Getting Git version info
+2026-06-28T10:15:48.1432008Z Working directory is '/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager'
+2026-06-28T10:15:48.1433834Z [command]/usr/bin/git version
+2026-06-28T10:15:48.1434389Z git version 2.54.0
+2026-06-28T10:15:48.1436188Z ##[endgroup]
+2026-06-28T10:15:48.1438471Z Temporarily overriding HOME='/home/runner/work/_temp/053a9c01-0ea8-4f9f-9fd7-b6a85afddeb9' before making global git config changes
+2026-06-28T10:15:48.1440452Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-28T10:15:48.1442156Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:48.1444760Z Deleting the contents of '/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager'
+2026-06-28T10:15:48.1446374Z ##[group]Determining repository object format
+2026-06-28T10:15:48.1447312Z ##[endgroup]
+2026-06-28T10:15:48.1448137Z ##[group]Initializing the repository
+2026-06-28T10:15:48.1449500Z [command]/usr/bin/git init /home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:48.1450940Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-06-28T10:15:48.1452184Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-06-28T10:15:48.1500817Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-06-28T10:15:48.1501792Z hint: call:
+2026-06-28T10:15:48.1502248Z hint:
+2026-06-28T10:15:48.1502825Z hint: 	git config --global init.defaultBranch <name>
+2026-06-28T10:15:48.1503514Z hint:
+2026-06-28T10:15:48.1504152Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-06-28T10:15:48.1505195Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-06-28T10:15:48.1506019Z hint:
+2026-06-28T10:15:48.1506485Z hint: 	git branch -m <name>
+2026-06-28T10:15:48.1507013Z hint:
+2026-06-28T10:15:48.1507700Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-06-28T10:15:48.1580533Z Initialized empty Git repository in /home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git/
+2026-06-28T10:15:48.1583409Z [command]/usr/bin/git remote add origin https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:48.1585549Z ##[endgroup]
+2026-06-28T10:15:48.1586880Z ##[group]Disabling automatic garbage collection
+2026-06-28T10:15:48.1587614Z [command]/usr/bin/git config --local gc.auto 0
+2026-06-28T10:15:48.1597208Z ##[endgroup]
+2026-06-28T10:15:48.1598311Z ##[group]Setting up auth
+2026-06-28T10:15:48.1598908Z Removing SSH command configuration
+2026-06-28T10:15:48.1600149Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-28T10:15:48.1602500Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-28T10:15:48.1604590Z Removing HTTP extra header
+2026-06-28T10:15:48.1605533Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-28T10:15:48.1608207Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-28T10:15:48.1610925Z Removing includeIf entries pointing to credentials config files
+2026-06-28T10:15:48.1804640Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-28T10:15:48.1896246Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-28T10:15:48.1913421Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-06-28T10:15:48.1918128Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git.path /home/runner/work/_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.1924412Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.1928054Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.1931569Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.1933875Z ##[endgroup]
+2026-06-28T10:15:48.1934643Z ##[group]Fetching the repository
+2026-06-28T10:15:48.1936168Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +a3254fcee825a18d68c2ebcf107ff208fdbfe427:refs/remotes/origin/main
+2026-06-28T10:15:48.1938011Z From https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:48.1939508Z  * [new ref]         a3254fcee825a18d68c2ebcf107ff208fdbfe427 -> origin/main
+2026-06-28T10:15:48.1940997Z [command]/usr/bin/git branch --list --remote origin/main
+2026-06-28T10:15:48.1941692Z   origin/main
+2026-06-28T10:15:48.1942862Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-06-28T10:15:48.1943595Z a3254fcee825a18d68c2ebcf107ff208fdbfe427
+2026-06-28T10:15:48.1945054Z ##[endgroup]
+2026-06-28T10:15:48.1945846Z ##[group]Determining the checkout info
+2026-06-28T10:15:48.1946730Z ##[endgroup]
+2026-06-28T10:15:48.1947481Z ##[group]Setting up sparse checkout
+2026-06-28T10:15:48.1948517Z [command]/usr/bin/git sparse-checkout set .github .agents .antigravity .claude .codex .crush .gemini .opencode .pi
+2026-06-28T10:15:48.1971811Z ##[endgroup]
+2026-06-28T10:15:48.1972659Z ##[group]Checking out the ref
+2026-06-28T10:15:48.1973535Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-06-28T10:15:48.1974488Z Switched to a new branch 'main'
+2026-06-28T10:15:48.1975440Z branch 'main' set up to track 'origin/main'.
+2026-06-28T10:15:48.1976968Z ##[endgroup]
+2026-06-28T10:15:48.1978096Z [command]/usr/bin/git log -1 --format=%H
+2026-06-28T10:15:48.1978768Z a3254fcee825a18d68c2ebcf107ff208fdbfe427
+2026-06-28T10:15:48.2013190Z ##[group]Removing auth
+2026-06-28T10:15:48.2014389Z Removing SSH command configuration
+2026-06-28T10:15:48.2015777Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-28T10:15:48.2019870Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-28T10:15:48.2023861Z Removing HTTP extra header
+2026-06-28T10:15:48.2025108Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-28T10:15:48.2030511Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-28T10:15:48.2033219Z Removing includeIf entries pointing to credentials config files
+2026-06-28T10:15:48.2035907Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-28T10:15:48.2037444Z includeif.gitdir:/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git.path
+2026-06-28T10:15:48.2039533Z includeif.gitdir:/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git/worktrees/*.path
+2026-06-28T10:15:48.2041666Z includeif.gitdir:/github/workspace/.git.path
+2026-06-28T10:15:48.2042447Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-06-28T10:15:48.2044688Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git.path
+2026-06-28T10:15:48.2047659Z /home/runner/work/_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.2066003Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git.path /home/runner/work/_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.2070061Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git/worktrees/*.path
+2026-06-28T10:15:48.2073179Z /home/runner/work/_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.2076253Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.2080329Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-06-28T10:15:48.2081545Z /github/runner_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.2084390Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.2086830Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-06-28T10:15:48.2092439Z /github/runner_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.2095850Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config
+2026-06-28T10:15:48.2098485Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-28T10:15:48.2826091Z Removing credentials config '/home/runner/work/_temp/git-credentials-7af323f2-3fdd-4539-ac44-7872c77e68dd.config'
+2026-06-28T10:15:48.2830785Z ##[endgroup]

@@ -1,17 +1,18 @@
 ---
 description: >
-  Build and verify a minimum reproduction for a single dotnet/runtime servicing release PR
-  (a PR targeting a release/* branch). Dispatched by the servicing-release-manager (or run manually)
-  with a PR number. Installs the baseline GA SDK, authors a minimal repro, runs it to confirm the
-  bug, uploads the repro + output.log as an artifact, writes a step summary, and posts a repro
-  comment to the PR (unless run in dry-run mode).
+  Build and verify minimum reproductions for dotnet/runtime servicing release PRs (PRs targeting a
+  release/* branch). Runs hourly to scan for rule-in servicing fixes that still need a repro, and can
+  also be run manually for a single PR number. For each PR it installs the baseline GA SDK, authors a
+  minimal repro, runs it to confirm the bug, uploads the repro + output.log as an artifact, writes a
+  step summary, and posts a repro comment to the PR (unless run in dry-run mode).
 
 on:
+  schedule: hourly
   workflow_dispatch:
     inputs:
       pr_number:
-        description: "Servicing release PR number to build a repro for"
-        required: true
+        description: "Optional: a single servicing release PR number to build a repro for (scan mode runs when empty)"
+        required: false
         type: string
       suppress_output:
         description: "Dry-run: produce the artifact + step summary but do NOT post a PR comment"
@@ -28,7 +29,7 @@ permissions:
   issues: read
 
 concurrency:
-  group: "servicing-repro-producer-${{ github.event.inputs.pr_number }}"
+  group: "servicing-repro-producer-${{ github.event.inputs.pr_number || github.run_id }}"
   cancel-in-progress: false
 
 # ###############################################################
@@ -84,10 +85,10 @@ network:
 safe-outputs:
   add-comment:
     target: "*"
-    max: 1
+    max: 3
     hide-older-comments: true
   upload-artifact:
-    max-uploads: 1
+    max-uploads: 3
     retention-days: 30
     allowed-paths:
       - "/tmp/gh-aw/agent/**"
@@ -100,52 +101,65 @@ timeout-minutes: 45
 
 # Servicing Repro Producer
 
-Build and verify a minimum reproduction for **PR #${{ github.event.inputs.pr_number }}** in
-`${{ github.repository }}` using the **`servicing-release` skill** at
-`.github/skills/servicing-release/SKILL.md`. Read that skill and follow **Procedure A -- Produce a
-minimum repro**. The PR's repository is `${{ github.repository }}`; its number is
-`${{ github.event.inputs.pr_number }}`.
+Produce and verify minimum reproductions for servicing release PRs in `${{ github.repository }}`,
+using the **`servicing-release` skill** at `.github/skills/servicing-release/SKILL.md`. Read that
+skill and follow **Procedure A -- Produce a minimum repro** for each PR you handle. You add no labels
+and modify no files in the repository.
 
-## Workspace
+## Mode
 
-Author the repro under a fresh directory **outside any checkout** so it can be uploaded:
+- **Single-PR mode** -- if `${{ github.event.inputs.pr_number }}` is non-empty, handle exactly that
+  one PR.
+- **Scan mode** -- otherwise (the hourly schedule, or a manual run with no number), find the
+  servicing PRs that still need a repro and handle up to **3** of them this run.
+
+## Selecting PRs (scan mode)
+
+Query `${{ github.repository }}` for **open** pull requests targeting `release/*` branches (include
+`release/*-staging`), updated within roughly the last 30 days. Read PR metadata and bodies through
+the integrity-gated `github` tool (skip `[Filtered]` items, record the count). Keep a PR only if:
+
+- it is **rule-in** by the skill's PR classification rule (else skip it); **and**
+- it has **no** prior `servicing-repro-producer` comment (identify such comments by the gh-aw footer
+  containing `workflow_id: servicing-repro-producer`).
+
+Take up to **3** such PRs (oldest-updated first). If none qualify, call `noop` with a one-line
+summary and stop.
+
+## For each selected PR
+
+Use a per-PR working directory outside any checkout so each repro can be uploaded separately (replace
+`<PR>` with the PR number):
 
 ```bash
-export WORKDIR=/tmp/gh-aw/agent/servicing-repro
+export WORKDIR="/tmp/gh-aw/agent/servicing-repro/pr-<PR>"
 rm -rf "$WORKDIR"; mkdir -p "$WORKDIR"; cd "$WORKDIR"
 ```
 
 Determine the target `MAJOR.MINOR` from the PR's base branch (`release/MAJOR.MINOR` or
-`release/MAJOR.MINOR-staging`).
+`release/MAJOR.MINOR-staging`), then:
 
-## Steps
-
-1. **Classify** PR #${{ github.event.inputs.pr_number }} with the skill's PR classification rule.
-   If it is ruled out (code-flow, infrastructure, branding, test-only, missing
-   `Servicing-approved`/`Servicing-consider`, etc.), do **not** build a repro: call `noop` with a
-   one-line reason and stop.
-2. **Dedup.** Read the PR's comments (integrity-gated). If this workflow has already posted a repro
-   comment for this PR -- identify it by the gh-aw footer that every posted comment carries, which
-   contains `workflow_id: servicing-repro-producer` -- call `noop` ("repro already posted") and stop.
+1. **Classify** the PR (single-PR mode only -- in scan mode this was already done). If it is ruled
+   out (code-flow, infrastructure, branding, test-only, missing `Servicing-approved`/
+   `Servicing-consider`, etc.), skip it; in single-PR mode call `noop` with the reason.
+2. **Dedup** (single-PR mode only): if a `servicing-repro-producer` comment already exists for the
+   PR (gh-aw footer `workflow_id: servicing-repro-producer`), skip it (single-PR mode: `noop`
+   "repro already posted").
 3. **Produce + verify** the repro per Procedure A on the **baseline GA SDK** for the target major.
-   Capture combined output to `$WORKDIR/output.log`. Confirm the bug reproduces; if it does not,
-   report that (step summary) and `noop` ("could not reproduce") -- do not post a comment.
-4. **Upload the artifact.** Call `upload_artifact` with name
-   `servicing-repro-pr-${{ github.event.inputs.pr_number }}` and path `/tmp/gh-aw/agent/servicing-repro`
-   (the repro sources + `output.log`).
-5. **Step summary.** Write to `GITHUB_STEP_SUMMARY`: the repro form used, the isolating code snippet,
-   the Expected result, and the Actual result (quoted from `output.log`).
-6. **Comment (unless dry-run).** If the bug reproduced and
-   `${{ github.event.inputs.suppress_output }}` is not `true`, post **one** comment on PR
-   #${{ github.event.inputs.pr_number }} via `add-comment` (set `pull_request_number` to that PR).
-   The comment body must include, in this order: (1) a 1-2 sentence description of the issue;
-   (2) which minimum repro approach was used (unit test / file-based app / csproj); (3) the code
-   snippet that isolates the repro call site; (4) **Expected Result**; (5) **Actual Result** (quoted
-   from the captured `output.log`); (6) a link to the uploaded workflow artifact for the repro and
-   its output. (gh-aw automatically appends a footer identifying this workflow, which is used for
-   dedup -- you do not need to add your own marker.)
+   Capture combined output to `$WORKDIR/output.log`. If the bug does **not** reproduce, record that
+   for the step summary and do **not** post a comment for this PR.
+4. **Upload the artifact** for this PR: call `upload_artifact` with name
+   `servicing-repro-pr-<PR>` and path `$WORKDIR`.
+5. **Comment (unless dry-run).** If the bug reproduced and `${{ github.event.inputs.suppress_output }}`
+   is not `true`, post **one** comment on that PR via `add-comment` (set `pull_request_number`). The
+   body must include, in order: (1) a 1-2 sentence description of the issue; (2) which repro approach
+   was used (unit test / file-based app / csproj); (3) the isolating code snippet; (4) **Expected
+   Result**; (5) **Actual Result** (quoted from `output.log`); (6) a link to the uploaded artifact.
+   (gh-aw appends a footer identifying this workflow, used for dedup -- no manual marker needed.) If
+   `suppress_output` is `true`, skip the comment.
 
-   If `suppress_output` is `true`, skip the comment entirely (the artifact + step summary are the
-   only outputs).
+## Finish
 
-Do not modify the repository. All repro work happens under `$WORKDIR`.
+Write a `GITHUB_STEP_SUMMARY` summarizing each PR handled (repro form, reproduced yes/no). **If this
+run posts no comments** (nothing qualified, all ruled out, or none reproduced), you MUST call `noop`
+with a one-line summary. All repro work happens under the per-PR `$WORKDIR`.

@@ -1,0 +1,82 @@
+﻿2026-06-28T10:15:04.0290590Z Current runner version: '2.335.1'
+2026-06-28T10:15:04.0460046Z ##[group]Runner Image Provisioner
+2026-06-28T10:15:04.0461084Z Hosted Compute Agent
+2026-06-28T10:15:04.0461772Z Version: 20260520.533
+2026-06-28T10:15:04.0462442Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+2026-06-28T10:15:04.0463166Z Build Date: 2026-05-20T17:44:04Z
+2026-06-28T10:15:04.0463908Z Worker ID: {5e81113e-d01c-4ee7-8a7b-52b90d85e194}
+2026-06-28T10:15:04.0464650Z Azure Region: northcentralus
+2026-06-28T10:15:04.0465337Z ##[endgroup]
+2026-06-28T10:15:04.0477590Z ##[group]VM Image
+2026-06-28T10:15:04.0478325Z - OS: Linux (x64)
+2026-06-28T10:15:04.0478970Z - Source: Docker
+2026-06-28T10:15:04.0479550Z - Name: ubuntu:24.04
+2026-06-28T10:15:04.0480189Z - Version: 20260526.57.1
+2026-06-28T10:15:04.0480789Z ##[endgroup]
+2026-06-28T10:15:04.0481878Z ##[group]GITHUB_TOKEN Permissions
+2026-06-28T10:15:04.0484039Z Metadata: read
+2026-06-28T10:15:04.0484658Z ##[endgroup]
+2026-06-28T10:15:04.0497828Z Secret source: Actions
+2026-06-28T10:15:04.0498859Z Prepare workflow directory
+2026-06-28T10:15:04.2084912Z Prepare all required actions
+2026-06-28T10:15:04.2241517Z Getting action download info
+2026-06-28T10:15:04.5844873Z Download action repository 'github/gh-aw-actions@8c7d04ebf1ece56cd381446125da3e0f6896294a' (SHA:8c7d04ebf1ece56cd381446125da3e0f6896294a)
+2026-06-28T10:15:05.1268449Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+2026-06-28T10:15:05.5793525Z Complete job name: pre_activation
+2026-06-28T10:15:05.6962405Z ##[group]Run github/gh-aw-actions/setup@8c7d04ebf1ece56cd381446125da3e0f6896294a
+2026-06-28T10:15:05.6963708Z with:
+2026-06-28T10:15:05.6964243Z   destination: /home/runner/work/_temp/gh-aw/actions
+2026-06-28T10:15:05.6964908Z   job-name: pre_activation
+2026-06-28T10:15:05.6965466Z   safe-output-artifact-client: false
+2026-06-28T10:15:05.6967869Z env:
+2026-06-28T10:15:05.6968458Z   GH_AW_SETUP_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:15:05.6969833Z   GH_AW_CURRENT_WORKFLOW_REF: jeffhandley/dotnet-runtime-servicing-release-manager/.github/workflows/servicing-repro-producer.lock.yml@refs/heads/main
+2026-06-28T10:15:05.6971102Z   GH_AW_INFO_VERSION: 1.0.63
+2026-06-28T10:15:05.6971635Z   GH_AW_INFO_AWF_VERSION: v0.27.7
+2026-06-28T10:15:05.6972645Z   GH_AW_INFO_ENGINE_ID: copilot
+2026-06-28T10:15:05.6973170Z ##[endgroup]
+2026-06-28T10:15:07.4197030Z Successfully copied 429 files to /home/runner/work/_temp/gh-aw/actions
+2026-06-28T10:15:07.8136706Z Successfully copied 26 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+2026-06-28T10:15:07.9277547Z Successfully copied 79 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+2026-06-28T10:15:07.9551452Z [otlp] INPUT_TRACE_ID not set, a new trace ID will be generated
+2026-06-28T10:15:07.9563760Z [otlp] GH_AW_OTLP_ENDPOINTS not set, skipping setup span
+2026-06-28T10:15:07.9617595Z [otlp] resolved trace-id=a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:15:07.9624150Z [otlp] trace-id=a14519b44acd7a2281993b80349cd1e0 written to GITHUB_OUTPUT
+2026-06-28T10:15:07.9630836Z [otlp] span-id=8cefa6e5aca242c1 written to GITHUB_OUTPUT
+2026-06-28T10:15:07.9635660Z [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+2026-06-28T10:15:07.9642906Z [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+2026-06-28T10:15:07.9648471Z [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV
+2026-06-28T10:15:07.9952643Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:15:07.9956690Z with:
+2026-06-28T10:15:07.9964077Z   github-token: ***
+2026-06-28T10:15:07.9968207Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/check_membership.cjs');
+await main();
+
+2026-06-28T10:15:07.9971470Z   debug: false
+2026-06-28T10:15:07.9971957Z   user-agent: actions/github-script
+2026-06-28T10:15:07.9973873Z   result-encoding: json
+2026-06-28T10:15:07.9974360Z   retries: 0
+2026-06-28T10:15:07.9975815Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:15:07.9976651Z env:
+2026-06-28T10:15:07.9978259Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:15:07.9979585Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 8cefa6e5aca242c1
+2026-06-28T10:15:07.9980554Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641707964
+2026-06-28T10:15:07.9982031Z   GH_AW_REQUIRED_ROLES: admin,maintainer,write
+2026-06-28T10:15:07.9982634Z ##[endgroup]
+2026-06-28T10:15:08.2094480Z Event workflow_dispatch requires validation
+2026-06-28T10:15:08.2106841Z Checking if user 'jeffhandley' has required permissions for jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:08.2111579Z Required permissions: admin, maintainer, write
+2026-06-28T10:15:08.4669653Z Repository permission level: admin
+2026-06-28T10:15:08.4698549Z ✅ User has admin access to repository
+2026-06-28T10:15:08.5247431Z Post job cleanup.
+2026-06-28T10:15:08.5846587Z [otlp] GH_AW_OTLP_ENDPOINTS not set, skipping OTLP export (will attempt JSONL mirror)
+2026-06-28T10:15:08.5910891Z Cleaning up /tmp/gh-aw...
+2026-06-28T10:15:08.6129706Z Cleaned up /tmp/gh-aw
+2026-06-28T10:15:08.6279966Z Evaluate and set job outputs
+2026-06-28T10:15:08.6307941Z Set output 'activated'
+2026-06-28T10:15:08.6311900Z Set output 'setup-parent-span-id'
+2026-06-28T10:15:08.6313052Z Set output 'setup-span-id'
+2026-06-28T10:15:08.6314661Z Set output 'setup-trace-id'
+2026-06-28T10:15:08.6318334Z Cleaning up orphan processes

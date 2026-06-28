@@ -1,0 +1,27 @@
+﻿2026-06-28T10:15:48.3070232Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/save_base_github_folders.sh"
+2026-06-28T10:15:48.3075430Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/save_base_github_folders.sh"[0m
+2026-06-28T10:15:48.3181342Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:15:48.3182094Z env:
+2026-06-28T10:15:48.3182746Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-06-28T10:15:48.3185769Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:15:48.3186592Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 2256f46e35a2a592
+2026-06-28T10:15:48.3187647Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641744950
+2026-06-28T10:15:48.3190969Z   GH_AW_AGENT_FOLDERS: .agents .antigravity .claude .codex .crush .gemini .github .opencode .pi
+2026-06-28T10:15:48.3193038Z   GH_AW_AGENT_FILES: .crush.json AGENTS.md ANTIGRAVITY.md CLAUDE.md GEMINI.md PI.md opencode.jsonc
+2026-06-28T10:15:48.3194462Z ##[endgroup]
+2026-06-28T10:15:48.3427542Z .agents not found in workspace, skipping
+2026-06-28T10:15:48.3432049Z .antigravity not found in workspace, skipping
+2026-06-28T10:15:48.3437162Z .claude not found in workspace, skipping
+2026-06-28T10:15:48.3441328Z .codex not found in workspace, skipping
+2026-06-28T10:15:48.3447900Z .crush not found in workspace, skipping
+2026-06-28T10:15:48.3452910Z .gemini not found in workspace, skipping
+2026-06-28T10:15:48.3822544Z Saved .github to /tmp/gh-aw/base/.github
+2026-06-28T10:15:48.3823714Z .opencode not found in workspace, skipping
+2026-06-28T10:15:48.3825232Z .pi not found in workspace, skipping
+2026-06-28T10:15:48.3825994Z .crush.json not found in workspace, skipping
+2026-06-28T10:15:48.3828663Z AGENTS.md not found in workspace, skipping
+2026-06-28T10:15:48.3867233Z ANTIGRAVITY.md not found in workspace, skipping
+2026-06-28T10:15:48.3868002Z CLAUDE.md not found in workspace, skipping
+2026-06-28T10:15:48.3872140Z GEMINI.md not found in workspace, skipping
+2026-06-28T10:15:48.3872897Z PI.md not found in workspace, skipping
+2026-06-28T10:15:48.3873601Z opencode.jsonc not found in workspace, skipping

@@ -1,0 +1,16 @@
+﻿2026-06-28T10:25:40.1532735Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/copy_copilot_session_state.sh"
+2026-06-28T10:25:40.1533323Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/copy_copilot_session_state.sh"[0m
+2026-06-28T10:25:40.1564038Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:25:40.1564313Z env:
+2026-06-28T10:25:40.1564512Z   DEFAULT_BRANCH: main
+2026-06-28T10:25:40.1565083Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:25:40.1565523Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:25:40.1565808Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:25:40.1566108Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:25:40.1566483Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:25:40.1566871Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:40.1567245Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: bcb24487f741a264
+2026-06-28T10:25:40.1567571Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641761389
+2026-06-28T10:25:40.1567854Z ##[endgroup]
+2026-06-28T10:25:40.1631692Z Copying Copilot session state from /home/runner/.copilot/session-state to /tmp/gh-aw/sandbox/agent/logs/copilot-session-state
+2026-06-28T10:25:40.1658238Z Session state directory copied successfully

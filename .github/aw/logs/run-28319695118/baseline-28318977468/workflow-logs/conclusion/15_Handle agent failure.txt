@@ -1,0 +1,91 @@
+﻿2026-06-28T10:30:16.6128601Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:30:16.6154437Z with:
+2026-06-28T10:30:16.6171161Z   github-token: ***
+2026-06-28T10:30:16.6175178Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/handle_agent_failure.cjs');
+await main();
+
+2026-06-28T10:30:16.6181527Z   debug: false
+2026-06-28T10:30:16.6183200Z   user-agent: actions/github-script
+2026-06-28T10:30:16.6187518Z   result-encoding: json
+2026-06-28T10:30:16.6189572Z   retries: 0
+2026-06-28T10:30:16.6192268Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:30:16.6194691Z env:
+2026-06-28T10:30:16.6196700Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:30:16.6199103Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 76bf3a2227258318
+2026-06-28T10:30:16.6200600Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642610276
+2026-06-28T10:30:16.6202123Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-06-28T10:30:16.6205675Z   GH_AW_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:30:16.6209792Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/blob/main/.github/workflows/servicing-repro-producer.md
+2026-06-28T10:30:16.6215942Z   GH_AW_RUN_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318977468
+2026-06-28T10:30:16.6219075Z   GH_AW_AGENT_CONCLUSION: success
+2026-06-28T10:30:16.6220456Z   GH_AW_WORKFLOW_ID: servicing-repro-producer
+2026-06-28T10:30:16.6221925Z   GH_AW_ACTION_FAILURE_ISSUE_EXPIRES_HOURS: 168
+2026-06-28T10:30:16.6223313Z   GH_AW_ENGINE_ID: copilot
+2026-06-28T10:30:16.6226075Z   GH_AW_CHECKOUT_PR_SUCCESS: true
+2026-06-28T10:30:16.6227650Z   GH_AW_EFFECTIVE_TOKENS: 
+2026-06-28T10:30:16.6229302Z   GH_AW_AI_CREDITS_RATE_LIMIT_ERROR: false
+2026-06-28T10:30:16.6231308Z   GH_AW_UNKNOWN_MODEL_AI_CREDITS: false
+2026-06-28T10:30:16.6233491Z   GH_AW_AIC: 251.115
+2026-06-28T10:30:16.6236229Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-06-28T10:30:16.6237813Z   GH_AW_MAX_AI_CREDITS: 1000
+2026-06-28T10:30:16.6239535Z   GH_AW_INFERENCE_ACCESS_ERROR: false
+2026-06-28T10:30:16.6240832Z   GH_AW_MCP_POLICY_ERROR: false
+2026-06-28T10:30:16.6242051Z   GH_AW_AGENTIC_ENGINE_TIMEOUT: false
+2026-06-28T10:30:16.6243362Z   GH_AW_MODEL_NOT_SUPPORTED_ERROR: false
+2026-06-28T10:30:16.6248270Z   GH_AW_ENGINE_API_HOSTS: api.enterprise.githubcopilot.com,api.githubcopilot.com,api.business.githubcopilot.com,api.individual.githubcopilot.com
+2026-06-28T10:30:16.6252147Z   GH_AW_LOCKDOWN_CHECK_FAILED: false
+2026-06-28T10:30:16.6254468Z   GH_AW_STALE_LOCK_FILE_FAILED: false
+2026-06-28T10:30:16.6255840Z   GH_AW_DAILY_AI_CREDITS_EXCEEDED: false
+2026-06-28T10:30:16.6258680Z   GH_AW_DAILY_AI_CREDITS_TOTAL_EFFECTIVE_TOKENS: 
+2026-06-28T10:30:16.6260910Z   GH_AW_DAILY_AI_CREDITS_THRESHOLD: 
+2026-06-28T10:30:16.6262194Z   GH_AW_GROUP_REPORTS: false
+2026-06-28T10:30:16.6263423Z   GH_AW_FAILURE_REPORT_AS_ISSUE: true
+2026-06-28T10:30:16.6265023Z   GH_AW_MISSING_TOOL_REPORT_AS_FAILURE: true
+2026-06-28T10:30:16.6266421Z   GH_AW_MISSING_DATA_REPORT_AS_FAILURE: true
+2026-06-28T10:30:16.6269216Z   GH_AW_TIMEOUT_MINUTES: 45
+2026-06-28T10:30:16.6270662Z ##[endgroup]
+2026-06-28T10:30:16.8546811Z [ai-credits] aiCredits source=env(GH_AW_AIC) value=251.115
+2026-06-28T10:30:16.8548767Z [ai-credits] maxAICredits source=env(GH_AW_MAX_AI_CREDITS) value=1000
+2026-06-28T10:30:16.8551881Z [ai-credits] rateLimitSignal source=none
+2026-06-28T10:30:16.8576019Z Agent conclusion: success
+2026-06-28T10:30:16.8577353Z Workflow name: Servicing Repro Producer
+2026-06-28T10:30:16.8578730Z Workflow ID: servicing-repro-producer
+2026-06-28T10:30:16.8580081Z Secret verification result: 
+2026-06-28T10:30:16.8581289Z Assignment error count: 0
+2026-06-28T10:30:16.8582767Z Assign copilot failure count: 0
+2026-06-28T10:30:16.8584009Z Create discussion error count: 0
+2026-06-28T10:30:16.8585547Z Code push failure count: 0
+2026-06-28T10:30:16.8586988Z Checkout PR success: true
+2026-06-28T10:30:16.8588130Z AI credits: 251.115
+2026-06-28T10:30:16.8589207Z Configured max AI credits: 1000
+2026-06-28T10:30:16.8590462Z AI credits rate-limit error: false
+2026-06-28T10:30:16.8591906Z Max AI credits exceeded (harness budget abort): false
+2026-06-28T10:30:16.8593419Z Daily workflow AIC guardrail exceeded: false
+2026-06-28T10:30:16.8595037Z Inference access error: false
+2026-06-28T10:30:16.8596246Z MCP policy error: false
+2026-06-28T10:30:16.8597375Z Agentic engine timeout: false
+2026-06-28T10:30:16.8598614Z Model not supported error: false
+2026-06-28T10:30:16.8599902Z Unknown model AI credits error: false
+2026-06-28T10:30:16.8601457Z Unknown model AI credits sources (audit/output): false/false
+2026-06-28T10:30:16.8602995Z Push repo-memory result: 
+2026-06-28T10:30:16.8604784Z App token minting failed (safe_outputs/conclusion/activation): false/false/false
+2026-06-28T10:30:16.8606567Z Lockdown check failed: false
+2026-06-28T10:30:16.8607840Z Stale lock file check failed: false
+2026-06-28T10:30:16.8609101Z Cache memory enabled: false
+2026-06-28T10:30:16.8610414Z Cache memory restored (from restore outputs): false
+2026-06-28T10:30:16.8611871Z Missing tool report-as-failure: true
+2026-06-28T10:30:16.8613829Z Missing data report-as-failure: true
+2026-06-28T10:30:16.8618723Z Agent output content length: 2246
+2026-06-28T10:30:16.8620459Z Agent emitted 1 missing_tool message(s) - activating failure handling
+2026-06-28T10:30:16.8878843Z Searching for pull request from branch: main
+2026-06-28T10:30:17.1279420Z No pull request found for branch: main
+2026-06-28T10:30:17.8718581Z Parent issue creation is disabled (group-reports: false)
+2026-06-28T10:30:17.8906975Z [@octokit/request] "POST https://api.github.com/repos/jeffhandley/dotnet-runtime-servicing-release-manager/issues" is deprecated. It is scheduled to be removed on Fri, 10 Mar 2028 00:00:00 GMT. See https://docs.github.com/en/rest/about-the-rest-api/api-versions
+2026-06-28T10:30:17.8912152Z Checking for existing issue with precise failure metadata for title: "[aw] Servicing Repro Producer is missing required tool"
+2026-06-28T10:30:17.8914653Z No existing issue found, creating a new one
+2026-06-28T10:30:17.8916011Z Found 1 missing_tool message(s)
+2026-06-28T10:30:17.8917509Z Generating failure issue footer with aiCredits context: 251.115
+2026-06-28T10:30:18.1355853Z ✓ Created new issue #4: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/issues/4
+2026-06-28T10:30:18.1362293Z Cascade check: 2 failure issue(s) in the last 60 min (threshold: 10) — no cascade

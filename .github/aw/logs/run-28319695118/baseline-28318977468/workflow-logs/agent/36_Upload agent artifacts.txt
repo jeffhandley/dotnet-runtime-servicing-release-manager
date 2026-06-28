@@ -1,0 +1,54 @@
+﻿2026-06-28T10:25:44.0672888Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-06-28T10:25:44.0673357Z with:
+2026-06-28T10:25:44.0673584Z   name: agent
+2026-06-28T10:25:44.0675906Z   path: /tmp/gh-aw/aw-prompts/prompt.txt
+/tmp/gh-aw/sandbox/agent/logs/
+/tmp/gh-aw/redacted-urls.log
+/tmp/gh-aw/mcp-logs/
+/tmp/gh-aw/proxy-logs/
+!/tmp/gh-aw/proxy-logs/proxy-tls/
+/tmp/gh-aw/agent_usage.json
+/tmp/gh-aw/agent-stdio.log
+/tmp/gh-aw/pre-agent-audit.txt
+/tmp/gh-aw/agent/
+/tmp/gh-aw/github_rate_limits.jsonl
+/tmp/gh-aw/safeoutputs.jsonl
+/tmp/gh-aw/agent_output.json
+/tmp/gh-aw/aw-*.patch
+/tmp/gh-aw/aw-*.bundle
+/tmp/gh-aw/awf-config.json
+/tmp/gh-aw/sandbox/firewall/logs/
+/tmp/gh-aw/sandbox/firewall/audit/
+/tmp/gh-aw/sandbox/firewall/awf-reflect.json
+
+2026-06-28T10:25:44.0677960Z   if-no-files-found: ignore
+2026-06-28T10:25:44.0678227Z   compression-level: 6
+2026-06-28T10:25:44.0678462Z   overwrite: false
+2026-06-28T10:25:44.0678697Z   include-hidden-files: false
+2026-06-28T10:25:44.0678949Z   archive: true
+2026-06-28T10:25:44.0679181Z env:
+2026-06-28T10:25:44.0679381Z   DEFAULT_BRANCH: main
+2026-06-28T10:25:44.0679612Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:25:44.0679869Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:25:44.0680099Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:25:44.0680400Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:25:44.0680766Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:25:44.0681151Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:44.0681517Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: bcb24487f741a264
+2026-06-28T10:25:44.0681845Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641761389
+2026-06-28T10:25:44.0682171Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-06-28T10:25:44.0682474Z   GH_AW_AIC: 251.115
+2026-06-28T10:25:44.0682704Z   GH_AW_AMBIENT_CONTEXT: 6781
+2026-06-28T10:25:44.0682948Z ##[endgroup]
+2026-06-28T10:25:44.2412329Z With the provided path, there will be 39 files uploaded
+2026-06-28T10:25:44.2413297Z Artifact name is valid!
+2026-06-28T10:25:44.2413786Z Root directory input is valid!
+2026-06-28T10:25:44.3677943Z Uploading artifact: agent.zip
+2026-06-28T10:25:44.3721700Z Beginning upload of artifact content to blob storage
+2026-06-28T10:25:44.7354109Z Uploaded bytes 3379775
+2026-06-28T10:25:44.7474469Z Finished uploading artifact content to blob storage!
+2026-06-28T10:25:44.7476122Z SHA256 digest of uploaded artifact is 639fbfe6596c9c485c508a02e5b347a9228445b39881130fcddacab67154edf9
+2026-06-28T10:25:44.7477267Z Finalizing artifact upload
+2026-06-28T10:25:44.9079631Z Artifact agent successfully finalized. Artifact ID 7933663254
+2026-06-28T10:25:44.9081099Z Artifact agent has been successfully uploaded! Final size is 3379775 bytes. Artifact ID is 7933663254
+2026-06-28T10:25:44.9084879Z Artifact download URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318977468/artifacts/7933663254

@@ -1,0 +1,30 @@
+﻿2026-06-28T10:15:40.9747326Z Current runner version: '2.335.1'
+2026-06-28T10:15:40.9781916Z ##[group]Runner Image Provisioner
+2026-06-28T10:15:40.9782876Z Hosted Compute Agent
+2026-06-28T10:15:40.9783492Z Version: 20260520.533
+2026-06-28T10:15:40.9784128Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+2026-06-28T10:15:40.9784881Z Build Date: 2026-05-20T17:44:04Z
+2026-06-28T10:15:40.9785535Z Worker ID: {1634163a-5670-4d88-9dc0-2cf0247ae831}
+2026-06-28T10:15:40.9786291Z Azure Region: eastus
+2026-06-28T10:15:40.9786847Z ##[endgroup]
+2026-06-28T10:15:40.9788174Z ##[group]VM Image
+2026-06-28T10:15:40.9788769Z - OS: Linux (x64)
+2026-06-28T10:15:40.9789741Z - Source: Docker
+2026-06-28T10:15:40.9790327Z - Name: ubuntu:24.04
+2026-06-28T10:15:40.9790889Z - Version: 20260526.57.1
+2026-06-28T10:15:40.9791950Z ##[endgroup]
+2026-06-28T10:15:40.9794859Z ##[group]GITHUB_TOKEN Permissions
+2026-06-28T10:15:40.9796985Z Actions: read
+2026-06-28T10:15:40.9797673Z Contents: read
+2026-06-28T10:15:40.9798229Z Metadata: read
+2026-06-28T10:15:40.9800590Z ##[endgroup]
+2026-06-28T10:15:40.9803535Z Secret source: Actions
+2026-06-28T10:15:40.9804450Z Prepare workflow directory
+2026-06-28T10:15:41.0667753Z Prepare all required actions
+2026-06-28T10:15:41.0710537Z Getting action download info
+2026-06-28T10:15:41.4964972Z Download action repository 'github/gh-aw-actions@8c7d04ebf1ece56cd381446125da3e0f6896294a' (SHA:8c7d04ebf1ece56cd381446125da3e0f6896294a)
+2026-06-28T10:15:41.9511598Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+2026-06-28T10:15:42.1061036Z Download action repository 'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae' (SHA:27d5ce7f107fe9357f9df03efb73ab90386fccae)
+2026-06-28T10:15:42.4098298Z Download action repository 'actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0' (SHA:9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0)
+2026-06-28T10:15:42.6242892Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-06-28T10:15:43.0879581Z Complete job name: activation

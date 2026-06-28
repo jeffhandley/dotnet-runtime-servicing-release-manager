@@ -1,0 +1,40 @@
+﻿2026-06-28T10:29:44.1574951Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+2026-06-28T10:29:44.1575892Z with:
+2026-06-28T10:29:44.1576759Z   name: safe-outputs-upload-artifacts
+2026-06-28T10:29:44.1577813Z   path: /home/runner/work/_temp/gh-aw/safeoutputs/upload-artifacts/
+2026-06-28T10:29:44.1578627Z   merge-multiple: false
+2026-06-28T10:29:44.1579376Z   repository: jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:29:44.1580168Z   run-id: 28318977468
+2026-06-28T10:29:44.1580696Z   skip-decompress: false
+2026-06-28T10:29:44.1581243Z   digest-mismatch: error
+2026-06-28T10:29:44.1581762Z env:
+2026-06-28T10:29:44.1582227Z   GH_AW_AGENT_AIC: 251.115
+2026-06-28T10:29:44.1582757Z   GH_AW_AIC: 251.115
+2026-06-28T10:29:44.1583313Z   GH_AW_AMBIENT_CONTEXT: 6781
+2026-06-28T10:29:44.1584310Z   GH_AW_CALLER_WORKFLOW_ID: jeffhandley/dotnet-runtime-servicing-release-manager/servicing-repro-producer
+2026-06-28T10:29:44.1585358Z   GH_AW_DETECTION_CONCLUSION: failure
+2026-06-28T10:29:44.1586171Z   GH_AW_DETECTION_REASON: parse_error
+2026-06-28T10:29:44.1587060Z   GH_AW_EFFECTIVE_TOKENS: 
+2026-06-28T10:29:44.1587615Z   GH_AW_ENGINE_ID: copilot
+2026-06-28T10:29:44.1588176Z   GH_AW_ENGINE_MODEL: claude-opus-4.8
+2026-06-28T10:29:44.1588778Z   GH_AW_ENGINE_VERSION: 1.0.63
+2026-06-28T10:29:44.1589341Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-06-28T10:29:44.1589985Z   GH_AW_WORKFLOW_ID: servicing-repro-producer
+2026-06-28T10:29:44.1590669Z   GH_AW_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:29:44.1592055Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/blob/main/.github/workflows/servicing-repro-producer.md
+2026-06-28T10:29:44.1593515Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:29:44.1594271Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 60707eab79cfd1b4
+2026-06-28T10:29:44.1594954Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642582975
+2026-06-28T10:29:44.1595570Z   GH_HOST: github.com
+2026-06-28T10:29:44.1596072Z ##[endgroup]
+2026-06-28T10:29:44.3254237Z Downloading single artifact
+2026-06-28T10:29:44.4848519Z Preparing to download the following artifacts:
+2026-06-28T10:29:44.4852691Z - safe-outputs-upload-artifacts (ID: 7933663151, Size: 2673, Expected Digest: sha256:356877d319af8b75b8ba40971baacbd700a5a23282068964f449292d996ea650)
+2026-06-28T10:29:44.8401837Z (node:1411) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-06-28T10:29:44.8416153Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-06-28T10:29:44.8421759Z Redirecting to blob download url: https://productionresultssa11.blob.core.windows.net/actions-results/d679feb2-69ba-42ef-b231-6b698fed5442/workflow-job-run-d9674c04-b12c-5753-8f21-043c3e97b651/artifacts/d95f22572209e8544fad019462412a224d7167d51f48bbc96115ab2089b3eec5.zip
+2026-06-28T10:29:44.8424308Z Starting download of artifact to: /home/runner/work/_temp/gh-aw/safeoutputs/upload-artifacts
+2026-06-28T10:29:44.8577601Z SHA256 digest of downloaded artifact is 356877d319af8b75b8ba40971baacbd700a5a23282068964f449292d996ea650
+2026-06-28T10:29:44.8579116Z Artifact download completed successfully.
+2026-06-28T10:29:44.8579980Z Total of 1 artifact(s) downloaded
+2026-06-28T10:29:44.8580811Z Download artifact has finished successfully

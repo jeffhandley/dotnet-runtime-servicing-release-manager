@@ -1,0 +1,41 @@
+﻿2026-06-28T10:29:41.4852838Z ##[group]Run github/gh-aw-actions/setup@8c7d04ebf1ece56cd381446125da3e0f6896294a
+2026-06-28T10:29:41.4854124Z with:
+2026-06-28T10:29:41.4854691Z   destination: /home/runner/work/_temp/gh-aw/actions
+2026-06-28T10:29:41.4855369Z   job-name: safe_outputs
+2026-06-28T10:29:41.4855921Z   trace-id: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:29:41.4856940Z   parent-span-id: 8cefa6e5aca242c1
+2026-06-28T10:29:41.4857548Z   safe-output-artifact-client: true
+2026-06-28T10:29:41.4858392Z env:
+2026-06-28T10:29:41.4858858Z   GH_AW_AGENT_AIC: 251.115
+2026-06-28T10:29:41.4859382Z   GH_AW_AIC: 251.115
+2026-06-28T10:29:41.4859884Z   GH_AW_AMBIENT_CONTEXT: 6781
+2026-06-28T10:29:41.4860865Z   GH_AW_CALLER_WORKFLOW_ID: jeffhandley/dotnet-runtime-servicing-release-manager/servicing-repro-producer
+2026-06-28T10:29:41.4861904Z   GH_AW_DETECTION_CONCLUSION: failure
+2026-06-28T10:29:41.4862505Z   GH_AW_DETECTION_REASON: parse_error
+2026-06-28T10:29:41.4863095Z   GH_AW_EFFECTIVE_TOKENS: 
+2026-06-28T10:29:41.4863646Z   GH_AW_ENGINE_ID: copilot
+2026-06-28T10:29:41.4864222Z   GH_AW_ENGINE_MODEL: claude-opus-4.8
+2026-06-28T10:29:41.4864815Z   GH_AW_ENGINE_VERSION: 1.0.63
+2026-06-28T10:29:41.4865368Z   GH_AW_THREAT_DETECTION_AIC: 
+2026-06-28T10:29:41.4865965Z   GH_AW_WORKFLOW_ID: servicing-repro-producer
+2026-06-28T10:29:41.4866970Z   GH_AW_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:29:41.4868389Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/blob/main/.github/workflows/servicing-repro-producer.md
+2026-06-28T10:29:41.4869821Z   GH_AW_SETUP_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:29:41.4871215Z   GH_AW_CURRENT_WORKFLOW_REF: jeffhandley/dotnet-runtime-servicing-release-manager/.github/workflows/servicing-repro-producer.lock.yml@refs/heads/main
+2026-06-28T10:29:41.4872572Z   GH_AW_INFO_VERSION: 1.0.63
+2026-06-28T10:29:41.4873130Z   GH_AW_INFO_AWF_VERSION: v0.27.7
+2026-06-28T10:29:41.4873727Z   GH_AW_INFO_ENGINE_ID: copilot
+2026-06-28T10:29:41.4875758Z ##[endgroup]
+2026-06-28T10:29:42.9799516Z Successfully copied 429 files to /home/runner/work/_temp/gh-aw/actions
+2026-06-28T10:29:42.9821321Z Successfully copied 26 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+2026-06-28T10:29:42.9822748Z Successfully copied 79 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+2026-06-28T10:29:42.9824068Z [otlp] INPUT_TRACE_ID=a14519b44acd7a2281993b80349cd1e0 (will reuse activation trace)
+2026-06-28T10:29:42.9825474Z [otlp] INPUT_PARENT_SPAN_ID=8cefa6e5aca242c1 (will parent setup span)
+2026-06-28T10:29:42.9826687Z [otlp] GH_AW_OTLP_ENDPOINTS not set, skipping setup span
+2026-06-28T10:29:42.9827576Z [otlp] resolved trace-id=a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:29:42.9828544Z [otlp] trace-id=a14519b44acd7a2281993b80349cd1e0 written to GITHUB_OUTPUT
+2026-06-28T10:29:42.9829665Z [otlp] span-id=60707eab79cfd1b4 written to GITHUB_OUTPUT
+2026-06-28T10:29:42.9830586Z [otlp] parent-span-id=8cefa6e5aca242c1 written to GITHUB_OUTPUT
+2026-06-28T10:29:42.9831543Z [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+2026-06-28T10:29:42.9832397Z [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+2026-06-28T10:29:42.9833257Z [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV

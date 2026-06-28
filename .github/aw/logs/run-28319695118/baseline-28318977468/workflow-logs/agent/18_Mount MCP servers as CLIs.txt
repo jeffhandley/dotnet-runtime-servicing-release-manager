@@ -1,0 +1,38 @@
+﻿2026-06-28T10:16:22.1024397Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:16:22.1025136Z with:
+2026-06-28T10:16:22.1026056Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/mount_mcp_as_cli.cjs');
+await main();
+
+2026-06-28T10:16:22.1029986Z   github-token: ***
+2026-06-28T10:16:22.1030228Z   debug: false
+2026-06-28T10:16:22.1030466Z   user-agent: actions/github-script
+2026-06-28T10:16:22.1030750Z   result-encoding: json
+2026-06-28T10:16:22.1030983Z   retries: 0
+2026-06-28T10:16:22.1031240Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:16:22.1031548Z env:
+2026-06-28T10:16:22.1031754Z   DEFAULT_BRANCH: main
+2026-06-28T10:16:22.1031997Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:16:22.1032251Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:16:22.1032495Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:16:22.1032791Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:16:22.1033197Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:16:22.1033573Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:16:22.1033948Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: bcb24487f741a264
+2026-06-28T10:16:22.1034272Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641761389
+2026-06-28T10:16:22.1035549Z   MCP_GATEWAY_API_KEY: ***
+2026-06-28T10:16:22.1035848Z   MCP_GATEWAY_DOMAIN: host.docker.internal
+2026-06-28T10:16:22.1036142Z   MCP_GATEWAY_PORT: 8080
+2026-06-28T10:16:22.1036384Z ##[endgroup]
+2026-06-28T10:16:22.1993047Z Mounting MCP servers as CLI tools...
+2026-06-28T10:16:22.1996275Z Found 1 user-facing server(s) in manifest (after filtering internal: github)
+2026-06-28T10:16:22.1997846Z Bridge script: /home/runner/work/_temp/gh-aw/actions/mcp_cli_bridge.cjs
+2026-06-28T10:16:22.2000807Z Mounting MCP server 'safeoutputs' (host url: http://127.0.0.1:8080/mcp/safeoutputs, container url: http://host.docker.internal:8080/mcp/safeoutputs)...
+2026-06-28T10:16:22.2447303Z   Found 7 tool(s)
+2026-06-28T10:16:22.2453815Z   ✓ Mounted as: /home/runner/work/_temp/gh-aw/mcp-cli/bin/safeoutputs
+2026-06-28T10:16:22.2455005Z CLI bin directory locked (read-only): /home/runner/work/_temp/gh-aw/mcp-cli/bin
+2026-06-28T10:16:22.2457070Z 
+2026-06-28T10:16:22.2457409Z Successfully mounted 1 MCP server(s) as CLI tools:
+2026-06-28T10:16:22.2458103Z   - safeoutputs
+2026-06-28T10:16:22.2458704Z CLI bin directory added to PATH: /home/runner/work/_temp/gh-aw/mcp-cli/bin

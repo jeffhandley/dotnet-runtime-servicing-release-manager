@@ -1,0 +1,737 @@
+﻿2026-06-28T10:25:51.5327455Z Current runner version: '2.335.1'
+2026-06-28T10:25:51.5361673Z ##[group]Runner Image Provisioner
+2026-06-28T10:25:51.5362984Z Hosted Compute Agent
+2026-06-28T10:25:51.5363971Z Version: 20260611.554
+2026-06-28T10:25:51.5365359Z Commit: 5e0782fdc9014723d3be820dd114dd31555c2bd1
+2026-06-28T10:25:51.5366537Z Build Date: 2026-06-11T21:40:46Z
+2026-06-28T10:25:51.5367587Z Worker ID: {61075489-5aca-4370-ab5c-d423975e071f}
+2026-06-28T10:25:51.5368794Z Azure Region: centralus
+2026-06-28T10:25:51.5369816Z ##[endgroup]
+2026-06-28T10:25:51.5371664Z ##[group]Operating System
+2026-06-28T10:25:51.5372826Z Ubuntu
+2026-06-28T10:25:51.5373596Z 24.04.4
+2026-06-28T10:25:51.5374559Z LTS
+2026-06-28T10:25:51.5375640Z ##[endgroup]
+2026-06-28T10:25:51.5376456Z ##[group]Runner Image
+2026-06-28T10:25:51.5377468Z Image: ubuntu-24.04
+2026-06-28T10:25:51.5378340Z Version: 20260622.220.1
+2026-06-28T10:25:51.5380313Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260622.220/images/ubuntu/Ubuntu2404-Readme.md
+2026-06-28T10:25:51.5382912Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260622.220
+2026-06-28T10:25:51.5384538Z ##[endgroup]
+2026-06-28T10:25:51.5386643Z ##[group]GITHUB_TOKEN Permissions
+2026-06-28T10:25:51.5389754Z Contents: read
+2026-06-28T10:25:51.5390767Z Metadata: read
+2026-06-28T10:25:51.5391764Z ##[endgroup]
+2026-06-28T10:25:51.5394837Z Secret source: Actions
+2026-06-28T10:25:51.5396343Z Prepare workflow directory
+2026-06-28T10:25:51.5754302Z Prepare all required actions
+2026-06-28T10:25:51.5807472Z Getting action download info
+2026-06-28T10:25:51.8488966Z Download action repository 'github/gh-aw-actions@8c7d04ebf1ece56cd381446125da3e0f6896294a' (SHA:8c7d04ebf1ece56cd381446125da3e0f6896294a)
+2026-06-28T10:25:52.6918446Z Download action repository 'actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c' (SHA:3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c)
+2026-06-28T10:25:53.2242308Z Download action repository 'actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0' (SHA:9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0)
+2026-06-28T10:25:53.2706180Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+2026-06-28T10:25:53.6493501Z Download action repository 'actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e' (SHA:48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e)
+2026-06-28T10:25:53.7770971Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-06-28T10:25:54.0010408Z Complete job name: detection
+2026-06-28T10:25:54.0848526Z ##[group]Run github/gh-aw-actions/setup@8c7d04ebf1ece56cd381446125da3e0f6896294a
+2026-06-28T10:25:54.0849313Z with:
+2026-06-28T10:25:54.0849666Z   destination: /home/runner/work/_temp/gh-aw/actions
+2026-06-28T10:25:54.0850074Z   job-name: detection
+2026-06-28T10:25:54.0850401Z   trace-id: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:54.0850789Z   parent-span-id: 8cefa6e5aca242c1
+2026-06-28T10:25:54.0851191Z   safe-output-artifact-client: false
+2026-06-28T10:25:54.0851660Z env:
+2026-06-28T10:25:54.0851996Z   GH_AW_SETUP_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:25:54.0852815Z   GH_AW_CURRENT_WORKFLOW_REF: jeffhandley/dotnet-runtime-servicing-release-manager/.github/workflows/servicing-repro-producer.lock.yml@refs/heads/main
+2026-06-28T10:25:54.0853573Z   GH_AW_INFO_VERSION: 1.0.63
+2026-06-28T10:25:54.0853909Z   GH_AW_INFO_AWF_VERSION: v0.27.7
+2026-06-28T10:25:54.0854246Z   GH_AW_INFO_ENGINE_ID: copilot
+2026-06-28T10:25:54.0854572Z ##[endgroup]
+2026-06-28T10:25:57.1605779Z Successfully copied 429 files to /home/runner/work/_temp/gh-aw/actions
+2026-06-28T10:25:57.3901026Z Successfully copied 26 mcp-scripts files to /home/runner/work/_temp/gh-aw/mcp-scripts
+2026-06-28T10:25:57.5126613Z Successfully copied 79 safe-outputs files to /home/runner/work/_temp/gh-aw/safeoutputs
+2026-06-28T10:25:57.5255509Z [otlp] INPUT_TRACE_ID=a14519b44acd7a2281993b80349cd1e0 (will reuse activation trace)
+2026-06-28T10:25:57.5257843Z [otlp] INPUT_PARENT_SPAN_ID=8cefa6e5aca242c1 (will parent setup span)
+2026-06-28T10:25:57.5266315Z [otlp] GH_AW_OTLP_ENDPOINTS not set, skipping setup span
+2026-06-28T10:25:57.5279474Z [otlp] resolved trace-id=a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:57.5280468Z [otlp] trace-id=a14519b44acd7a2281993b80349cd1e0 written to GITHUB_OUTPUT
+2026-06-28T10:25:57.5285996Z [otlp] span-id=81a26a3ecdf39161 written to GITHUB_OUTPUT
+2026-06-28T10:25:57.5300478Z [otlp] parent-span-id=8cefa6e5aca242c1 written to GITHUB_OUTPUT
+2026-06-28T10:25:57.5301475Z [otlp] GITHUB_AW_OTEL_TRACE_ID written to GITHUB_ENV
+2026-06-28T10:25:57.5301972Z [otlp] GITHUB_AW_OTEL_PARENT_SPAN_ID written to GITHUB_ENV
+2026-06-28T10:25:57.5302476Z [otlp] GITHUB_AW_OTEL_JOB_START_MS written to GITHUB_ENV
+2026-06-28T10:25:57.5481495Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+2026-06-28T10:25:57.5481999Z with:
+2026-06-28T10:25:57.5482296Z   name: agent
+2026-06-28T10:25:57.5482583Z   path: /tmp/gh-aw/
+2026-06-28T10:25:57.5482879Z   merge-multiple: false
+2026-06-28T10:25:57.5483276Z   repository: jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:25:57.5483718Z   run-id: 28318977468
+2026-06-28T10:25:57.5483999Z   skip-decompress: false
+2026-06-28T10:25:57.5484290Z   digest-mismatch: error
+2026-06-28T10:25:57.5484569Z env:
+2026-06-28T10:25:57.5485097Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:57.5485526Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:25:57.5485900Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:25:57.5486246Z ##[endgroup]
+2026-06-28T10:25:57.6816572Z Downloading single artifact
+2026-06-28T10:25:57.8241550Z Preparing to download the following artifacts:
+2026-06-28T10:25:57.8242426Z - agent (ID: 7933663254, Size: 3379775, Expected Digest: sha256:639fbfe6596c9c485c508a02e5b347a9228445b39881130fcddacab67154edf9)
+2026-06-28T10:25:58.0851282Z Redirecting to blob download url: https://productionresultssa11.blob.core.windows.net/actions-results/d679feb2-69ba-42ef-b231-6b698fed5442/workflow-job-run-d9674c04-b12c-5753-8f21-043c3e97b651/artifacts/d4f0bc5a29de06b510f9aa428f1eedba926012b591fef7a518e776a7c9bd1824.zip
+2026-06-28T10:25:58.0853345Z Starting download of artifact to: /tmp/gh-aw
+2026-06-28T10:25:58.2497658Z (node:3306) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-06-28T10:25:58.2499287Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-06-28T10:25:58.6075433Z SHA256 digest of downloaded artifact is 639fbfe6596c9c485c508a02e5b347a9228445b39881130fcddacab67154edf9
+2026-06-28T10:25:58.6076738Z Artifact download completed successfully.
+2026-06-28T10:25:58.6077268Z Total of 1 artifact(s) downloaded
+2026-06-28T10:25:58.6079479Z Download artifact has finished successfully
+2026-06-28T10:25:58.6215778Z ##[group]Run mkdir -p /tmp/gh-aw/
+2026-06-28T10:25:58.6216239Z [36;1mmkdir -p /tmp/gh-aw/[0m
+2026-06-28T10:25:58.6216578Z [36;1mfind "/tmp/gh-aw/" -type f -print[0m
+2026-06-28T10:25:58.6217051Z [36;1mecho "GH_AW_AGENT_OUTPUT=/tmp/gh-aw/agent_output.json" >> "$GITHUB_OUTPUT"[0m
+2026-06-28T10:25:58.6342772Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:25:58.6343076Z env:
+2026-06-28T10:25:58.6343361Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:58.6343748Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:25:58.6344085Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:25:58.6344377Z ##[endgroup]
+2026-06-28T10:25:58.6445444Z /tmp/gh-aw/github_rate_limits.jsonl
+2026-06-28T10:25:58.6445951Z /tmp/gh-aw/agent_usage.json
+2026-06-28T10:25:58.6446376Z /tmp/gh-aw/agent_output.json
+2026-06-28T10:25:58.6446807Z /tmp/gh-aw/agent/comment-body.md
+2026-06-28T10:25:58.6447278Z /tmp/gh-aw/agent/servicing-repro/output.log
+2026-06-28T10:25:58.6447881Z /tmp/gh-aw/agent/servicing-repro/global.json
+2026-06-28T10:25:58.6448684Z /tmp/gh-aw/agent/servicing-repro/NuGet.config
+2026-06-28T10:25:58.6449234Z /tmp/gh-aw/agent/servicing-repro/repro/Program.cs
+2026-06-28T10:25:58.6450015Z /tmp/gh-aw/agent/servicing-repro/repro/repro.csproj
+2026-06-28T10:25:58.6450502Z /tmp/gh-aw/agent/servicing-repro/step-summary.md
+2026-06-28T10:25:58.6450842Z /tmp/gh-aw/agent/comment-payload.json
+2026-06-28T10:25:58.6451210Z /tmp/gh-aw/pre-agent-audit.txt
+2026-06-28T10:25:58.6451531Z /tmp/gh-aw/agent-stdio.log
+2026-06-28T10:25:58.6451864Z /tmp/gh-aw/sandbox/agent/logs/process-1782641810720-210.log
+2026-06-28T10:25:58.6452288Z /tmp/gh-aw/sandbox/firewall/logs/cache.log
+2026-06-28T10:25:58.6452613Z /tmp/gh-aw/sandbox/firewall/logs/access.log
+2026-06-28T10:25:58.6452969Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/otel.jsonl
+2026-06-28T10:25:58.6453402Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-06-28T10:25:58.6453849Z /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/models.json
+2026-06-28T10:25:58.6454372Z /tmp/gh-aw/sandbox/firewall/logs/audit.jsonl
+2026-06-28T10:25:58.6454716Z /tmp/gh-aw/sandbox/firewall/awf-reflect.json
+2026-06-28T10:25:58.6455281Z /tmp/gh-aw/sandbox/firewall/audit/iptables-audit.txt
+2026-06-28T10:25:58.6455629Z /tmp/gh-aw/sandbox/firewall/audit/squid.conf
+2026-06-28T10:25:58.6455997Z /tmp/gh-aw/sandbox/firewall/audit/awf-resolved-config.json
+2026-06-28T10:25:58.6456383Z /tmp/gh-aw/sandbox/firewall/audit/policy-manifest.json
+2026-06-28T10:25:58.6456820Z /tmp/gh-aw/sandbox/firewall/audit/docker-compose.redacted.yml
+2026-06-28T10:25:58.6457180Z /tmp/gh-aw/otel.jsonl
+2026-06-28T10:25:58.6457427Z /tmp/gh-aw/awf-config.json
+2026-06-28T10:25:58.6457689Z /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:25:58.6457969Z /tmp/gh-aw/safeoutputs.jsonl
+2026-06-28T10:25:58.6458267Z /tmp/gh-aw/mcp-logs/safeoutputs.log
+2026-06-28T10:25:58.6458552Z /tmp/gh-aw/mcp-logs/stderr.log
+2026-06-28T10:25:58.6458828Z /tmp/gh-aw/mcp-logs/rpc-messages.jsonl
+2026-06-28T10:25:58.6459129Z /tmp/gh-aw/mcp-logs/github.log
+2026-06-28T10:25:58.6459406Z /tmp/gh-aw/mcp-logs/mcp-gateway.log
+2026-06-28T10:25:58.6459690Z /tmp/gh-aw/mcp-logs/start-gateway.log
+2026-06-28T10:25:58.6460298Z /tmp/gh-aw/mcp-logs/wazero-cache/wazero-v1.11.0-amd64-linux/8cae5f71b3a6859b21ca7f5165e62e00ad14f143ea4505869f79c02f654cabd1
+2026-06-28T10:25:58.6460880Z /tmp/gh-aw/mcp-logs/gateway.md
+2026-06-28T10:25:58.6461153Z /tmp/gh-aw/mcp-logs/safeoutputs/server.log
+2026-06-28T10:25:58.6461446Z /tmp/gh-aw/mcp-logs/tools.json
+2026-06-28T10:25:58.6497300Z ##[group]Run rm -rf /tmp/gh-aw/sandbox/firewall/logs
+2026-06-28T10:25:58.6497719Z [36;1mrm -rf /tmp/gh-aw/sandbox/firewall/logs[0m
+2026-06-28T10:25:58.6498070Z [36;1mrm -rf /tmp/gh-aw/sandbox/firewall/audit[0m
+2026-06-28T10:25:58.6527621Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:25:58.6527898Z env:
+2026-06-28T10:25:58.6528173Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:58.6528569Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:25:58.6528914Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:25:58.6529219Z ##[endgroup]
+2026-06-28T10:25:58.6627912Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/download_docker_images.sh" ghcr.io/github/gh-aw-firewall/agent:0.27.7@sha256:aae231e4635c8999d039c132f1602d3df850fe9b84a00aa2b5ac981179b5661c ghcr.io/github/gh-aw-firewall/api-proxy:0.27.7@sha256:009caf2e3d88fa77b64e9a03a95a228fc58db0f1701c6d324b29ba5a3c7c79b6 ghcr.io/github/gh-aw-firewall/squid:0.27.7@sha256:deb1d4e19de62d51cee0508057a596a19315c3423ada4d675cad136dc8037c96
+2026-06-28T10:25:58.6630714Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/download_docker_images.sh" ghcr.io/github/gh-aw-firewall/agent:0.27.7@sha256:aae231e4635c8999d039c132f1602d3df850fe9b84a00aa2b5ac981179b5661c ghcr.io/github/gh-aw-firewall/api-proxy:0.27.7@sha256:009caf2e3d88fa77b64e9a03a95a228fc58db0f1701c6d324b29ba5a3c7c79b6 ghcr.io/github/gh-aw-firewall/squid:0.27.7@sha256:deb1d4e19de62d51cee0508057a596a19315c3423ada4d675cad136dc8037c96[0m
+2026-06-28T10:25:58.6661522Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:25:58.6661972Z env:
+2026-06-28T10:25:58.6662298Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:25:58.6662698Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:25:58.6663031Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:25:58.6663333Z ##[endgroup]
+2026-06-28T10:25:58.6727642Z Starting download of 3 image(s) with max 4 concurrent downloads...
+2026-06-28T10:25:58.6819803Z Attempt 1 of 3: Pulling ghcr.io/github/gh-aw-firewall/agent:0.27.7@sha256:aae231e4635c8999d039c132f1602d3df850fe9b84a00aa2b5ac981179b5661c...
+2026-06-28T10:25:58.6852538Z Attempt 1 of 3: Pulling ghcr.io/github/gh-aw-firewall/api-proxy:0.27.7@sha256:009caf2e3d88fa77b64e9a03a95a228fc58db0f1701c6d324b29ba5a3c7c79b6...
+2026-06-28T10:25:58.6854063Z Attempt 1 of 3: Pulling ghcr.io/github/gh-aw-firewall/squid:0.27.7@sha256:deb1d4e19de62d51cee0508057a596a19315c3423ada4d675cad136dc8037c96...
+2026-06-28T10:26:00.0096955Z ghcr.io/github/gh-aw-firewall/squid:0.27.7@sha256:deb1d4e19de62d51cee0508057a596a19315c3423ada4d675cad136dc8037c96
+2026-06-28T10:26:00.0114840Z Successfully pulled ghcr.io/github/gh-aw-firewall/squid:0.27.7@sha256:deb1d4e19de62d51cee0508057a596a19315c3423ada4d675cad136dc8037c96
+2026-06-28T10:26:00.0115861Z Tagging digest-pinned image as ghcr.io/github/gh-aw-firewall/squid:0.27.7
+2026-06-28T10:26:02.0182844Z ghcr.io/github/gh-aw-firewall/api-proxy:0.27.7@sha256:009caf2e3d88fa77b64e9a03a95a228fc58db0f1701c6d324b29ba5a3c7c79b6
+2026-06-28T10:26:02.0206246Z Successfully pulled ghcr.io/github/gh-aw-firewall/api-proxy:0.27.7@sha256:009caf2e3d88fa77b64e9a03a95a228fc58db0f1701c6d324b29ba5a3c7c79b6
+2026-06-28T10:26:02.0210995Z Tagging digest-pinned image as ghcr.io/github/gh-aw-firewall/api-proxy:0.27.7
+2026-06-28T10:26:07.0003323Z ghcr.io/github/gh-aw-firewall/agent:0.27.7@sha256:aae231e4635c8999d039c132f1602d3df850fe9b84a00aa2b5ac981179b5661c
+2026-06-28T10:26:07.0019766Z Successfully pulled ghcr.io/github/gh-aw-firewall/agent:0.27.7@sha256:aae231e4635c8999d039c132f1602d3df850fe9b84a00aa2b5ac981179b5661c
+2026-06-28T10:26:07.0020633Z Tagging digest-pinned image as ghcr.io/github/gh-aw-firewall/agent:0.27.7
+2026-06-28T10:26:07.0170808Z All images downloaded successfully
+2026-06-28T10:26:07.0213144Z ##[group]Run if [[ -n "$OUTPUT_TYPES" || "$HAS_PATCH" == "true" ]]; then
+2026-06-28T10:26:07.0213648Z [36;1mif [[ -n "$OUTPUT_TYPES" || "$HAS_PATCH" == "true" ]]; then[0m
+2026-06-28T10:26:07.0214057Z [36;1m  echo "run_detection=true" >> "$GITHUB_OUTPUT"[0m
+2026-06-28T10:26:07.0214520Z [36;1m  echo "Detection will run: output_types=$OUTPUT_TYPES, has_patch=$HAS_PATCH"[0m
+2026-06-28T10:26:07.0215225Z [36;1melse[0m
+2026-06-28T10:26:07.0215517Z [36;1m  echo "run_detection=false" >> "$GITHUB_OUTPUT"[0m
+2026-06-28T10:26:07.0215957Z [36;1m  echo "Detection skipped: no agent outputs or patches to analyze"[0m
+2026-06-28T10:26:07.0216338Z [36;1mfi[0m
+2026-06-28T10:26:07.0251016Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:26:07.0251306Z env:
+2026-06-28T10:26:07.0251595Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:07.0252010Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:07.0252399Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:07.0252766Z   OUTPUT_TYPES: upload_artifact,add_comment,missing_tool
+2026-06-28T10:26:07.0253101Z   HAS_PATCH: false
+2026-06-28T10:26:07.0253341Z ##[endgroup]
+2026-06-28T10:26:07.0305945Z Detection will run: output_types=upload_artifact,add_comment,missing_tool, has_patch=false
+2026-06-28T10:26:07.0333119Z ##[group]Run rm -f "${RUNNER_TEMP}/gh-aw/mcp-config/mcp-servers.json"
+2026-06-28T10:26:07.0333627Z [36;1mrm -f "${RUNNER_TEMP}/gh-aw/mcp-config/mcp-servers.json"[0m
+2026-06-28T10:26:07.0334022Z [36;1mrm -f "$HOME/.copilot/mcp-config.json"[0m
+2026-06-28T10:26:07.0334389Z [36;1mrm -f "$GITHUB_WORKSPACE/.gemini/settings.json"[0m
+2026-06-28T10:26:07.0364362Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:26:07.0364623Z env:
+2026-06-28T10:26:07.0365073Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:07.0365639Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:07.0366013Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:07.0366305Z ##[endgroup]
+2026-06-28T10:26:07.0471758Z ##[group]Run mkdir -p /tmp/gh-aw/threat-detection/aw-prompts
+2026-06-28T10:26:07.0472246Z [36;1mmkdir -p /tmp/gh-aw/threat-detection/aw-prompts[0m
+2026-06-28T10:26:07.0472608Z [36;1mrm -f /tmp/gh-aw/agent_usage.json[0m
+2026-06-28T10:26:07.0473147Z [36;1mcp /tmp/gh-aw/aw-prompts/prompt.txt /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt 2>/dev/null || true[0m
+2026-06-28T10:26:07.0473824Z [36;1mif [ ! -s /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt ]; then[0m
+2026-06-28T10:26:07.0475172Z [36;1m  echo "::warning::ERR_VALIDATION: Missing or empty detection context prompt at /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt. Ensure the agent artifact includes /tmp/gh-aw/aw-prompts/prompt.txt. Detection will continue with fallback workflow context."[0m
+2026-06-28T10:26:07.0476156Z [36;1mfi[0m
+2026-06-28T10:26:07.0476598Z [36;1mcp /tmp/gh-aw/agent_output.json /tmp/gh-aw/threat-detection/agent_output.json 2>/dev/null || true[0m
+2026-06-28T10:26:07.0477136Z [36;1mfor f in /tmp/gh-aw/aw-*.patch; do[0m
+2026-06-28T10:26:07.0477537Z [36;1m  [ -f "$f" ] && cp "$f" /tmp/gh-aw/threat-detection/ 2>/dev/null || true[0m
+2026-06-28T10:26:07.0477903Z [36;1mdone[0m
+2026-06-28T10:26:07.0478160Z [36;1mfor f in /tmp/gh-aw/aw-*.bundle; do[0m
+2026-06-28T10:26:07.0478539Z [36;1m  [ -f "$f" ] && cp "$f" /tmp/gh-aw/threat-detection/ 2>/dev/null || true[0m
+2026-06-28T10:26:07.0478893Z [36;1mdone[0m
+2026-06-28T10:26:07.0479147Z [36;1mecho "Prepared threat detection files:"[0m
+2026-06-28T10:26:07.0479539Z [36;1mls -la /tmp/gh-aw/threat-detection/ 2>/dev/null || true[0m
+2026-06-28T10:26:07.0508739Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:26:07.0509004Z env:
+2026-06-28T10:26:07.0509287Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:07.0509685Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:07.0510017Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:07.0510308Z ##[endgroup]
+2026-06-28T10:26:07.0614321Z Prepared threat detection files:
+2026-06-28T10:26:07.0628082Z total 16
+2026-06-28T10:26:07.0628456Z drwxr-xr-x 3 runner runner 4096 Jun 28 10:26 .
+2026-06-28T10:26:07.0628995Z drwxr-xr-x 7 runner runner 4096 Jun 28 10:26 ..
+2026-06-28T10:26:07.0629397Z -rw-r--r-- 1 runner runner 2248 Jun 28 10:26 agent_output.json
+2026-06-28T10:26:07.0629843Z drwxr-xr-x 2 runner runner 4096 Jun 28 10:26 aw-prompts
+2026-06-28T10:26:07.0705403Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:26:07.0705828Z with:
+2026-06-28T10:26:07.0706773Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/setup_threat_detection.cjs');
+await main();
+
+2026-06-28T10:26:07.0710660Z   github-token: ***
+2026-06-28T10:26:07.0710906Z   debug: false
+2026-06-28T10:26:07.0711155Z   user-agent: actions/github-script
+2026-06-28T10:26:07.0711445Z   result-encoding: json
+2026-06-28T10:26:07.0711679Z   retries: 0
+2026-06-28T10:26:07.0711931Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:26:07.0712244Z env:
+2026-06-28T10:26:07.0712539Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:07.0712920Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:07.0713299Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:07.0713619Z   WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:26:07.0715413Z   WORKFLOW_DESCRIPTION: Build and verify a minimum reproduction for a single dotnet/runtime servicing release PR (a PR targeting a release/* branch). Dispatched by the servicing-release-manager (or run manually) with a PR number. Installs the baseline GA SDK, authors a minimal repro, runs it to confirm the bug, uploads the repro + output.log as an artifact, writes a step summary, and posts a repro comment to the PR (unless run in dry-run mode).
+2026-06-28T10:26:07.0717166Z   HAS_PATCH: false
+2026-06-28T10:26:07.0717395Z ##[endgroup]
+2026-06-28T10:26:07.1669322Z Prompt file found: /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt (9194 bytes)
+2026-06-28T10:26:07.1670894Z Agent output file found: /tmp/gh-aw/threat-detection/agent_output.json (2248 bytes)
+2026-06-28T10:26:07.1695043Z Threat detection setup completed
+2026-06-28T10:26:07.1821050Z ##[group]Run mkdir -p /tmp/gh-aw/threat-detection
+2026-06-28T10:26:07.1821457Z [36;1mmkdir -p /tmp/gh-aw/threat-detection[0m
+2026-06-28T10:26:07.1821827Z [36;1mtouch /tmp/gh-aw/threat-detection/detection.log[0m
+2026-06-28T10:26:07.1856093Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:26:07.1856363Z env:
+2026-06-28T10:26:07.1856658Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:07.1857060Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:07.1857419Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:07.1857752Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:26:07.1858075Z ##[endgroup]
+2026-06-28T10:26:07.2002929Z ##[group]Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+2026-06-28T10:26:07.2003342Z with:
+2026-06-28T10:26:07.2003555Z   node-version: 24
+2026-06-28T10:26:07.2003802Z   package-manager-cache: false
+2026-06-28T10:26:07.2004069Z   check-latest: false
+2026-06-28T10:26:07.2019903Z   token: ***
+2026-06-28T10:26:07.2020178Z env:
+2026-06-28T10:26:07.2020466Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:07.2020856Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:07.2021199Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:07.2021545Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:26:07.2021874Z ##[endgroup]
+2026-06-28T10:26:07.3821967Z Found in cache @ /opt/hostedtoolcache/node/24.17.0/x64
+2026-06-28T10:26:07.3827490Z ##[group]Environment details
+2026-06-28T10:26:09.6650195Z node: v24.17.0
+2026-06-28T10:26:09.6650581Z npm: 11.13.0
+2026-06-28T10:26:09.6650808Z yarn: 1.22.22
+2026-06-28T10:26:09.6651661Z ##[endgroup]
+2026-06-28T10:26:09.6799316Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/install_copilot_cli.sh" 1.0.63
+2026-06-28T10:26:09.6799867Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/install_copilot_cli.sh" 1.0.63[0m
+2026-06-28T10:26:09.6877596Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:26:09.6877880Z env:
+2026-06-28T10:26:09.6878161Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:09.6878558Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:09.6878889Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:09.6879238Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:26:09.6879556Z   GH_HOST: github.com
+2026-06-28T10:26:09.6879799Z ##[endgroup]
+2026-06-28T10:26:09.6983289Z Ensuring correct ownership of /home/runner/.copilot...
+2026-06-28T10:26:09.7132526Z Installing GitHub Copilot CLI version 1.0.63 (os: Linux, arch: x86_64)...
+2026-06-28T10:26:09.7153929Z Explicit Copilot CLI version argument provided (1.0.63); skipping compat matrix resolution.
+2026-06-28T10:26:09.7158693Z Searching toolcache for GitHub Copilot CLI (requested: 1.0.63, arch: x64, range: none..none)...
+2026-06-28T10:26:09.7164767Z   Scanning toolcache root: /opt/hostedtoolcache/copilot-cli
+2026-06-28T10:26:09.7274262Z   Found candidate: /opt/hostedtoolcache/copilot-cli/1.0.56/x64/bin/copilot (version: 1.0.56, arch: x64)
+2026-06-28T10:26:09.7276691Z   Skipping candidate (version mismatch: want 1.0.63, got 1.0.56)
+2026-06-28T10:26:09.7277348Z   Scanning toolcache root: /opt/hostedtoolcache/copilot-cli
+2026-06-28T10:26:09.7378328Z   Found candidate: /opt/hostedtoolcache/copilot-cli/1.0.56/x64/bin/copilot (version: 1.0.56, arch: x64)
+2026-06-28T10:26:09.7380244Z   Skipping candidate (version mismatch: want 1.0.63, got 1.0.56)
+2026-06-28T10:26:09.7381001Z   Toolcache root /home/runner/work/_tool/copilot-cli not found, skipping
+2026-06-28T10:26:09.7381728Z   No compatible toolcache entry found
+2026-06-28T10:26:09.7386458Z Downloading checksums from https://github.com/github/copilot-cli/releases/download/v1.0.63/SHA256SUMS.txt...
+2026-06-28T10:26:09.8812378Z Downloading binary from https://github.com/github/copilot-cli/releases/download/v1.0.63/copilot-linux-x64.tar.gz...
+2026-06-28T10:26:10.4692711Z Verifying SHA256 checksum for copilot-linux-x64.tar.gz...
+2026-06-28T10:26:10.5563699Z ✓ Checksum verification passed for copilot-linux-x64.tar.gz
+2026-06-28T10:26:10.5564699Z Installing binary to /usr/local/bin...
+2026-06-28T10:26:11.6691471Z Verifying Copilot CLI installation...
+2026-06-28T10:26:13.8114486Z GitHub Copilot CLI 1.0.63.
+2026-06-28T10:26:13.8115087Z Run 'copilot update' to check for updates.
+2026-06-28T10:26:13.8434468Z ✓ Copilot CLI installation complete
+2026-06-28T10:26:13.8632788Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/install_awf_binary.sh" v0.27.7
+2026-06-28T10:26:13.8633710Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/install_awf_binary.sh" v0.27.7[0m
+2026-06-28T10:26:13.8676956Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:26:13.8677344Z env:
+2026-06-28T10:26:13.8677640Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:13.8678039Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:13.8678379Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:13.8678721Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:26:13.8679036Z ##[endgroup]
+2026-06-28T10:26:13.8773612Z Installing awf with checksum verification (version: v0.27.7, os: Linux, arch: x86_64)
+2026-06-28T10:26:13.8787424Z Downloading checksums from 'https://github.com/github/gh-aw-firewall/releases/download/v0.27.7/checksums.txt'...
+2026-06-28T10:26:14.0318901Z Node.js >= 20 detected (v24.17.0), using lightweight bundle...
+2026-06-28T10:26:14.0320294Z Downloading bundle from 'https://github.com/github/gh-aw-firewall/releases/download/v0.27.7/awf-bundle.js'...
+2026-06-28T10:26:14.2257354Z Verifying SHA256 checksum for awf-bundle.js...
+2026-06-28T10:26:14.2321376Z ✓ Checksum verification passed for awf-bundle.js
+2026-06-28T10:26:14.2615815Z ✓ Installed awf bundle to /usr/local/lib/awf/awf-bundle.js
+2026-06-28T10:26:14.4276173Z 0.27.7
+2026-06-28T10:26:14.4338867Z ✓ AWF installation complete
+2026-06-28T10:26:14.4412598Z ##[group]Run set -o pipefail
+2026-06-28T10:26:14.4412992Z [36;1mset -o pipefail[0m
+2026-06-28T10:26:14.4413352Z [36;1mprintf '%s' "$(date +%s%3N)" > /tmp/gh-aw/agent_cli_start_ms.txt[0m
+2026-06-28T10:26:14.4413804Z [36;1mtrap 'rm -f "$HOME/.copilot/settings.json"' EXIT[0m
+2026-06-28T10:26:14.4414164Z [36;1mmkdir -p "$HOME/.copilot"[0m
+2026-06-28T10:26:14.4414616Z [36;1mprintf '%s' '{"builtInAgents":{"rubberDuck":false}}' > "$HOME/.copilot/settings.json"[0m
+2026-06-28T10:26:14.4415335Z [36;1mexport XDG_CONFIG_HOME="$HOME"[0m
+2026-06-28T10:26:14.4415666Z [36;1mtouch /tmp/gh-aw/agent-step-summary.md[0m
+2026-06-28T10:26:14.4416083Z [36;1mGH_AW_NODE_BIN=$(command -v node 2>/dev/null || true)[0m
+2026-06-28T10:26:14.4416419Z [36;1mexport GH_AW_NODE_BIN[0m
+2026-06-28T10:26:14.4416736Z [36;1mexport COPILOT_API_KEY="$COPILOT_DUMMY_BYOK"[0m
+2026-06-28T10:26:14.4417167Z [36;1m(umask 177 && touch /tmp/gh-aw/threat-detection/detection.log)[0m
+2026-06-28T10:26:14.4417681Z [36;1mGH_AW_MAX_AI_CREDITS="${GH_AW_MAX_AI_CREDITS:-400}"[0m
+2026-06-28T10:26:14.4421025Z [36;1mprintf '%s\n' "{\"\$schema\":\"https://github.com/github/gh-aw-firewall/releases/download/v0.27.7/awf-config.schema.json\",\"network\":{\"allowDomains\":[\"api.business.githubcopilot.com\",\"api.enterprise.githubcopilot.com\",\"api.github.com\",\"api.githubcopilot.com\",\"api.individual.githubcopilot.com\",\"github.com\",\"host.docker.internal\",\"registry.npmjs.org\",\"telemetry.enterprise.githubcopilot.com\"]},\"apiProxy\":{\"enabled\":true,\"enableTokenSteering\":true,\"maxRuns\":500,\"maxAiCredits\":${GH_AW_MAX_AI_CREDITS},\"maxCacheMisses\":5},\"container\":{\"imageTag\":\"0.27.7,squid=sha256:deb1d4e19de62d51cee0508057a596a19315c3423ada4d675cad136dc8037c96,agent=sha256:aae231e4635c8999d039c132f1602d3df850fe9b84a00aa2b5ac981179b5661c,api-proxy=sha256:009caf2e3d88fa77b64e9a03a95a228fc58db0f1701c6d324b29ba5a3c7c79b6,cli-proxy=sha256:4757f198a3fa20f88bdbe70be7ae1a05f127d9c0a9e96a5d6460ef40c08fc83d\"}}" > "${RUNNER_TEMP}/gh-aw/awf-config.json"[0m
+2026-06-28T10:26:14.4424562Z [36;1mcp "${RUNNER_TEMP}/gh-aw/awf-config.json" /tmp/gh-aw/awf-config.json[0m
+2026-06-28T10:26:14.4425200Z [36;1mexport GH_AW_MODELS_JSON_PATH="/tmp/gh-aw/models.json"[0m
+2026-06-28T10:26:14.4425561Z [36;1mGH_AW_DOCKER_HOST=""[0m
+2026-06-28T10:26:14.4425855Z [36;1mif [[ "${DOCKER_HOST:-}" =~ ^tcp:// ]]; then[0m
+2026-06-28T10:26:14.4426189Z [36;1m  GH_AW_DOCKER_HOST="${DOCKER_HOST}"[0m
+2026-06-28T10:26:14.4426484Z [36;1mfi[0m
+2026-06-28T10:26:14.4426741Z [36;1mGH_AW_DOCKER_HOST_PATH_PREFIX_ARGS=""[0m
+2026-06-28T10:26:14.4427071Z [36;1mif [[ "${DOCKER_HOST:-}" =~ ^tcp:// ]]; then[0m
+2026-06-28T10:26:14.4427512Z [36;1m  GH_AW_DOCKER_HOST_PATH_PREFIX_ARGS="--docker-host-path-prefix /tmp/gh-aw"[0m
+2026-06-28T10:26:14.4428789Z [36;1m  _GH_AW_CHROOT_JSON=$(jq -c --arg src /tmp/gh-aw --arg user "$(id -un)" --argjson uid "$(id -u)" --argjson gid "$(id -g)" --arg home /tmp/gh-aw/home '.chroot={"binariesSourcePath":$src,"identity":{"user":$user,"uid":$uid,"gid":$gid,"home":$home}}' "${RUNNER_TEMP}/gh-aw/awf-config.json") || { echo "chroot config patch failed" >&2; exit 1; }[0m
+2026-06-28T10:26:14.4429973Z [36;1m  printf '%s\n' "$_GH_AW_CHROOT_JSON" > "${RUNNER_TEMP}/gh-aw/awf-config.json"[0m
+2026-06-28T10:26:14.4430463Z [36;1m  printf '%s\n' "$_GH_AW_CHROOT_JSON" > "/tmp/gh-aw/awf-config.json"[0m
+2026-06-28T10:26:14.4430819Z [36;1mfi[0m
+2026-06-28T10:26:14.4431036Z [36;1mGH_AW_TOOL_CACHE_MOUNT=""[0m
+2026-06-28T10:26:14.4431459Z [36;1mGH_AW_TOOL_CACHE="${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"[0m
+2026-06-28T10:26:14.4431887Z [36;1mif [ -d "$GH_AW_TOOL_CACHE" ]; then[0m
+2026-06-28T10:26:14.4432231Z [36;1m  if [[ "$GH_AW_TOOL_CACHE" != /opt/* ]]; then[0m
+2026-06-28T10:26:14.4432625Z [36;1m    GH_AW_TOOL_CACHE_MOUNT="$GH_AW_TOOL_CACHE:$GH_AW_TOOL_CACHE:ro"[0m
+2026-06-28T10:26:14.4432997Z [36;1m  fi[0m
+2026-06-28T10:26:14.4433205Z [36;1mfi[0m
+2026-06-28T10:26:14.4433627Z [36;1m# shellcheck disable=SC1003,SC2086[0m
+2026-06-28T10:26:14.4435827Z [36;1msudo -E awf --config "${RUNNER_TEMP}/gh-aw/awf-config.json" --container-workdir "${GITHUB_WORKSPACE}" --mount "${RUNNER_TEMP}/gh-aw:${RUNNER_TEMP}/gh-aw:ro" --mount "${RUNNER_TEMP}/gh-aw:/host${RUNNER_TEMP}/gh-aw:ro" ${GH_AW_TOOL_CACHE_MOUNT:+--mount "$GH_AW_TOOL_CACHE_MOUNT"} ${GH_AW_DOCKER_HOST:+--docker-host "$GH_AW_DOCKER_HOST"} ${GH_AW_DOCKER_HOST_PATH_PREFIX_ARGS} --env-all --exclude-env COPILOT_GITHUB_TOKEN --log-level info --proxy-logs-dir /tmp/gh-aw/sandbox/firewall/logs --audit-dir /tmp/gh-aw/sandbox/firewall/audit --enable-host-access --allow-host-ports 80,443,8080 --skip-pull \[0m
+2026-06-28T10:26:14.4441061Z [36;1m  -- /bin/bash -c 'set +o histexpand; : "${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"; GH_AW_TOOL_CACHE="$RUNNER_TOOL_CACHE"; export PATH="$(find "$GH_AW_TOOL_CACHE" -maxdepth 5 -type d -name bin 2>/dev/null | tr '\''\n'\'' '\'':'\'')$PATH"; [ -n "$GOROOT" ] && export PATH="$GOROOT/bin:$PATH" || true && GH_AW_NODE_EXEC="${GH_AW_NODE_BIN:-}"; if [ -z "$GH_AW_NODE_EXEC" ] || [ ! -x "$GH_AW_NODE_EXEC" ]; then GH_AW_NODE_EXEC="$(command -v node 2>/dev/null || true)"; fi; if [ -z "$GH_AW_NODE_EXEC" ]; then echo "node runtime missing on this runner — check runtimes.node in workflow YAML" >&2; exit 127; fi; GH_AW_NPM_GLOBAL_ROOT="$(npm root -g 2>/dev/null || true)"; if [ -n "$GH_AW_NPM_GLOBAL_ROOT" ]; then export NODE_PATH="${GH_AW_NPM_GLOBAL_ROOT}${NODE_PATH:+:${NODE_PATH}}"; fi; "$GH_AW_NODE_EXEC" ${RUNNER_TEMP}/gh-aw/actions/copilot_harness.cjs /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --add-dir "${GITHUB_WORKSPACE}" --prompt-file /tmp/gh-aw/aw-prompts/prompt.txt' 2>&1 | tee -a /tmp/gh-aw/threat-detection/detection.log[0m
+2026-06-28T10:26:14.4477759Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:26:14.4478035Z env:
+2026-06-28T10:26:14.4478325Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:26:14.4478732Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:26:14.4479063Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:26:14.4479411Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:26:14.4479730Z   AWF_REFLECT_ENABLED: 1
+2026-06-28T10:26:14.4479997Z   COPILOT_AGENT_RUNNER_TYPE: STANDALONE
+2026-06-28T10:26:14.4480334Z   COPILOT_DUMMY_BYOK: dummy-byok-key-for-offline-mode
+2026-06-28T10:26:14.4480689Z   COPILOT_GITHUB_TOKEN: 
+
+2026-06-28T10:26:14.4480956Z   COPILOT_MODEL: claude-opus-4.8
+2026-06-28T10:26:14.4481228Z   GH_AW_MAX_AI_CREDITS: 400
+2026-06-28T10:26:14.4481472Z   GH_AW_MAX_TURNS: 
+2026-06-28T10:26:14.4481709Z   GH_AW_PHASE: detection
+2026-06-28T10:26:14.4481961Z   GH_AW_TIMEOUT_MINUTES: 20
+2026-06-28T10:26:14.4482203Z   GH_AW_VERSION: v0.80.9
+2026-06-28T10:26:14.4482480Z   GITHUB_API_URL: https://api.github.com
+2026-06-28T10:26:14.4482771Z   GITHUB_AW: true
+2026-06-28T10:26:14.4483035Z   GITHUB_COPILOT_INTEGRATION_ID: agentic-workflows
+2026-06-28T10:26:14.4483350Z   GITHUB_HEAD_REF: 
+2026-06-28T10:26:14.4483585Z   GITHUB_REF_NAME: main
+2026-06-28T10:26:14.4483845Z   GITHUB_SERVER_URL: https://github.com
+2026-06-28T10:26:14.4484207Z   GITHUB_STEP_SUMMARY: /tmp/gh-aw/agent-step-summary.md
+2026-06-28T10:26:14.4484854Z   GITHUB_WORKSPACE: /home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager
+2026-06-28T10:26:14.4485699Z   GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+2026-06-28T10:26:14.4486076Z   GIT_AUTHOR_NAME: github-actions[bot]
+2026-06-28T10:26:14.4486441Z   GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+2026-06-28T10:26:14.4486832Z   GIT_COMMITTER_NAME: github-actions[bot]
+2026-06-28T10:26:14.4487143Z   RUNNER_TEMP: /home/runner/work/_temp
+2026-06-28T10:26:14.4487508Z   TRACEPARENT: 00-a14519b44acd7a2281993b80349cd1e0-81a26a3ecdf39161-01
+2026-06-28T10:26:14.4487884Z ##[endgroup]
+2026-06-28T10:26:14.6335401Z [INFO] Auto-detected DNS servers from /run/systemd/resolve/resolv.conf: 168.63.129.16
+2026-06-28T10:26:14.6348313Z [WARN] ⚠️  Using --env-all: All host environment variables will be passed to container
+2026-06-28T10:26:14.6349040Z [WARN]    This may expose sensitive credentials if logs or configs are shared
+2026-06-28T10:26:14.6350356Z [WARN] ⚠️  Host access enabled with host.docker.internal in allowed domains
+2026-06-28T10:26:14.6351362Z [WARN]    Containers can access ANY service running on the host machine
+2026-06-28T10:26:14.6351932Z [WARN]    Only use this for trusted workloads (e.g., MCP gateways)
+2026-06-28T10:26:14.6352963Z [INFO] API proxy enabled: OpenAI=false, Anthropic=false, Copilot=true (github-token), Gemini=false
+2026-06-28T10:26:18.6751253Z [INFO] Allowed domains: api.business.githubcopilot.com, api.enterprise.githubcopilot.com, api.github.com, api.githubcopilot.com, api.individual.githubcopilot.com, github.com, host.docker.internal, registry.npmjs.org, telemetry.enterprise.githubcopilot.com
+2026-06-28T10:26:18.6753526Z [INFO] Setting up host-level firewall network and iptables rules...
+2026-06-28T10:26:18.7526331Z [SUCCESS] Created network 'awf-net' with bridge 'fw-bridge'
+2026-06-28T10:26:18.7527144Z [INFO] Setting up host-level iptables rules...
+2026-06-28T10:26:18.8382095Z [INFO] Host access enabled: allowing traffic to gateway IPs 172.30.0.1, 172.17.0.1 on ports 80, 443, 8080
+2026-06-28T10:26:18.8997182Z [SUCCESS] Host-level iptables rules configured successfully
+2026-06-28T10:26:18.9067272Z [INFO] Generating configuration files...
+2026-06-28T10:26:19.0700066Z [INFO] API proxy sidecar enabled - API keys will be held securely in sidecar container
+2026-06-28T10:26:19.0701164Z [INFO] API proxy will route through Squid to respect domain whitelisting
+2026-06-28T10:26:19.0818682Z [INFO] Starting containers...
+2026-06-28T10:26:19.3455527Z  Container awf-squid  Creating
+2026-06-28T10:26:19.3455982Z  Container awf-api-proxy  Creating
+2026-06-28T10:26:19.3696898Z  Container awf-api-proxy  Created
+2026-06-28T10:26:19.4218118Z  Container awf-squid  Created
+2026-06-28T10:26:19.4218726Z  Container awf-agent  Creating
+2026-06-28T10:26:19.4353519Z  Container awf-agent  Created
+2026-06-28T10:26:19.4354248Z  Container awf-iptables-init  Creating
+2026-06-28T10:26:19.4449869Z  Container awf-iptables-init  Created
+2026-06-28T10:26:19.4463631Z  Container awf-squid  Starting
+2026-06-28T10:26:19.4464213Z  Container awf-api-proxy  Starting
+2026-06-28T10:26:19.6183487Z  Container awf-api-proxy  Started
+2026-06-28T10:26:19.7628252Z  Container awf-squid  Started
+2026-06-28T10:26:19.7628694Z  Container awf-api-proxy  Waiting
+2026-06-28T10:26:19.7629002Z  Container awf-squid  Waiting
+2026-06-28T10:26:25.2639274Z  Container awf-api-proxy  Healthy
+2026-06-28T10:26:25.2639882Z  Container awf-squid  Healthy
+2026-06-28T10:26:25.2640241Z  Container awf-agent  Starting
+2026-06-28T10:26:25.4050850Z  Container awf-agent  Started
+2026-06-28T10:26:25.4051248Z  Container awf-agent  Waiting
+2026-06-28T10:26:30.9069937Z  Container awf-agent  Healthy
+2026-06-28T10:26:30.9070553Z  Container awf-iptables-init  Starting
+2026-06-28T10:26:30.9814146Z  Container awf-iptables-init  Started
+2026-06-28T10:26:30.9857702Z [SUCCESS] Containers started successfully
+2026-06-28T10:26:30.9861736Z [INFO] Executing agent command...
+2026-06-28T10:26:31.0035613Z [entrypoint] Agentic Workflow Firewall - Agent Container
+2026-06-28T10:26:31.0036196Z [entrypoint] ==================================
+2026-06-28T10:26:31.0036723Z [entrypoint] Adjusting awfuser UID:GID from 1000:1000 to 1001:1001
+2026-06-28T10:26:31.0037175Z [entrypoint] UID/GID adjustment complete
+2026-06-28T10:26:31.0037528Z [entrypoint] Configuring DNS...
+2026-06-28T10:26:31.0037973Z [entrypoint] DNS configured with Docker embedded DNS (127.0.0.11) only
+2026-06-28T10:26:31.0038572Z [entrypoint] Waiting for iptables initialization from init container...
+2026-06-28T10:26:31.3611910Z [entrypoint] iptables initialization complete
+2026-06-28T10:26:31.3630038Z [health-check] API Proxy Pre-flight Check
+2026-06-28T10:26:31.3631082Z [health-check] ==========================================
+2026-06-28T10:26:31.3636145Z [health-check] Checking GitHub Copilot API proxy configuration...
+2026-06-28T10:26:31.3639332Z [health-check] COPILOT_API_URL=http://172.30.0.30:10002
+2026-06-28T10:26:31.3640878Z [health-check] ✓ COPILOT_GITHUB_TOKEN is placeholder value (correct)
+2026-06-28T10:26:31.3642100Z [health-check] ✓ COPILOT_TOKEN is placeholder value (correct)
+2026-06-28T10:26:31.3643021Z [health-check] ✓ COPILOT_PROVIDER_API_KEY is placeholder value (correct)
+2026-06-28T10:26:31.3643801Z [health-check] COPILOT_PROVIDER_BASE_URL=http://172.30.0.30:10002 (offline+BYOK mode)
+2026-06-28T10:26:31.3644605Z [health-check] ✓ COPILOT_PROVIDER_BASE_URL matches COPILOT_API_URL
+2026-06-28T10:26:31.3645722Z [health-check] ✓ Copilot CLI offline+BYOK mode configured
+2026-06-28T10:26:31.3646627Z [health-check] Testing connectivity to GitHub Copilot API proxy at http://172.30.0.30:10002...
+2026-06-28T10:26:31.3895262Z [health-check] ✓ GitHub Copilot API proxy is reachable at http://172.30.0.30:10002
+2026-06-28T10:26:31.3896275Z [health-check] ==========================================
+2026-06-28T10:26:31.3897084Z [health-check] ✓ All API proxy health checks passed
+2026-06-28T10:26:31.3897861Z [health-check] ✓ Credential isolation verified
+2026-06-28T10:26:31.3898568Z [health-check] ✓ Connectivity established
+2026-06-28T10:26:31.3899222Z [health-check] ==========================================
+2026-06-28T10:26:31.3902246Z [entrypoint] Pre-seeding JVM build tool proxy configuration (squid-proxy:3128)...
+2026-06-28T10:26:31.4027972Z [entrypoint] ✓ Created Maven proxy config (/host/home/runner/.m2/settings.xml)
+2026-06-28T10:26:31.4068489Z [entrypoint] ✓ Created Gradle proxy config (/host/home/runner/.gradle/gradle.properties)
+2026-06-28T10:26:31.4092006Z [entrypoint] ✓ Set JAVA_TOOL_OPTIONS with proxy and nonProxyHosts flags
+2026-06-28T10:26:31.4092757Z [entrypoint] Proxy configuration:
+2026-06-28T10:26:31.4093410Z [entrypoint]   HTTP_PROXY=http://172.30.0.10:3128
+2026-06-28T10:26:31.4094117Z [entrypoint]   HTTPS_PROXY=http://172.30.0.10:3128
+2026-06-28T10:26:31.4094714Z [entrypoint] Network information:
+2026-06-28T10:26:31.4155564Z [entrypoint]   IP address: 172.30.0.20 
+2026-06-28T10:26:31.4164016Z [entrypoint]   Hostname: ff7ccc7b05b9
+2026-06-28T10:26:31.6588249Z [entrypoint] ==================================
+2026-06-28T10:26:31.6588861Z [entrypoint] Chroot mode enabled - dropping CAP_SYS_CHROOT and CAP_SYS_ADMIN
+2026-06-28T10:26:31.6624502Z [entrypoint] Switching to awfuser (UID: 1001, GID: 1001)
+2026-06-28T10:26:31.6631110Z [entrypoint] Executing command: /bin/bash -c /bin/bash -c 'set +o histexpand; : "${RUNNER_TOOL_CACHE:?RUNNER_TOOL_CACHE must be set}"; GH_AW_TOOL_CACHE="$RUNNER_TOOL_CACHE"; export PATH="$(find "$GH_AW_TOOL_CACHE" -maxdepth 5 -type d -name bin 2>/dev/null | tr '\''\n'\'' '\'':'\'')$PATH"; [ -n "$GOROOT" ] && export PATH="$GOROOT/bin:$PATH" || true && GH_AW_NODE_EXEC="${GH_AW_NODE_BIN:-}"; if [ -z "$GH_AW_NODE_EXEC" ] || [ ! -x "$GH_AW_NODE_EXEC" ]; then GH_AW_NODE_EXEC="$(command -v node 2>/dev/null || true)"; fi; if [ -z "$GH_AW_NODE_EXEC" ]; then echo "node runtime missing on this runner — check runtimes.node in workflow YAML" >&2; exit 127; fi; GH_AW_NPM_GLOBAL_ROOT="$(npm root -g 2>/dev/null || true)"; if [ -n "$GH_AW_NPM_GLOBAL_ROOT" ]; then export NODE_PATH="${GH_AW_NPM_GLOBAL_ROOT}${NODE_PATH:+:${NODE_PATH}}"; fi; "$GH_AW_NODE_EXEC" ${RUNNER_TEMP}/gh-aw/actions/copilot_harness.cjs /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --add-dir "${GITHUB_WORKSPACE}" --prompt-file /tmp/gh-aw/aw-prompts/prompt.txt'
+2026-06-28T10:26:31.6635898Z 
+2026-06-28T10:26:31.6637771Z [entrypoint] Chroot mode: running command inside host filesystem (/host)
+2026-06-28T10:26:31.7069792Z [entrypoint] Mounted procfs at /host/proc (nosuid,nodev,noexec,hidepid=2)
+2026-06-28T10:26:31.7220095Z [entrypoint] One-shot token library copied to chroot at /tmp/awf-lib/one-shot-token.so
+2026-06-28T10:26:31.7273855Z [entrypoint] DNS configuration created in chroot (/host/etc/resolv.conf)
+2026-06-28T10:26:31.7357250Z [entrypoint] Chroot working directory: /home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager
+2026-06-28T10:26:31.7382126Z [entrypoint] Running as host user: runner (UID: 1001)
+2026-06-28T10:26:31.7382803Z [entrypoint] Using host PATH for chroot
+2026-06-28T10:26:31.7397342Z [entrypoint] Adding JAVA_HOME/bin to PATH: /usr/lib/jvm/temurin-17-jdk-amd64/bin
+2026-06-28T10:26:31.7509955Z [entrypoint] DNS configuration will be removed on exit
+2026-06-28T10:26:31.7532557Z [entrypoint] Transferred /host/tmp/gh-aw ownership to chroot user (1001:1001)
+2026-06-28T10:26:31.7646572Z [entrypoint] Node.js available via GH_AW_NODE_BIN: /opt/hostedtoolcache/node/24.17.0/x64/bin/node
+2026-06-28T10:26:32.7696018Z [entrypoint] Unsetting sensitive tokens from parent shell environment...
+2026-06-28T10:26:32.7696665Z [entrypoint] Unset COPILOT_GITHUB_TOKEN from /proc/1/environ
+2026-06-28T10:26:32.7697228Z [entrypoint] Unset COPILOT_PROVIDER_API_KEY from /proc/1/environ
+2026-06-28T10:26:34.6608152Z [copilot-harness] starting: command=/usr/local/bin/copilot maxRetries=3 initialDelayMs=5000 backoffMultiplier=2 maxDelayMs=60000 nodeVersion=v24.17.0 platform=linux
+2026-06-28T10:26:34.6638688Z [copilot-harness] pre-flight: command is accessible and executable: /usr/local/bin/copilot
+2026-06-28T10:26:34.6640025Z [copilot-harness] resolved --prompt-file: path=/tmp/gh-aw/aw-prompts/prompt.txt size=6708B
+2026-06-28T10:26:34.6641284Z [copilot-harness] awf-reflect: fetching http://api-proxy:10000/reflect (timeout=60000ms)
+2026-06-28T10:26:34.8273147Z [copilot-harness] awf-reflect: saved 1522B to /tmp/gh-aw/sandbox/firewall/awf-reflect.json
+2026-06-28T10:26:34.8276361Z [copilot-harness] attempt 1: spawning: /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --add-dir /home/runner/work/dotnet-runtime-servicing-release-manag
+2026-06-28T10:26:34.8305371Z [copilot-harness] attempt 1: process started (pid=199)
+2026-06-28T10:26:36.3790121Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:26:36.3790471Z 
+2026-06-28T10:26:37.5207377Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:26:37.5207734Z 
+2026-06-28T10:26:39.1664195Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:26:39.1665166Z 
+2026-06-28T10:26:43.0147518Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:26:43.0148014Z 
+2026-06-28T10:26:49.5265173Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:26:49.5265577Z 
+2026-06-28T10:27:05.4346434Z 
+2026-06-28T10:27:05.4348165Z Failed to get response from the AI model; retried 5 times (total retry wait time: 29.34 seconds) Last error: CAPIError: 503 Credentials for GitHub Copilot (port 10002) are not configured. Set COPILOT_GITHUB_TOKEN or COPILOT_PROVIDER_API_KEY to enable this provider.
+2026-06-28T10:27:05.4694023Z 
+2026-06-28T10:27:05.4694043Z 
+2026-06-28T10:27:05.4694675Z Changes    +0 -0
+2026-06-28T10:27:05.4695367Z Duration   29s
+2026-06-28T10:27:05.5090022Z [copilot-harness] attempt 1: process exit event exitCode=1
+2026-06-28T10:27:05.5090812Z [copilot-harness] attempt 1: process closed exitCode=1 duration=30s stdout=310B stderr=301B hasOutput=true
+2026-06-28T10:27:05.5101669Z [copilot-harness] attempt 1 failed: exitCode=1 failureClass=partial_execution isCAPIError400=false isCAPIQuotaExceededError=false isMCPPolicyError=false isModelNotSupportedError=false isNullTypeToolCallError=false isSDKSessionIdleTimeoutError=false isMCPGatewayShutdownError=false isAuthError=false isAuthenticationFailedError=false permissionDeniedCount=0 hasNumerousPermissionDenied=false hasOutput=true retriesRemaining=3
+2026-06-28T10:27:05.5108860Z [copilot-harness] attempt 1: outputTail="● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\nFailed to get response from the AI model; retried 5 times (total retry wait time: 29.34 seconds) Last error: CAPIError: 503 Credentials for GitHub Copilot (port 10002) are not configured. Set COPILOT_GITHUB_TOKEN or COPILOT_PROVIDER_API_KEY to enable this provider.\nChanges    +0 -0\nDuration   29s"
+2026-06-28T10:27:05.5111512Z [copilot-harness] attempt 1: partial execution — will retry with --continue (attempt 2/4)
+2026-06-28T10:27:05.5112232Z [copilot-harness] retry 1/3: sleeping 5000ms before next attempt (--continue)
+2026-06-28T10:27:10.5146529Z [copilot-harness] retry 1/3: woke up, next delay cap will be 20000ms
+2026-06-28T10:27:10.5149025Z [copilot-harness] attempt 2: spawning: /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --add-dir /home/runner/work/dotnet-runtime-servicing-release-manag
+2026-06-28T10:27:10.5168582Z [copilot-harness] attempt 2: process started (pid=432)
+2026-06-28T10:27:12.1672248Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:27:12.1672585Z 
+2026-06-28T10:27:13.0886262Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:27:13.0886716Z 
+2026-06-28T10:27:14.8026893Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:27:14.8027419Z 
+2026-06-28T10:27:18.5296247Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:27:18.5296757Z 
+2026-06-28T10:27:27.5441833Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:27:27.5442512Z 
+2026-06-28T10:27:43.7156073Z 
+2026-06-28T10:27:43.7157711Z Failed to get response from the AI model; retried 5 times (total retry wait time: 31.92 seconds) Last error: CAPIError: 503 Credentials for GitHub Copilot (port 10002) are not configured. Set COPILOT_GITHUB_TOKEN or COPILOT_PROVIDER_API_KEY to enable this provider.
+2026-06-28T10:27:43.7499448Z 
+2026-06-28T10:27:43.7499720Z 
+2026-06-28T10:27:43.7500467Z Changes    +0 -0
+2026-06-28T10:27:43.7501072Z Duration   1m 8s
+2026-06-28T10:27:43.7890452Z [copilot-harness] attempt 2: process exit event exitCode=1
+2026-06-28T10:27:43.7891956Z [copilot-harness] attempt 2: process closed exitCode=1 duration=33s stdout=310B stderr=303B hasOutput=true
+2026-06-28T10:27:43.7895893Z [copilot-harness] attempt 2 failed: exitCode=1 failureClass=partial_execution isCAPIError400=false isCAPIQuotaExceededError=false isMCPPolicyError=false isModelNotSupportedError=false isNullTypeToolCallError=false isSDKSessionIdleTimeoutError=false isMCPGatewayShutdownError=false isAuthError=false isAuthenticationFailedError=false permissionDeniedCount=0 hasNumerousPermissionDenied=false hasOutput=true retriesRemaining=2
+2026-06-28T10:27:43.7902931Z [copilot-harness] attempt 2: outputTail="● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\nFailed to get response from the AI model; retried 5 times (total retry wait time: 31.92 seconds) Last error: CAPIError: 503 Credentials for GitHub Copilot (port 10002) are not configured. Set COPILOT_GITHUB_TOKEN or COPILOT_PROVIDER_API_KEY to enable this provider.\nChanges    +0 -0\nDuration   1m 8s"
+2026-06-28T10:27:43.7905739Z [copilot-harness] attempt 2: partial execution — will retry with --continue (attempt 3/4)
+2026-06-28T10:27:43.7906430Z [copilot-harness] retry 2/3: sleeping 10000ms before next attempt (--continue)
+2026-06-28T10:27:53.7965147Z [copilot-harness] retry 2/3: woke up, next delay cap will be 40000ms
+2026-06-28T10:27:53.7967530Z [copilot-harness] attempt 3: spawning: /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --add-dir /home/runner/work/dotnet-runtime-servicing-release-manag
+2026-06-28T10:27:53.7986398Z [copilot-harness] attempt 3: process started (pid=712)
+2026-06-28T10:27:55.3296501Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:27:55.3296842Z 
+2026-06-28T10:27:56.2597659Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:27:56.2598138Z 
+2026-06-28T10:27:58.5328723Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:27:58.5329541Z 
+2026-06-28T10:28:03.0529895Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:28:03.0530395Z 
+2026-06-28T10:28:11.7857960Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:28:11.7858459Z 
+2026-06-28T10:28:28.7180896Z 
+2026-06-28T10:28:28.7182510Z Failed to get response from the AI model; retried 5 times (total retry wait time: 33.63 seconds) Last error: CAPIError: 503 Credentials for GitHub Copilot (port 10002) are not configured. Set COPILOT_GITHUB_TOKEN or COPILOT_PROVIDER_API_KEY to enable this provider.
+2026-06-28T10:28:28.7524645Z 
+2026-06-28T10:28:28.7525267Z 
+2026-06-28T10:28:28.7525846Z Changes    +0 -0
+2026-06-28T10:28:28.7526266Z Duration   1m 53s
+2026-06-28T10:28:28.7924300Z [copilot-harness] attempt 3: process exit event exitCode=1
+2026-06-28T10:28:28.7925641Z [copilot-harness] attempt 3: process closed exitCode=1 duration=34s stdout=310B stderr=304B hasOutput=true
+2026-06-28T10:28:28.7929299Z [copilot-harness] attempt 3 failed: exitCode=1 failureClass=partial_execution isCAPIError400=false isCAPIQuotaExceededError=false isMCPPolicyError=false isModelNotSupportedError=false isNullTypeToolCallError=false isSDKSessionIdleTimeoutError=false isMCPGatewayShutdownError=false isAuthError=false isAuthenticationFailedError=false permissionDeniedCount=0 hasNumerousPermissionDenied=false hasOutput=true retriesRemaining=1
+2026-06-28T10:28:28.7936313Z [copilot-harness] attempt 3: outputTail="● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\nFailed to get response from the AI model; retried 5 times (total retry wait time: 33.63 seconds) Last error: CAPIError: 503 Credentials for GitHub Copilot (port 10002) are not configured. Set COPILOT_GITHUB_TOKEN or COPILOT_PROVIDER_API_KEY to enable this provider.\nChanges    +0 -0\nDuration   1m 53s"
+2026-06-28T10:28:28.7938777Z [copilot-harness] attempt 3: partial execution — will retry with --continue (attempt 4/4)
+2026-06-28T10:28:28.7939470Z [copilot-harness] retry 3/3: sleeping 20000ms before next attempt (--continue)
+2026-06-28T10:28:48.7964040Z [copilot-harness] retry 3/3: woke up, next delay cap will be 60000ms
+2026-06-28T10:28:48.7966787Z [copilot-harness] attempt 4: spawning: /usr/local/bin/copilot --add-dir /tmp/gh-aw/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --no-ask-user --allow-all-tools --add-dir /home/runner/work/dotnet-runtime-servicing-release-manag
+2026-06-28T10:28:48.7988695Z [copilot-harness] attempt 4: process started (pid=1059)
+2026-06-28T10:28:50.4659276Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:28:50.4660150Z 
+2026-06-28T10:28:51.3246617Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:28:51.3247087Z 
+2026-06-28T10:28:52.9996188Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:28:52.9996701Z 
+2026-06-28T10:28:56.9864121Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:28:56.9864504Z 
+2026-06-28T10:29:03.5601432Z ● Request failed due to a transient API error. Retrying...
+2026-06-28T10:29:03.5601955Z 
+2026-06-28T10:29:17.2615908Z 
+2026-06-28T10:29:17.2618279Z Failed to get response from the AI model; retried 5 times (total retry wait time: 27.16 seconds) Last error: CAPIError: 503 Credentials for GitHub Copilot (port 10002) are not configured. Set COPILOT_GITHUB_TOKEN or COPILOT_PROVIDER_API_KEY to enable this provider.
+2026-06-28T10:29:17.2952692Z 
+2026-06-28T10:29:17.2952705Z 
+2026-06-28T10:29:17.2953165Z Changes    +0 -0
+2026-06-28T10:29:17.2953495Z Duration   2m 41s
+2026-06-28T10:29:17.3354261Z [copilot-harness] attempt 4: process exit event exitCode=1
+2026-06-28T10:29:17.3355896Z [copilot-harness] attempt 4: process closed exitCode=1 duration=28s stdout=310B stderr=304B hasOutput=true
+2026-06-28T10:29:17.3359774Z [copilot-harness] attempt 4 failed: exitCode=1 failureClass=partial_execution isCAPIError400=false isCAPIQuotaExceededError=false isMCPPolicyError=false isModelNotSupportedError=false isNullTypeToolCallError=false isSDKSessionIdleTimeoutError=false isMCPGatewayShutdownError=false isAuthError=false isAuthenticationFailedError=false permissionDeniedCount=0 hasNumerousPermissionDenied=false hasOutput=true retriesRemaining=0
+2026-06-28T10:29:17.3367523Z [copilot-harness] attempt 4: outputTail="● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\n● Request failed due to a transient API error. Retrying...\nFailed to get response from the AI model; retried 5 times (total retry wait time: 27.16 seconds) Last error: CAPIError: 503 Credentials for GitHub Copilot (port 10002) are not configured. Set COPILOT_GITHUB_TOKEN or COPILOT_PROVIDER_API_KEY to enable this provider.\nChanges    +0 -0\nDuration   2m 41s"
+2026-06-28T10:29:17.3371344Z [copilot-harness] all 3 retries exhausted — giving up (exitCode=1)
+2026-06-28T10:29:17.3372825Z [copilot-harness] awf-reflect: fetching http://api-proxy:10000/reflect (timeout=60000ms)
+2026-06-28T10:29:17.3394094Z [copilot-harness] awf-reflect: saved 1522B to /tmp/gh-aw/sandbox/firewall/awf-reflect.json
+2026-06-28T10:29:17.3397087Z [copilot-harness] done: exitCode=1 totalDuration=2m 42s
+2026-06-28T10:29:17.6890589Z [INFO] Stopping containers...
+2026-06-28T10:29:17.7789327Z  Container awf-iptables-init  Stopping
+2026-06-28T10:29:17.7792111Z  Container awf-iptables-init  Stopped
+2026-06-28T10:29:17.7792688Z  Container awf-iptables-init  Removing
+2026-06-28T10:29:17.7829023Z  Container awf-iptables-init  Removed
+2026-06-28T10:29:17.7829551Z  Container awf-agent  Stopping
+2026-06-28T10:29:17.7832861Z  Container awf-agent  Stopped
+2026-06-28T10:29:17.7833725Z  Container awf-agent  Removing
+2026-06-28T10:29:17.7931353Z  Container awf-agent  Removed
+2026-06-28T10:29:17.7933099Z  Container awf-api-proxy  Stopping
+2026-06-28T10:29:17.7933678Z  Container awf-squid  Stopping
+2026-06-28T10:29:17.8804409Z  Container awf-api-proxy  Stopped
+2026-06-28T10:29:17.8806109Z  Container awf-api-proxy  Removing
+2026-06-28T10:29:17.8853154Z  Container awf-api-proxy  Removed
+2026-06-28T10:29:18.8943641Z  Container awf-squid  Stopped
+2026-06-28T10:29:18.8944463Z  Container awf-squid  Removing
+2026-06-28T10:29:18.8993247Z  Container awf-squid  Removed
+2026-06-28T10:29:18.9034331Z [SUCCESS] Containers stopped successfully
+2026-06-28T10:29:18.9534491Z [INFO] Agent session state preserved at: /tmp/awf-agent-session-state-1782642374518
+2026-06-28T10:29:18.9558342Z [INFO] API proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs
+2026-06-28T10:29:18.9582963Z [INFO] CLI proxy logs available at: /tmp/gh-aw/sandbox/firewall/logs/cli-proxy-logs
+2026-06-28T10:29:18.9607370Z [INFO] Squid logs available at: /tmp/gh-aw/sandbox/firewall/logs
+2026-06-28T10:29:18.9631056Z [INFO] Audit artifacts available at: /tmp/gh-aw/sandbox/firewall/audit
+2026-06-28T10:29:18.9650238Z [WARN] Command completed with exit code: 1
+2026-06-28T10:29:18.9651076Z Process exiting with code: 1
+2026-06-28T10:29:18.9737252Z ##[error]Process completed with exit code 1.
+2026-06-28T10:29:18.9808606Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:29:18.9809020Z with:
+2026-06-28T10:29:18.9809945Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/parse_token_usage.cjs');
+await main();
+
+2026-06-28T10:29:18.9813757Z   github-token: ***
+2026-06-28T10:29:18.9813994Z   debug: false
+2026-06-28T10:29:18.9814224Z   user-agent: actions/github-script
+2026-06-28T10:29:18.9814509Z   result-encoding: json
+2026-06-28T10:29:18.9814741Z   retries: 0
+2026-06-28T10:29:18.9815234Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:29:18.9815544Z env:
+2026-06-28T10:29:18.9815809Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:29:18.9816194Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:29:18.9816559Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:29:18.9816893Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:29:18.9817268Z   GH_AW_TOKEN_USAGE_SUMMARY_TITLE: Threat Detection Token Usage
+2026-06-28T10:29:18.9817617Z ##[endgroup]
+2026-06-28T10:29:19.0821936Z No token usage data found, skipping summary
+2026-06-28T10:29:19.0962296Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-06-28T10:29:19.0962727Z with:
+2026-06-28T10:29:19.0962935Z   name: detection
+2026-06-28T10:29:19.0963200Z   path: /tmp/gh-aw/threat-detection/detection.log
+2026-06-28T10:29:19.0963534Z   if-no-files-found: ignore
+2026-06-28T10:29:19.0963789Z   compression-level: 6
+2026-06-28T10:29:19.0964024Z   overwrite: false
+2026-06-28T10:29:19.0964252Z   include-hidden-files: false
+2026-06-28T10:29:19.0964510Z   archive: true
+2026-06-28T10:29:19.0965200Z env:
+2026-06-28T10:29:19.0965460Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:29:19.0965830Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:29:19.0966145Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:29:19.0966470Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:29:19.0966769Z ##[endgroup]
+2026-06-28T10:29:19.2402290Z With the provided path, there will be 1 file uploaded
+2026-06-28T10:29:19.2407156Z Artifact name is valid!
+2026-06-28T10:29:19.2407522Z Root directory input is valid!
+2026-06-28T10:29:19.4445050Z Uploading artifact: detection.zip
+2026-06-28T10:29:19.4484664Z Beginning upload of artifact content to blob storage
+2026-06-28T10:29:19.5999848Z Uploaded bytes 3876
+2026-06-28T10:29:19.6361626Z Finished uploading artifact content to blob storage!
+2026-06-28T10:29:19.6362396Z SHA256 digest of uploaded artifact is 5715abb711b378d660116abc279b95d92f9ec7c5ca58785ad1557bb2a9481a81
+2026-06-28T10:29:19.6363055Z Finalizing artifact upload
+2026-06-28T10:29:19.8965280Z Artifact detection successfully finalized. Artifact ID 7933689185
+2026-06-28T10:29:19.8966621Z Artifact detection has been successfully uploaded! Final size is 3876 bytes. Artifact ID is 7933689185
+2026-06-28T10:29:19.8970399Z Artifact download URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318977468/artifacts/7933689185
+2026-06-28T10:29:19.9151481Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:29:19.9152162Z with:
+2026-06-28T10:29:19.9157765Z   script: try {
+  const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+  setupGlobals(core, github, context, exec, io, getOctokit);
+  const { main } = require('/home/runner/work/_temp/gh-aw/actions/parse_threat_detection_results.cjs');
+  await main();
+} catch (loadErr) {
+  const continueOnError = process.env.GH_AW_DETECTION_CONTINUE_ON_ERROR !== 'false';
+  const detectionExecutionFailed = process.env.DETECTION_AGENTIC_EXECUTION_OUTCOME === 'failure';
+  const msg = 'ERR_SYSTEM: \u274C Unexpected error loading threat detection module: ' + (loadErr && loadErr.message ? loadErr.message : String(loadErr));
+  core.error(msg);
+  core.setOutput('reason', 'parse_error');
+  if (continueOnError && !detectionExecutionFailed) {
+    core.warning('\u26A0\uFE0F ' + msg);
+    core.setOutput('conclusion', 'warning');
+    core.setOutput('success', 'false');
+  } else {
+    core.setOutput('conclusion', 'failure');
+    core.setOutput('success', 'false');
+    core.setFailed(msg);
+  }
+}
+
+2026-06-28T10:29:19.9169577Z   github-token: ***
+2026-06-28T10:29:19.9169989Z   debug: false
+2026-06-28T10:29:19.9170362Z   user-agent: actions/github-script
+2026-06-28T10:29:19.9170824Z   result-encoding: json
+2026-06-28T10:29:19.9171203Z   retries: 0
+2026-06-28T10:29:19.9171598Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:29:19.9172097Z env:
+2026-06-28T10:29:19.9172513Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:29:19.9173138Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:29:19.9173687Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:29:19.9174234Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:29:19.9174765Z   RUN_DETECTION: true
+2026-06-28T10:29:19.9175416Z   DETECTION_AGENTIC_EXECUTION_OUTCOME: failure
+2026-06-28T10:29:19.9175941Z   GH_AW_DETECTION_CONTINUE_ON_ERROR: true
+2026-06-28T10:29:19.9176417Z ##[endgroup]
+2026-06-28T10:29:20.0217234Z ════════════════════════════════════════════════════════
+2026-06-28T10:29:20.0218128Z 🛡️  Threat Detection: Parse Results & Conclude
+2026-06-28T10:29:20.0218929Z ════════════════════════════════════════════════════════
+2026-06-28T10:29:20.0219526Z 📋 RUN_DETECTION env: "true"
+2026-06-28T10:29:20.0220045Z 📋 continue-on-error: true
+2026-06-28T10:29:20.0220637Z 📋 detection execution outcome: "failure"
+2026-06-28T10:29:20.0221439Z 📁 Threat detection directory: /tmp/gh-aw/threat-detection
+2026-06-28T10:29:20.0222300Z 📄 Detection log path: /tmp/gh-aw/threat-detection/detection.log
+2026-06-28T10:29:20.0223534Z 📄 Structured result path: /tmp/gh-aw/threat-detection/detection_result.json
+2026-06-28T10:29:20.0224175Z 🔍 Detection is required. Proceeding to parse detection result...
+2026-06-28T10:29:20.0225047Z 🔎 Checking for structured result file: /tmp/gh-aw/threat-detection/detection_result.json
+2026-06-28T10:29:20.0225879Z ℹ️  No structured result file found. Falling back to detection log parsing.
+2026-06-28T10:29:20.0226523Z ✔️  Detection log file exists: /tmp/gh-aw/threat-detection/detection.log
+2026-06-28T10:29:20.0227067Z 📊 Detection log stats: 227 lines, 17876 bytes
+2026-06-28T10:29:20.0227583Z 📄 No lines containing THREAT_DETECTION_RESULT found in 227 lines
+2026-06-28T10:29:20.0228155Z 🔎 Parsing THREAT_DETECTION_RESULT from detection log...
+2026-06-28T10:29:20.0245463Z ##[error]❌ Failed to parse detection result: No THREAT_DETECTION_RESULT found in detection log. The detection model may have failed to follow the output format.
+2026-06-28T10:29:20.0247510Z 💡 This usually means the AI engine did not produce the expected output format.
+2026-06-28T10:29:20.0248698Z    Expected format: THREAT_DETECTION_RESULT:{"prompt_injection":bool,"secret_leak":bool,"malicious_patch":bool,"reasons":[...]}
+2026-06-28T10:29:20.0251435Z ##[error]ERR_PARSE: ❌ No THREAT_DETECTION_RESULT found in detection log. The detection model may have failed to follow the output format.
+2026-06-28T10:29:20.0401238Z Post job cleanup.
+2026-06-28T10:29:20.1686498Z Post job cleanup.
+2026-06-28T10:29:20.2030357Z [otlp] GH_AW_OTLP_ENDPOINTS not set, skipping OTLP export (will attempt JSONL mirror)
+2026-06-28T10:29:20.2138039Z Cleaning up /tmp/gh-aw...
+2026-06-28T10:29:20.2273620Z Cleaned up /tmp/gh-aw
+2026-06-28T10:29:20.2372431Z Evaluate and set job outputs
+2026-06-28T10:29:20.2377877Z Set output 'detection_conclusion'
+2026-06-28T10:29:20.2379517Z Set output 'detection_reason'
+2026-06-28T10:29:20.2380382Z Set output 'detection_success'
+2026-06-28T10:29:20.2381215Z Cleaning up orphan processes

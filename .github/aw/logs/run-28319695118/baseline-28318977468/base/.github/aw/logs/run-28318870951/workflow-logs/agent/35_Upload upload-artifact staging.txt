@@ -1,0 +1,22 @@
+﻿2026-06-28T10:11:58.2072589Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-06-28T10:11:58.2073021Z with:
+2026-06-28T10:11:58.2073420Z   name: safe-outputs-upload-artifacts
+2026-06-28T10:11:58.2073816Z   path: /home/runner/work/_temp/gh-aw/safeoutputs/upload-artifacts/
+2026-06-28T10:11:58.2074185Z   retention-days: 1
+2026-06-28T10:11:58.2074418Z   if-no-files-found: ignore
+2026-06-28T10:11:58.2074659Z   compression-level: 6
+2026-06-28T10:11:58.2074882Z   overwrite: false
+2026-06-28T10:11:58.2075102Z   include-hidden-files: false
+2026-06-28T10:11:58.2075347Z   archive: true
+2026-06-28T10:11:58.2075541Z env:
+2026-06-28T10:11:58.2075725Z   DEFAULT_BRANCH: main
+2026-06-28T10:11:58.2075949Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:11:58.2076189Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:11:58.2076408Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:11:58.2076690Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:11:58.2077051Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:11:58.2077454Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:58.2077816Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 0ef936f9d8320f32
+2026-06-28T10:11:58.2078139Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641488649
+2026-06-28T10:11:58.2078413Z ##[endgroup]
+2026-06-28T10:11:58.3540636Z No files were found with the provided path: /home/runner/work/_temp/gh-aw/safeoutputs/upload-artifacts/. No artifacts will be uploaded.

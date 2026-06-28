@@ -1,0 +1,23 @@
+﻿2026-06-28T10:16:05.4700349Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/install_awf_binary.sh" v0.27.7
+2026-06-28T10:16:05.4701034Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/install_awf_binary.sh" v0.27.7[0m
+2026-06-28T10:16:05.4736313Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:16:05.4736588Z env:
+2026-06-28T10:16:05.4736795Z   DEFAULT_BRANCH: main
+2026-06-28T10:16:05.4737034Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:16:05.4737288Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:16:05.4737515Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:16:05.4737824Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:16:05.4738299Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:16:05.4739032Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:16:05.4739498Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: bcb24487f741a264
+2026-06-28T10:16:05.4739882Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641761389
+2026-06-28T10:16:05.4740203Z ##[endgroup]
+2026-06-28T10:16:05.4829736Z Installing awf with checksum verification (version: v0.27.7, os: Linux, arch: x86_64)
+2026-06-28T10:16:05.4843088Z Downloading checksums from 'https://github.com/github/gh-aw-firewall/releases/download/v0.27.7/checksums.txt'...
+2026-06-28T10:16:05.6312116Z Node.js >= 20 detected (v22.23.0), using lightweight bundle...
+2026-06-28T10:16:05.6313248Z Downloading bundle from 'https://github.com/github/gh-aw-firewall/releases/download/v0.27.7/awf-bundle.js'...
+2026-06-28T10:16:05.7716507Z Verifying SHA256 checksum for awf-bundle.js...
+2026-06-28T10:16:05.7776707Z ✓ Checksum verification passed for awf-bundle.js
+2026-06-28T10:16:05.8062899Z ✓ Installed awf bundle to /usr/local/lib/awf/awf-bundle.js
+2026-06-28T10:16:06.2354113Z 0.27.7
+2026-06-28T10:16:06.4737316Z ✓ AWF installation complete

@@ -1,0 +1,52 @@
+﻿2026-06-28T10:15:49.7784082Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:15:49.7785775Z with:
+2026-06-28T10:15:49.7794381Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+
+const substitutePlaceholders = require('/home/runner/work/_temp/gh-aw/actions/substitute_placeholders.cjs');
+
+// Call the substitution function
+return await substitutePlaceholders({
+  file: process.env.GH_AW_PROMPT,
+  substitutions: {
+    GH_AW_EXPR_1A3A194A: process.env.GH_AW_EXPR_1A3A194A,
+    GH_AW_EXPR_463A214A: process.env.GH_AW_EXPR_463A214A,
+    GH_AW_EXPR_802A9F6A: process.env.GH_AW_EXPR_802A9F6A,
+    GH_AW_EXPR_FF1D34CE: process.env.GH_AW_EXPR_FF1D34CE,
+    GH_AW_GITHUB_ACTOR: process.env.GH_AW_GITHUB_ACTOR,
+    GH_AW_GITHUB_EVENT_INPUTS_PR_NUMBER: process.env.GH_AW_GITHUB_EVENT_INPUTS_PR_NUMBER,
+    GH_AW_GITHUB_EVENT_INPUTS_SUPPRESS_OUTPUT: process.env.GH_AW_GITHUB_EVENT_INPUTS_SUPPRESS_OUTPUT,
+    GH_AW_GITHUB_REPOSITORY: process.env.GH_AW_GITHUB_REPOSITORY,
+    GH_AW_GITHUB_RUN_ID: process.env.GH_AW_GITHUB_RUN_ID,
+    GH_AW_GITHUB_WORKSPACE: process.env.GH_AW_GITHUB_WORKSPACE,
+    GH_AW_MCP_CLI_SERVERS_LIST: process.env.GH_AW_MCP_CLI_SERVERS_LIST,
+    GH_AW_NEEDS_PRE_ACTIVATION_OUTPUTS_ACTIVATED: process.env.GH_AW_NEEDS_PRE_ACTIVATION_OUTPUTS_ACTIVATED
+  }
+});
+
+2026-06-28T10:15:49.7810787Z   github-token: ***
+2026-06-28T10:15:49.7811348Z   debug: false
+2026-06-28T10:15:49.7811847Z   user-agent: actions/github-script
+2026-06-28T10:15:49.7812441Z   result-encoding: json
+2026-06-28T10:15:49.7812942Z   retries: 0
+2026-06-28T10:15:49.7813453Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:15:49.7814687Z env:
+2026-06-28T10:15:49.7815150Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-06-28T10:15:49.7815833Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:15:49.7816583Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 2256f46e35a2a592
+2026-06-28T10:15:49.7817250Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641744950
+2026-06-28T10:15:49.7817950Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:15:49.7818612Z   GH_AW_EXPR_1A3A194A: false
+2026-06-28T10:15:49.7819623Z   GH_AW_EXPR_463A214A: false
+2026-06-28T10:15:49.7820964Z   GH_AW_EXPR_802A9F6A: false
+2026-06-28T10:15:49.7821523Z   GH_AW_EXPR_FF1D34CE: 
+2026-06-28T10:15:49.7822045Z   GH_AW_GITHUB_ACTOR: jeffhandley
+2026-06-28T10:15:49.7823261Z   GH_AW_GITHUB_EVENT_INPUTS_PR_NUMBER: 1
+2026-06-28T10:15:49.7825808Z   GH_AW_GITHUB_EVENT_INPUTS_SUPPRESS_OUTPUT: false
+2026-06-28T10:15:49.7826879Z   GH_AW_GITHUB_REPOSITORY: jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:49.7832668Z   GH_AW_GITHUB_RUN_ID: 28318977468
+2026-06-28T10:15:49.7835454Z   GH_AW_GITHUB_WORKSPACE: /home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager
+2026-06-28T10:15:49.7838593Z   GH_AW_MCP_CLI_SERVERS_LIST: - `safeoutputs` — run `safeoutputs --help` to see available tools
+2026-06-28T10:15:49.7846506Z   GH_AW_NEEDS_PRE_ACTIVATION_OUTPUTS_ACTIVATED: true
+2026-06-28T10:15:49.7852182Z ##[endgroup]
+2026-06-28T10:15:50.0336132Z [substitutePlaceholders] /tmp/gh-aw/aw-prompts/prompt.txt (12 substitution(s))

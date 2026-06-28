@@ -1,0 +1,21 @@
+﻿2026-06-28T10:29:18.9808598Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:29:18.9809018Z with:
+2026-06-28T10:29:18.9809936Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/parse_token_usage.cjs');
+await main();
+
+2026-06-28T10:29:18.9813754Z   github-token: ***
+2026-06-28T10:29:18.9813992Z   debug: false
+2026-06-28T10:29:18.9814221Z   user-agent: actions/github-script
+2026-06-28T10:29:18.9814506Z   result-encoding: json
+2026-06-28T10:29:18.9814739Z   retries: 0
+2026-06-28T10:29:18.9815231Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:29:18.9815542Z env:
+2026-06-28T10:29:18.9815806Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:29:18.9816191Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 81a26a3ecdf39161
+2026-06-28T10:29:18.9816520Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642357528
+2026-06-28T10:29:18.9816890Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-06-28T10:29:18.9817266Z   GH_AW_TOKEN_USAGE_SUMMARY_TITLE: Threat Detection Token Usage
+2026-06-28T10:29:18.9817614Z ##[endgroup]
+2026-06-28T10:29:19.0821878Z No token usage data found, skipping summary

@@ -1,0 +1,81 @@
+﻿2026-06-28T10:15:44.9910654Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:15:44.9911505Z with:
+2026-06-28T10:15:44.9913208Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/generate_aw_info.cjs');
+await main(core, context);
+
+2026-06-28T10:15:44.9919631Z   github-token: ***
+2026-06-28T10:15:44.9920081Z   debug: false
+2026-06-28T10:15:44.9920518Z   user-agent: actions/github-script
+2026-06-28T10:15:44.9921255Z   result-encoding: json
+2026-06-28T10:15:44.9922247Z   retries: 0
+2026-06-28T10:15:44.9922706Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:15:44.9923274Z env:
+2026-06-28T10:15:44.9923679Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-06-28T10:15:44.9924284Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:15:44.9925037Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 2256f46e35a2a592
+2026-06-28T10:15:44.9925685Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641744950
+2026-06-28T10:15:44.9926232Z   GH_AW_INFO_ENGINE_ID: copilot
+2026-06-28T10:15:44.9926749Z   GH_AW_INFO_ENGINE_NAME: GitHub Copilot CLI
+2026-06-28T10:15:44.9927305Z   GH_AW_INFO_MODEL: claude-opus-4.8
+2026-06-28T10:15:44.9927817Z   GH_AW_INFO_VERSION: 1.0.63
+2026-06-28T10:15:44.9928302Z   GH_AW_INFO_AGENT_VERSION: 1.0.63
+2026-06-28T10:15:44.9928808Z   GH_AW_INFO_CLI_VERSION: v0.80.9
+2026-06-28T10:15:44.9929750Z   GH_AW_INFO_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:15:44.9930385Z   GH_AW_INFO_EXPERIMENTAL: false
+2026-06-28T10:15:44.9930911Z   GH_AW_INFO_SUPPORTS_TOOLS_ALLOWLIST: true
+2026-06-28T10:15:44.9931471Z   GH_AW_INFO_STAGED: false
+2026-06-28T10:15:44.9932160Z   GH_AW_INFO_ALLOWED_DOMAINS: ["defaults","github","dotnet","aka.ms","linux-distros"]
+2026-06-28T10:15:44.9932937Z   GH_AW_INFO_FIREWALL_ENABLED: true
+2026-06-28T10:15:44.9933451Z   GH_AW_INFO_AWF_VERSION: v0.27.7
+2026-06-28T10:15:44.9933951Z   GH_AW_INFO_AWMG_VERSION: 
+2026-06-28T10:15:44.9934433Z   GH_AW_INFO_FIREWALL_TYPE: squid
+2026-06-28T10:15:44.9934932Z   GH_AW_COMPILED_STRICT: true
+2026-06-28T10:15:44.9935405Z ##[endgroup]
+2026-06-28T10:15:45.2610161Z Starting context variable validation...
+2026-06-28T10:15:45.2611158Z ✓ github.event.repository.id is valid: 1282834225
+2026-06-28T10:15:45.2611876Z ✓ github.event.sender.id is valid: 1031940
+2026-06-28T10:15:45.2612456Z Validated 2 context variables
+2026-06-28T10:15:45.2613294Z ✅ All context variables validated successfully
+2026-06-28T10:15:45.2615899Z Lockdown mode not explicitly enabled, skipping validation
+2026-06-28T10:15:45.2616617Z Repository visibility: unknown
+2026-06-28T10:15:45.2617129Z Compiled with strict mode: true
+2026-06-28T10:15:45.2617719Z Generated merged models.json at: /tmp/gh-aw/models.json
+2026-06-28T10:15:45.2621540Z Generated aw_info.json at: /tmp/gh-aw/aw_info.json
+2026-06-28T10:15:45.2622208Z {
+2026-06-28T10:15:45.2622604Z   "engine_id": "copilot",
+2026-06-28T10:15:45.2623096Z   "engine_name": "GitHub Copilot CLI",
+2026-06-28T10:15:45.2623917Z   "model": "claude-opus-4.8",
+2026-06-28T10:15:45.2624422Z   "version": "1.0.63",
+2026-06-28T10:15:45.2624870Z   "agent_version": "1.0.63",
+2026-06-28T10:15:45.2625396Z   "workflow_name": "Servicing Repro Producer",
+2026-06-28T10:15:45.2625978Z   "experimental": false,
+2026-06-28T10:15:45.2628304Z   "supports_tools_allowlist": true,
+2026-06-28T10:15:45.2629429Z   "run_id": 28318977468,
+2026-06-28T10:15:45.2629885Z   "run_number": 5,
+2026-06-28T10:15:45.2630313Z   "run_attempt": "1",
+2026-06-28T10:15:45.2630942Z   "repository": "jeffhandley/dotnet-runtime-servicing-release-manager",
+2026-06-28T10:15:45.2631940Z   "ref": "refs/heads/main",
+2026-06-28T10:15:45.2632472Z   "sha": "a3254fcee825a18d68c2ebcf107ff208fdbfe427",
+2026-06-28T10:15:45.2633052Z   "actor": "jeffhandley",
+2026-06-28T10:15:45.2633520Z   "event_name": "workflow_dispatch",
+2026-06-28T10:15:45.2635108Z   "target_repo": "",
+2026-06-28T10:15:45.2635966Z   "staged": false,
+2026-06-28T10:15:45.2636611Z   "allowed_domains": [
+2026-06-28T10:15:45.2637042Z     "defaults",
+2026-06-28T10:15:45.2637445Z     "github",
+2026-06-28T10:15:45.2637830Z     "dotnet",
+2026-06-28T10:15:45.2638213Z     "aka.ms",
+2026-06-28T10:15:45.2638608Z     "linux-distros"
+2026-06-28T10:15:45.2639025Z   ],
+2026-06-28T10:15:45.2639588Z   "firewall_enabled": true,
+2026-06-28T10:15:45.2642832Z   "awf_version": "v0.27.7",
+2026-06-28T10:15:45.2643371Z   "awmg_version": "",
+2026-06-28T10:15:45.2643805Z   "steps": {
+2026-06-28T10:15:45.2644204Z     "firewall": "squid"
+2026-06-28T10:15:45.2644631Z   },
+2026-06-28T10:15:45.2645040Z   "created_at": "2026-06-28T10:15:45.164Z",
+2026-06-28T10:15:45.2645600Z   "cli_version": "v0.80.9"
+2026-06-28T10:15:45.2646041Z }
+2026-06-28T10:15:45.2646457Z Generated workflow overview in step summary

@@ -123,12 +123,10 @@ ruled out (code-flow, infrastructure, branding, test-only, missing `Servicing-ap
 
 ## Build the two work queues
 
-- **Repro queue** -- a rule-in PR with **no** prior `servicing-repro-producer` comment (identify
-  such comments by the gh-aw footer containing `workflow_id: servicing-repro-producer`) and no
+- **Repro queue** -- a rule-in PR that has **no** `<!-- servicing-repro -->` comment and no
   `"<pr>:repro"` entry in `dispatched`.
-- **Fix-test queue** -- a rule-in PR that is **merged**, **has** a `servicing-repro-producer`
-  comment, has **no** `servicing-fix-tester` comment (gh-aw footer
-  `workflow_id: servicing-fix-tester`), no `"<pr>:fixtest"` entry in
+- **Fix-test queue** -- a rule-in PR that is **merged**, **has** a `<!-- servicing-repro -->`
+  comment, has **no** `<!-- servicing-fix-verdict -->` comment, no `"<pr>:fixtest"` entry in
   `dispatched`, **and** whose fix commit (the PR merge commit) has **flowed into the latest daily SDK
   build** for the target band (apply the skill's *fix-flow detection*: resolve the band's daily
   `runtime_commit` and use the GitHub compare API -- include only when status is `behind`/`identical`).

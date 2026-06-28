@@ -1,0 +1,31 @@
+﻿2026-06-28T10:16:06.4984384Z ##[group]Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+2026-06-28T10:16:06.4985192Z with:
+2026-06-28T10:16:06.4985407Z   name: activation
+2026-06-28T10:16:06.4985624Z   path: /tmp/gh-aw
+2026-06-28T10:16:06.4985851Z   merge-multiple: false
+2026-06-28T10:16:06.4986199Z   repository: jeffhandley/dotnet-runtime-servicing-release-manager
+2026-06-28T10:16:06.4986584Z   run-id: 28318977468
+2026-06-28T10:16:06.4986812Z   skip-decompress: false
+2026-06-28T10:16:06.4987045Z   digest-mismatch: error
+2026-06-28T10:16:06.4987280Z env:
+2026-06-28T10:16:06.4987476Z   DEFAULT_BRANCH: main
+2026-06-28T10:16:06.4987699Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:16:06.4987940Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:16:06.4988160Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:16:06.4988452Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:16:06.4988812Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:16:06.4989179Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:16:06.4989572Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: bcb24487f741a264
+2026-06-28T10:16:06.4989885Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641761389
+2026-06-28T10:16:06.4990155Z ##[endgroup]
+2026-06-28T10:16:06.6397383Z Downloading single artifact
+2026-06-28T10:16:06.7327992Z Preparing to download the following artifacts:
+2026-06-28T10:16:06.7329281Z - activation (ID: 7933593526, Size: 843995, Expected Digest: sha256:eed18d7413d6947a48f01dcd6bb0085411f445375d3ce47fd5848938e1ef095c)
+2026-06-28T10:16:06.8494450Z Redirecting to blob download url: https://productionresultssa11.blob.core.windows.net/actions-results/d679feb2-69ba-42ef-b231-6b698fed5442/workflow-job-run-f3154489-674b-5c12-8af4-c13134ecdc39/artifacts/b15526c9c0e75acea3d1f8055de216c85f0330baf8604e13d8c6ce90fb90d6d7.zip
+2026-06-28T10:16:06.8497509Z Starting download of artifact to: /tmp/gh-aw
+2026-06-28T10:16:06.8937225Z (node:3517) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-06-28T10:16:06.8938825Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-06-28T10:16:07.0036201Z SHA256 digest of downloaded artifact is eed18d7413d6947a48f01dcd6bb0085411f445375d3ce47fd5848938e1ef095c
+2026-06-28T10:16:07.0037648Z Artifact download completed successfully.
+2026-06-28T10:16:07.0038465Z Total of 1 artifact(s) downloaded
+2026-06-28T10:16:07.0041778Z Download artifact has finished successfully

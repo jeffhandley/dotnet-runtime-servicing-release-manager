@@ -1,0 +1,19 @@
+﻿2026-06-28T10:30:12.3577435Z ##[group]Run actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae
+2026-06-28T10:30:12.3578403Z with:
+2026-06-28T10:30:12.3579084Z   key: agentic-workflow-usage-servicingreproproducer-28318977468
+2026-06-28T10:30:12.3580055Z   restore-keys: agentic-workflow-usage-servicingreproproducer-
+2026-06-28T10:30:12.3582434Z   path: /tmp/gh-aw/agentic-workflow-usage-cache.jsonl
+2026-06-28T10:30:12.3585043Z   enableCrossOsArchive: false
+2026-06-28T10:30:12.3585789Z   fail-on-cache-miss: false
+2026-06-28T10:30:12.3587437Z   lookup-only: false
+2026-06-28T10:30:12.3587992Z env:
+2026-06-28T10:30:12.3589078Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:30:12.3589891Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 76bf3a2227258318
+2026-06-28T10:30:12.3590602Z   GITHUB_AW_OTEL_JOB_START_MS: 1782642610276
+2026-06-28T10:30:12.3591772Z ##[endgroup]
+2026-06-28T10:30:12.6939495Z Cache hit for restore-key: agentic-workflow-usage-servicingreproproducer-28318870951
+2026-06-28T10:30:12.8002559Z Received 273 of 273 (100.0%), 0.0 MBs/sec
+2026-06-28T10:30:12.8008328Z Cache Size: ~0 MB (273 B)
+2026-06-28T10:30:12.8097126Z [command]/usr/bin/tar -xf /home/runner/work/_temp/eac9f974-4600-4d4b-82f2-11e2a54f4d95/cache.tzst -P -C /home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager --use-compress-program unzstd
+2026-06-28T10:30:12.8263897Z Cache restored successfully
+2026-06-28T10:30:12.8459222Z Cache restored from key: agentic-workflow-usage-servicingreproproducer-28318870951

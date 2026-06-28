@@ -1,0 +1,13 @@
+﻿2026-06-28T10:12:31.6875005Z ##[group]Run actions/cache/save@27d5ce7f107fe9357f9df03efb73ab90386fccae
+2026-06-28T10:12:31.6875927Z with:
+2026-06-28T10:12:31.6876541Z   key: agentic-workflow-usage-servicingreproproducer-28318870951
+2026-06-28T10:12:31.6877364Z   path: /tmp/gh-aw/agentic-workflow-usage-cache.jsonl
+2026-06-28T10:12:31.6878033Z   enableCrossOsArchive: false
+2026-06-28T10:12:31.6878553Z env:
+2026-06-28T10:12:31.6879089Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:12:31.6879849Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7cc20d9c19d6443a
+2026-06-28T10:12:31.6880524Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641549395
+2026-06-28T10:12:31.6882325Z ##[endgroup]
+2026-06-28T10:12:31.9015305Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/dotnet-runtime-servicing-release-manager/dotnet-runtime-servicing-release-manager --files-from manifest.txt --use-compress-program zstdmt
+2026-06-28T10:12:32.2031376Z Sent 273 of 273 (100.0%), 0.0 MBs/sec
+2026-06-28T10:12:32.3280025Z Cache saved with key: agentic-workflow-usage-servicingreproproducer-28318870951

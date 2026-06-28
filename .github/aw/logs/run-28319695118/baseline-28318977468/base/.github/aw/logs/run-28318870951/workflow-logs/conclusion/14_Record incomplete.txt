@@ -1,0 +1,23 @@
+﻿2026-06-28T10:12:33.6612285Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:12:33.6613359Z with:
+2026-06-28T10:12:33.6618675Z   github-token: ***
+2026-06-28T10:12:33.6620971Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/report_incomplete_handler.cjs');
+await main();
+
+2026-06-28T10:12:33.6623912Z   debug: false
+2026-06-28T10:12:33.6624468Z   user-agent: actions/github-script
+2026-06-28T10:12:33.6625137Z   result-encoding: json
+2026-06-28T10:12:33.6625685Z   retries: 0
+2026-06-28T10:12:33.6626255Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:12:33.6626969Z env:
+2026-06-28T10:12:33.6627673Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:12:33.6628563Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7cc20d9c19d6443a
+2026-06-28T10:12:33.6629358Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641549395
+2026-06-28T10:12:33.6630193Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-06-28T10:12:33.6630995Z   GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: true
+2026-06-28T10:12:33.6632007Z   GH_AW_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:12:33.6633714Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/blob/main/.github/workflows/servicing-repro-producer.md
+2026-06-28T10:12:33.6635361Z ##[endgroup]
+2026-06-28T10:12:33.8098663Z Max count: unlimited

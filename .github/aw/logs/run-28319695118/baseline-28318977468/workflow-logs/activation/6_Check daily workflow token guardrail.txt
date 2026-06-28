@@ -1,0 +1,27 @@
+﻿2026-06-28T10:15:45.9117821Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:15:45.9118621Z with:
+2026-06-28T10:15:45.9123878Z   github-token: ***
+2026-06-28T10:15:45.9125674Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/check_daily_aic_workflow_guardrail.cjs');
+await main();
+
+2026-06-28T10:15:45.9127529Z   debug: false
+2026-06-28T10:15:45.9127972Z   user-agent: actions/github-script
+2026-06-28T10:15:45.9128517Z   result-encoding: json
+2026-06-28T10:15:45.9128963Z   retries: 0
+2026-06-28T10:15:45.9129622Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:15:45.9130206Z env:
+2026-06-28T10:15:45.9130787Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-06-28T10:15:45.9131418Z   GITHUB_AW_OTEL_TRACE_ID: a14519b44acd7a2281993b80349cd1e0
+2026-06-28T10:15:45.9132106Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 2256f46e35a2a592
+2026-06-28T10:15:45.9132766Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641744950
+2026-06-28T10:15:45.9133365Z   GH_AW_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:15:45.9133992Z   GH_AW_WORKFLOW_ID: servicing-repro-producer
+2026-06-28T10:15:45.9135023Z   GH_AW_RUN_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318977468
+2026-06-28T10:15:45.9136032Z   GH_AW_WORKFLOW_DISPATCH_AW_CONTEXT: 
+2026-06-28T10:15:45.9136585Z   GH_AW_HAS_SLASH_COMMAND: false
+2026-06-28T10:15:45.9137094Z   GH_AW_HAS_LABEL_COMMAND: false
+2026-06-28T10:15:45.9142104Z   GH_AW_GITHUB_TOKEN: ***
+2026-06-28T10:15:45.9142599Z ##[endgroup]
+2026-06-28T10:15:46.1448993Z Skipping daily workflow AI Credits guardrail for manual or command-driven runs.
