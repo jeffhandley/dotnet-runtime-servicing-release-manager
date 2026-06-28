@@ -1,7 +1,0 @@
-{"timestamp":"2026-06-28T10:15:48.866Z","source":"response_headers","operation":"repos.getContent","resource":"core","limit":5000,"remaining":4990,"used":10,"reset":"2026-06-28T11:11:14.000Z"}
-{"timestamp":"2026-06-28T10:15:48.974Z","source":"response_headers","operation":"repos.getContent","resource":"core","limit":5000,"remaining":4989,"used":11,"reset":"2026-06-28T11:11:14.000Z"}
-{"timestamp":"2026-06-28T10:16:19.269Z","source":"retry","operation":"MCP gateway health check","attempt":1,"delay_ms":500}
-{"timestamp":"2026-06-28T10:16:19.851Z","source":"retry","operation":"MCP gateway health check","attempt":2,"delay_ms":1000}
-{"timestamp":"2026-06-28T10:16:20.852Z","source":"retry","operation":"MCP gateway health check","attempt":3,"delay_ms":1000}
-{"timestamp":"2026-06-28T10:25:41.799Z","source":"response_headers","operation":"repos.listCollaborators","resource":"core","limit":5000,"remaining":4982,"used":18,"reset":"2026-06-28T11:10:35.000Z"}
-{"timestamp":"2026-06-28T10:25:41.986Z","source":"response_headers","operation":"issues.get","resource":"core","limit":5000,"remaining":4984,"used":16,"reset":"2026-06-28T11:11:14.000Z"}

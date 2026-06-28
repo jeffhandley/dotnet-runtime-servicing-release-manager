@@ -1,3 +1,0 @@
-﻿2026-06-28T10:10:54.3027483Z Evaluate and set job outputs
-2026-06-28T10:10:54.3035902Z Set output 'pat_number'
-2026-06-28T10:10:54.3038385Z Cleaning up orphan processes

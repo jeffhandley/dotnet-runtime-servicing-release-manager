@@ -1,8 +1,0 @@
-﻿2026-06-28T10:29:47.2137674Z Evaluate and set job outputs
-2026-06-28T10:29:47.2152079Z Set output 'code_push_failure_count'
-2026-06-28T10:29:47.2154466Z Set output 'comment_id'
-2026-06-28T10:29:47.2155981Z Set output 'comment_url'
-2026-06-28T10:29:47.2170387Z Set output 'create_discussion_error_count'
-2026-06-28T10:29:47.2171712Z Set output 'process_safe_outputs_processed_count'
-2026-06-28T10:29:47.2172774Z Set output 'process_safe_outputs_temporary_id_map'
-2026-06-28T10:29:47.2174526Z Cleaning up orphan processes

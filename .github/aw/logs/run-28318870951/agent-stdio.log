@@ -1,8 +1,0 @@
-[INFO] Auto-detected DNS servers from /run/systemd/resolve/resolv.conf: 168.63.129.16
-[WARN] ⚠️  Using --env-all: All host environment variables will be passed to container
-[WARN]    This may expose sensitive credentials if logs or configs are shared
-[WARN] ⚠️  Host access enabled with host.docker.internal in allowed domains
-[WARN]    Containers can access ANY service running on the host machine
-[WARN]    Only use this for trusted workloads (e.g., MCP gateways)
-[INFO] API proxy enabled: OpenAI=false, Anthropic=false, Copilot=true (github-token), Gemini=false
-[ERROR] Error: model 'claude-opus-4.6' is retired or unsupported. Did you mean 'claude-opus-4.8'?
