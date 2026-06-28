@@ -115,10 +115,15 @@ Inputs: a release/* PR number (and its target major.minor, e.g. `8.0`).
    runnable on the target SDK -- see *Reference: repro forms*):
    1. a **unit test** (`dotnet new xunit`) whose assertion encodes the **Expected** behavior, so it
       **fails** on the buggy baseline and **passes** once fixed;
-   2. a **standalone file-based C# app** that prints/writes `Expected` vs `Actual` (use single-file
-      `dotnet run app.cs` only when the SDK is .NET 10+; otherwise use a minimal console project);
-   3. a **csproj + source** app, only when the simpler forms cannot express the scenario.
-   Author it under `"$WORKDIR"`. Keep it minimal -- only the APIs/types the fix touches.
+   2. a **minimal console csproj** (`dotnet new console`, `<UseAppHost>false</UseAppHost>`) that prints
+      `Expected` vs `Actual` -- this is the most portable form because it builds **offline** from the
+      SDK's bundled ref/host packs and so runs on **daily/servicing SDKs** as well as GA;
+   3. a **standalone file-based C# app** (`dotnet run app.cs`, .NET 10+ only) -- convenient, but **only
+      when the repro will run exclusively on a public GA SDK**. Do **not** use it for a fix that will be
+      fix-tested (Procedure B): on a daily SDK `dotnet run app.cs` tries to restore ILLink/ILCompiler at
+      the unreleased patch version (not on public feeds) and fails.
+   Author it under `"$WORKDIR"`. Keep it minimal -- only the APIs/types the fix touches. Because the
+   tester reuses the producer's repro **unchanged** on a daily SDK, prefer forms 1 or 2.
 4. **Provision the baseline SDK** (the latest public GA of the target major, which still exhibits the
    bug) unless a user-supplied SDK is in effect -- see *Reference: SDK installation*.
 5. **Run and capture.** Build/run the repro with the baseline SDK, capturing combined stdout+stderr:
@@ -192,6 +197,13 @@ dotnet --version
 Notes: the install script and SDK tarballs are served from `builds.dotnet.microsoft.com`; daily
 builds resolve via `aka.ms` → `ci.dot.net`. The runner is **linux-x64** in the workflows.
 
+> **Daily-SDK package restore.** A daily/servicing SDK's matching runtime/ref packs are **not** on
+> nuget.org yet. Keep repros restore-free (a `UseAppHost=false` console csproj or a unit test builds
+> from the SDK's **bundled** packs). Only if a repro genuinely needs extra package refs at the
+> unreleased patch version, add the daily feed to a local `nuget.config`:
+> `https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet10/nuget/v3/index.json` (band-specific;
+> `dotnet9`/`dotnet8` for the others).
+
 ## Reference: fix-flow detection (has the fix shipped in a daily SDK?)
 
 Goal: given a fix commit `C` on `release/$MAJOR.0`, decide whether the **latest daily SDK** for the
@@ -236,13 +248,27 @@ After installing, an SDK's runtime commit is the first line of
 
 - **Unit test (preferred).** `dotnet new xunit -o repro`; write one `[Fact]`/`[Theory]` that asserts
   **Expected**. It fails on the buggy baseline (the assertion message shows the actual value) and
-  passes once fixed. Run with `dotnet test`.
-- **File-based app.** A single `.cs` run via `dotnet run app.cs` (only on .NET 10+ SDKs, which
-  support file-based apps). Print `Expected: ...` and `Actual: ...`; optionally exit non-zero when
-  buggy. For .NET 8/9 targets use a minimal console project instead.
-- **csproj + source.** `dotnet new console -o repro` (or a small multi-file project) when the bug
-  needs project settings (runtime config, trimming/AOT, target framework, package refs). Pin
-  `<TargetFramework>` to the target major (e.g. `net8.0`).
+  passes once fixed. Run with `dotnet test`. Reusable across GA and daily SDKs (xunit/test-sdk
+  packages are version-independent and on nuget.org).
+- **Minimal console csproj (most portable).** `dotnet new console -o repro` with
+  `<UseAppHost>false</UseAppHost>` (and no AOT/trim). It builds **offline** from the SDK's bundled
+  `Microsoft.NETCore.App.Ref`/`.Host` packs, so the **same** project runs on a GA baseline **and** on a
+  daily/servicing fixed SDK. Print `Expected: ...` / `Actual: ...`; optionally exit non-zero when buggy.
+  Pin `<TargetFramework>` to the target major (e.g. `net10.0`). Example:
+  ```xml
+  <Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net10.0</TargetFramework>
+      <UseAppHost>false</UseAppHost>
+    </PropertyGroup>
+  </Project>
+  ```
+  Run framework-dependent: `dotnet build -c Release` then `dotnet bin/Release/<tfm>/repro.dll`.
+- **File-based app (GA-only convenience).** A single `.cs` run via `dotnet run app.cs` (only on .NET
+  10+ SDKs). **Avoid for anything that will be fix-tested:** on a daily/servicing SDK it tries to
+  restore `Microsoft.DotNet.ILCompiler`/`Microsoft.NET.ILLink.Tasks` at the unreleased patch version
+  (absent from public feeds) and fails restore. Safe only when the run targets a public GA SDK.
 - **Output.** Always capture combined stdout+stderr to `output.log` (Procedure A) or
   `output-<role>-<sdkversion>.log` (Procedure B). The report must quote the **Actual** result
   directly from these logs -- never paraphrase a result you did not capture.
