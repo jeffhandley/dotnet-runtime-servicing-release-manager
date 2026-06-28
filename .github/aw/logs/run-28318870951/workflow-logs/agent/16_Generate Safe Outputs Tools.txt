@@ -1,0 +1,130 @@
+﻿2026-06-28T10:11:43.1983490Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:11:43.1983922Z with:
+2026-06-28T10:11:43.1984914Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/generate_safe_outputs_tools.cjs');
+await main();
+
+2026-06-28T10:11:43.1988635Z   github-token: ***
+2026-06-28T10:11:43.1989136Z   debug: false
+2026-06-28T10:11:43.1989383Z   user-agent: actions/github-script
+2026-06-28T10:11:43.1989660Z   result-encoding: json
+2026-06-28T10:11:43.1989878Z   retries: 0
+2026-06-28T10:11:43.1990119Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:11:43.1990409Z env:
+2026-06-28T10:11:43.1990595Z   DEFAULT_BRANCH: main
+2026-06-28T10:11:43.1990817Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:11:43.1991066Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:11:43.1991289Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:11:43.1991593Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:11:43.1991941Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:11:43.1992508Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:43.1992866Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 0ef936f9d8320f32
+2026-06-28T10:11:43.1993177Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641488649
+2026-06-28T10:11:43.1994021Z   GH_AW_TOOLS_META_JSON: {
+  "description_suffixes": {
+    "add_comment": " CONSTRAINTS: Maximum 1 comment(s) can be added. Target: *. Supports reply_to_id for discussion threading."
+  },
+  "repo_params": {},
+  "dynamic_tools": []
+}
+
+2026-06-28T10:11:43.1998800Z   GH_AW_VALIDATION_JSON: {
+  "add_comment": {
+    "defaultMax": 1,
+    "fields": {
+      "body": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 65000
+      },
+      "item_number": {
+        "issueOrPRNumber": true
+      },
+      "reply_to_id": {
+        "type": "string",
+        "maxLength": 256
+      },
+      "repo": {
+        "type": "string",
+        "maxLength": 256
+      }
+    }
+  },
+  "missing_data": {
+    "defaultMax": 20,
+    "fields": {
+      "alternatives": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      },
+      "context": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      },
+      "data_type": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 128
+      },
+      "reason": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      }
+    }
+  },
+  "missing_tool": {
+    "defaultMax": 20,
+    "fields": {
+      "alternatives": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 512
+      },
+      "reason": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 256
+      },
+      "tool": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 128
+      }
+    }
+  },
+  "noop": {
+    "defaultMax": 1,
+    "fields": {
+      "message": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 65000
+      }
+    }
+  },
+  "report_incomplete": {
+    "defaultMax": 5,
+    "fields": {
+      "details": {
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 65000
+      },
+      "reason": {
+        "required": true,
+        "type": "string",
+        "sanitize": true,
+        "maxLength": 1024
+      }
+    }
+  }
+}
+
+2026-06-28T10:11:43.2003487Z ##[endgroup]

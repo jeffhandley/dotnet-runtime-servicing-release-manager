@@ -1,0 +1,15 @@
+{"timestamp":"2026-06-28T10:11:14.211Z","source":"response_headers","operation":"actions.getWorkflowRun","resource":"core","limit":5000,"remaining":4999,"used":1,"reset":"2026-06-28T11:11:14.000Z"}
+{"timestamp":"2026-06-28T10:11:14.497Z","source":"response_headers","operation":"actions.listWorkflowRuns","resource":"core","limit":5000,"remaining":4998,"used":2,"reset":"2026-06-28T11:11:14.000Z"}
+{"timestamp":"2026-06-28T10:11:14.585Z","source":"response_headers","operation":"actions.listWorkflowRunArtifacts","resource":"core","limit":5000,"remaining":4997,"used":3,"reset":"2026-06-28T11:11:14.000Z"}
+{"timestamp":"2026-06-28T10:11:14.695Z","source":"response_headers","operation":"actions.listWorkflowRunArtifacts","resource":"core","limit":5000,"remaining":4996,"used":4,"reset":"2026-06-28T11:11:14.000Z"}
+{"timestamp":"2026-06-28T10:11:14.781Z","source":"response_headers","operation":"actions.listWorkflowRunArtifacts","resource":"core","limit":5000,"remaining":4995,"used":5,"reset":"2026-06-28T11:11:14.000Z"}
+{"timestamp":"2026-06-28T10:11:16.233Z","source":"response_headers","operation":"repos.getContent","resource":"core","limit":5000,"remaining":4994,"used":6,"reset":"2026-06-28T11:11:14.000Z"}
+{"timestamp":"2026-06-28T10:11:16.357Z","source":"response_headers","operation":"repos.getContent","resource":"core","limit":5000,"remaining":4993,"used":7,"reset":"2026-06-28T11:11:14.000Z"}
+{"timestamp":"2026-06-28T10:11:48.399Z","source":"retry","operation":"MCP gateway health check","attempt":1,"delay_ms":500}
+{"timestamp":"2026-06-28T10:11:48.906Z","source":"retry","operation":"MCP gateway health check","attempt":2,"delay_ms":1000}
+{"timestamp":"2026-06-28T10:11:49.909Z","source":"retry","operation":"MCP gateway health check","attempt":3,"delay_ms":1000}
+{"timestamp":"2026-06-28T10:11:50.911Z","source":"retry","operation":"MCP gateway health check","attempt":4,"delay_ms":1000}
+{"timestamp":"2026-06-28T10:11:51.913Z","source":"retry","operation":"MCP gateway health check","attempt":5,"delay_ms":1000}
+{"timestamp":"2026-06-28T10:11:52.916Z","source":"retry","operation":"MCP gateway health check","attempt":6,"delay_ms":1000}
+{"timestamp":"2026-06-28T10:11:53.918Z","source":"retry","operation":"MCP gateway health check","attempt":7,"delay_ms":1000}
+{"timestamp":"2026-06-28T10:11:57.321Z","source":"response_headers","operation":"repos.listCollaborators","resource":"core","limit":5000,"remaining":4998,"used":2,"reset":"2026-06-28T11:10:35.000Z"}

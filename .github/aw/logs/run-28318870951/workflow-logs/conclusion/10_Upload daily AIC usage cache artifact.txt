@@ -1,0 +1,27 @@
+﻿2026-06-28T10:12:32.3404116Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-06-28T10:12:32.3404996Z with:
+2026-06-28T10:12:32.3405448Z   name: aic-usage-cache
+2026-06-28T10:12:32.3406065Z   path: /tmp/gh-aw/agentic-workflow-usage-cache.jsonl
+2026-06-28T10:12:32.3406747Z   if-no-files-found: ignore
+2026-06-28T10:12:32.3407284Z   retention-days: 7
+2026-06-28T10:12:32.3407775Z   compression-level: 6
+2026-06-28T10:12:32.3408282Z   overwrite: false
+2026-06-28T10:12:32.3408796Z   include-hidden-files: false
+2026-06-28T10:12:32.3409347Z   archive: true
+2026-06-28T10:12:32.3409814Z env:
+2026-06-28T10:12:32.3410365Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:12:32.3411618Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7cc20d9c19d6443a
+2026-06-28T10:12:32.3412643Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641549395
+2026-06-28T10:12:32.3413251Z ##[endgroup]
+2026-06-28T10:12:32.5240940Z With the provided path, there will be 1 file uploaded
+2026-06-28T10:12:32.5252919Z Artifact name is valid!
+2026-06-28T10:12:32.5256870Z Root directory input is valid!
+2026-06-28T10:12:33.1606803Z Uploading artifact: aic-usage-cache.zip
+2026-06-28T10:12:33.1607985Z Beginning upload of artifact content to blob storage
+2026-06-28T10:12:33.1609421Z Uploaded bytes 254
+2026-06-28T10:12:33.1610099Z Finished uploading artifact content to blob storage!
+2026-06-28T10:12:33.1611301Z SHA256 digest of uploaded artifact is 35b457b528581ab36dd50f512185a05c55c4dc75d885aab1b5ee5f627af22ac0
+2026-06-28T10:12:33.1612940Z Finalizing artifact upload
+2026-06-28T10:12:33.1615350Z Artifact aic-usage-cache successfully finalized. Artifact ID 7933569507
+2026-06-28T10:12:33.1617071Z Artifact aic-usage-cache has been successfully uploaded! Final size is 254 bytes. Artifact ID is 7933569507
+2026-06-28T10:12:33.1619448Z Artifact download URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318870951/artifacts/7933569507

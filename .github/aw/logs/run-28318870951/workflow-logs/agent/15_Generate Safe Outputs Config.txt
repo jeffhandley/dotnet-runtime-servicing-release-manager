@@ -1,0 +1,20 @@
+﻿2026-06-28T10:11:43.1741341Z ##[group]Run mkdir -p "${RUNNER_TEMP}/gh-aw/safeoutputs"
+2026-06-28T10:11:43.1741818Z [36;1mmkdir -p "${RUNNER_TEMP}/gh-aw/safeoutputs"[0m
+2026-06-28T10:11:43.1742162Z [36;1mmkdir -p /tmp/gh-aw/safeoutputs[0m
+2026-06-28T10:11:43.1742496Z [36;1mmkdir -p /tmp/gh-aw/mcp-logs/safeoutputs[0m
+2026-06-28T10:11:43.1742893Z [36;1mmkdir -p "${RUNNER_TEMP}/gh-aw/safeoutputs/upload-artifacts"[0m
+2026-06-28T10:11:43.1743481Z [36;1mcat > "${RUNNER_TEMP}/gh-aw/safeoutputs/config.json" << 'GH_AW_SAFE_OUTPUTS_CONFIG_1394580bfccfd9ea_EOF'[0m
+2026-06-28T10:11:43.1744934Z [36;1m{"add_comment":{"hide_older_comments":true,"max":1,"target":"*"},"create_report_incomplete_issue":{},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"true"},"report_incomplete":{},"upload_artifact":{"allowed-paths":["/tmp/gh-aw/agent/**"],"default-if-no-files":"ignore","max-size-bytes":104857600,"max-uploads":1,"retention-days":30}}[0m
+2026-06-28T10:11:43.1746232Z [36;1mGH_AW_SAFE_OUTPUTS_CONFIG_1394580bfccfd9ea_EOF[0m
+2026-06-28T10:11:43.1778051Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:11:43.1778341Z env:
+2026-06-28T10:11:43.1778534Z   DEFAULT_BRANCH: main
+2026-06-28T10:11:43.1778765Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:11:43.1779344Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:11:43.1779580Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:11:43.1779873Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:11:43.1780241Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:11:43.1780603Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:43.1780952Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 0ef936f9d8320f32
+2026-06-28T10:11:43.1781255Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641488649
+2026-06-28T10:11:43.1781523Z ##[endgroup]

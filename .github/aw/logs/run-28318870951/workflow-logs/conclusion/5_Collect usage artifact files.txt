@@ -1,0 +1,45 @@
+﻿2026-06-28T10:12:30.2292126Z ##[group]Run mkdir -p /tmp/gh-aw/usage/agent /tmp/gh-aw/usage/detection
+2026-06-28T10:12:30.2293178Z [36;1mmkdir -p /tmp/gh-aw/usage/agent /tmp/gh-aw/usage/detection[0m
+2026-06-28T10:12:30.2293968Z [36;1mecho "Usage artifact source file status:"[0m
+2026-06-28T10:12:30.2297945Z [36;1mfor file in /tmp/gh-aw/aw_info.json /tmp/gh-aw/aw-info.jsonl /tmp/gh-aw/agent_usage.jsonl /tmp/gh-aw/detection_usage.jsonl /tmp/gh-aw/github_rate_limits.jsonl /tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/threat-detection/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/threat-detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/threat-detection/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl; do[0m
+2026-06-28T10:12:30.2302305Z [36;1m  [ -f "$file" ] && echo "FOUND: $file" || echo "MISSING: $file"[0m
+2026-06-28T10:12:30.2303038Z [36;1mdone[0m
+2026-06-28T10:12:30.2303782Z [36;1m[ -f /tmp/gh-aw/aw_info.json ] && cp /tmp/gh-aw/aw_info.json /tmp/gh-aw/usage/aw_info.json || true[0m
+2026-06-28T10:12:30.2304950Z [36;1m[ -f /tmp/gh-aw/aw-info.jsonl ] && cp /tmp/gh-aw/aw-info.jsonl /tmp/gh-aw/usage/aw-info.jsonl || true[0m
+2026-06-28T10:12:30.2306228Z [36;1m[ -f /tmp/gh-aw/agent_usage.jsonl ] && cp /tmp/gh-aw/agent_usage.jsonl /tmp/gh-aw/usage/agent_usage.jsonl || true[0m
+2026-06-28T10:12:30.2307656Z [36;1m[ -f /tmp/gh-aw/detection_usage.jsonl ] && cp /tmp/gh-aw/detection_usage.jsonl /tmp/gh-aw/usage/detection_usage.jsonl || true[0m
+2026-06-28T10:12:30.2309238Z [36;1m[ -f /tmp/gh-aw/github_rate_limits.jsonl ] && cp /tmp/gh-aw/github_rate_limits.jsonl /tmp/gh-aw/usage/github_rate_limits.jsonl || true[0m
+2026-06-28T10:12:30.2311280Z [36;1m[ -f /tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl ] && cp /tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/usage/agent/token_usage.jsonl || true[0m
+2026-06-28T10:12:30.2313831Z [36;1m[ -f /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl ] && cp /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/usage/agent/token_usage.jsonl || true[0m
+2026-06-28T10:12:30.2316231Z [36;1m[ -f /tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl ] && cp /tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/usage/agent/token_usage.jsonl || true[0m
+2026-06-28T10:12:30.2318855Z [36;1m[ -f /tmp/gh-aw/threat-detection/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl ] && cp /tmp/gh-aw/threat-detection/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/usage/detection/token_usage.jsonl || true[0m
+2026-06-28T10:12:30.2321842Z [36;1m[ -f /tmp/gh-aw/threat-detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl ] && cp /tmp/gh-aw/threat-detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/usage/detection/token_usage.jsonl || true[0m
+2026-06-28T10:12:30.2325537Z [36;1m[ -f /tmp/gh-aw/threat-detection/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl ] && cp /tmp/gh-aw/threat-detection/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl /tmp/gh-aw/usage/detection/token_usage.jsonl || true[0m
+2026-06-28T10:12:30.2327554Z [36;1m[ -f /tmp/gh-aw/usage/agent/token_usage.jsonl ] || : > /tmp/gh-aw/usage/agent/token_usage.jsonl[0m
+2026-06-28T10:12:30.2328785Z [36;1m[ -f /tmp/gh-aw/usage/detection/token_usage.jsonl ] || : > /tmp/gh-aw/usage/detection/token_usage.jsonl[0m
+2026-06-28T10:12:30.2329756Z [36;1mmkdir -p /tmp/gh-aw/usage/activity[0m
+2026-06-28T10:12:30.2330609Z [36;1mnode /home/runner/work/_temp/gh-aw/actions/generate_usage_activity_summary.cjs[0m
+2026-06-28T10:12:30.2331918Z [36;1mfind /tmp/gh-aw/usage -type f -print | sort[0m
+2026-06-28T10:12:30.2336311Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:12:30.2336832Z env:
+2026-06-28T10:12:30.2337367Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:12:30.2338271Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7cc20d9c19d6443a
+2026-06-28T10:12:30.2338935Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641549395
+2026-06-28T10:12:30.2339506Z ##[endgroup]
+2026-06-28T10:12:30.2382252Z Usage artifact source file status:
+2026-06-28T10:12:30.3333591Z MISSING: /tmp/gh-aw/aw_info.json
+2026-06-28T10:12:30.3334514Z MISSING: /tmp/gh-aw/aw-info.jsonl
+2026-06-28T10:12:30.3335115Z MISSING: /tmp/gh-aw/agent_usage.jsonl
+2026-06-28T10:12:30.3335732Z MISSING: /tmp/gh-aw/detection_usage.jsonl
+2026-06-28T10:12:30.3336503Z FOUND: /tmp/gh-aw/github_rate_limits.jsonl
+2026-06-28T10:12:30.3337344Z MISSING: /tmp/gh-aw/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl
+2026-06-28T10:12:30.3338363Z MISSING: /tmp/gh-aw/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-06-28T10:12:30.3339429Z MISSING: /tmp/gh-aw/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl
+2026-06-28T10:12:30.3340546Z MISSING: /tmp/gh-aw/threat-detection/sandbox/firewall-audit-logs/api-proxy-logs/token-usage.jsonl
+2026-06-28T10:12:30.3342177Z MISSING: /tmp/gh-aw/threat-detection/sandbox/firewall/logs/api-proxy-logs/token-usage.jsonl
+2026-06-28T10:12:30.3343383Z MISSING: /tmp/gh-aw/threat-detection/sandbox/firewall/audit/api-proxy-logs/token-usage.jsonl
+2026-06-28T10:12:30.3344273Z /tmp/gh-aw/usage/activity/summary.json
+2026-06-28T10:12:30.3344854Z /tmp/gh-aw/usage/activity/summary.json
+2026-06-28T10:12:30.3345449Z /tmp/gh-aw/usage/agent/token_usage.jsonl
+2026-06-28T10:12:30.3346056Z /tmp/gh-aw/usage/detection/token_usage.jsonl
+2026-06-28T10:12:30.3346679Z /tmp/gh-aw/usage/github_rate_limits.jsonl

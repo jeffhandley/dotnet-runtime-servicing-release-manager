@@ -1,0 +1,36 @@
+﻿2026-06-28T10:11:28.7287145Z ##[group]Run bash "${RUNNER_TEMP}/gh-aw/actions/install_copilot_cli.sh" 1.0.63
+2026-06-28T10:11:28.7287769Z [36;1mbash "${RUNNER_TEMP}/gh-aw/actions/install_copilot_cli.sh" 1.0.63[0m
+2026-06-28T10:11:28.7319348Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:11:28.7319664Z env:
+2026-06-28T10:11:28.7319909Z   DEFAULT_BRANCH: main
+2026-06-28T10:11:28.7320191Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:11:28.7320495Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:11:28.7320771Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:11:28.7321102Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:11:28.7321525Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:11:28.7321936Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:28.7322337Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 0ef936f9d8320f32
+2026-06-28T10:11:28.7322720Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641488649
+2026-06-28T10:11:28.7323049Z   GH_HOST: github.com
+2026-06-28T10:11:28.7323311Z ##[endgroup]
+2026-06-28T10:11:28.7406208Z Ensuring correct ownership of /home/runner/.copilot...
+2026-06-28T10:11:28.7552900Z Installing GitHub Copilot CLI version 1.0.63 (os: Linux, arch: x86_64)...
+2026-06-28T10:11:28.7572978Z Explicit Copilot CLI version argument provided (1.0.63); skipping compat matrix resolution.
+2026-06-28T10:11:28.7577423Z Searching toolcache for GitHub Copilot CLI (requested: 1.0.63, arch: x64, range: none..none)...
+2026-06-28T10:11:28.7582793Z   Scanning toolcache root: /opt/hostedtoolcache/copilot-cli
+2026-06-28T10:11:28.7682322Z   Found candidate: /opt/hostedtoolcache/copilot-cli/1.0.56/x64/bin/copilot (version: 1.0.56, arch: x64)
+2026-06-28T10:11:28.7684876Z   Skipping candidate (version mismatch: want 1.0.63, got 1.0.56)
+2026-06-28T10:11:28.7685837Z   Scanning toolcache root: /opt/hostedtoolcache/copilot-cli
+2026-06-28T10:11:28.7773971Z   Found candidate: /opt/hostedtoolcache/copilot-cli/1.0.56/x64/bin/copilot (version: 1.0.56, arch: x64)
+2026-06-28T10:11:28.7775804Z   Skipping candidate (version mismatch: want 1.0.63, got 1.0.56)
+2026-06-28T10:11:28.7776545Z   Toolcache root /home/runner/work/_tool/copilot-cli not found, skipping
+2026-06-28T10:11:28.7777277Z   No compatible toolcache entry found
+2026-06-28T10:11:28.7782935Z Downloading checksums from https://github.com/github/copilot-cli/releases/download/v1.0.63/SHA256SUMS.txt...
+2026-06-28T10:11:28.8779330Z Downloading binary from https://github.com/github/copilot-cli/releases/download/v1.0.63/copilot-linux-x64.tar.gz...
+2026-06-28T10:11:29.1900397Z Verifying SHA256 checksum for copilot-linux-x64.tar.gz...
+2026-06-28T10:11:29.2661285Z ✓ Checksum verification passed for copilot-linux-x64.tar.gz
+2026-06-28T10:11:29.2662331Z Installing binary to /usr/local/bin...
+2026-06-28T10:11:30.2924290Z Verifying Copilot CLI installation...
+2026-06-28T10:11:32.4474106Z GitHub Copilot CLI 1.0.63.
+2026-06-28T10:11:32.4474686Z Run 'copilot update' to check for updates.
+2026-06-28T10:11:32.4777838Z ✓ Copilot CLI installation complete

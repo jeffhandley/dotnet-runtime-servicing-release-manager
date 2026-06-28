@@ -42,7 +42,7 @@ environment: copilot-pat-pool
 
 engine:
   id: copilot
-  model: claude-opus-4.8
+  model: claude-opus-4.6
   env:
     COPILOT_GITHUB_TOKEN: |
       ${{ case(

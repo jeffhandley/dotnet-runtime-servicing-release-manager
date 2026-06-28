@@ -1,0 +1,24 @@
+﻿2026-06-28T10:11:57.7339205Z ##[group]Run # Fix permissions on firewall logs/audit dirs so they can be uploaded as artifacts
+2026-06-28T10:11:57.7339545Z [36;1m# Fix permissions on firewall logs/audit dirs so they can be uploaded as artifacts[0m
+2026-06-28T10:11:57.7339704Z [36;1m# AWF runs with sudo, creating files owned by root[0m
+2026-06-28T10:11:57.7339911Z [36;1msudo chmod -R a+rX /tmp/gh-aw/sandbox/firewall 2>/dev/null || true[0m
+2026-06-28T10:11:57.7340255Z [36;1m# Only run awf logs summary if awf command exists (it may not be installed if workflow failed before install step)[0m
+2026-06-28T10:11:57.7340372Z [36;1mif command -v awf &> /dev/null; then[0m
+2026-06-28T10:11:57.7340523Z [36;1m  awf logs summary | tee -a "$GITHUB_STEP_SUMMARY"[0m
+2026-06-28T10:11:57.7340602Z [36;1melse[0m
+2026-06-28T10:11:57.7340793Z [36;1m  echo 'AWF binary not installed, skipping firewall log summary'[0m
+2026-06-28T10:11:57.7340875Z [36;1mfi[0m
+2026-06-28T10:11:57.7370489Z shell: /usr/bin/bash -e {0}
+2026-06-28T10:11:57.7370570Z env:
+2026-06-28T10:11:57.7370691Z   DEFAULT_BRANCH: main
+2026-06-28T10:11:57.7370787Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-06-28T10:11:57.7370879Z   GH_AW_ASSETS_BRANCH: 
+2026-06-28T10:11:57.7370966Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-06-28T10:11:57.7371115Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-06-28T10:11:57.7371261Z   GH_AW_WORKFLOW_ID_SANITIZED: servicingreproproducer
+2026-06-28T10:11:57.7371415Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:57.7371541Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 0ef936f9d8320f32
+2026-06-28T10:11:57.7371649Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641488649
+2026-06-28T10:11:57.7371776Z   AWF_LOGS_DIR: /tmp/gh-aw/sandbox/firewall/logs
+2026-06-28T10:11:57.7371857Z ##[endgroup]
+2026-06-28T10:11:57.9605953Z [ERROR] No log sources found. Run awf with a command first to generate logs.

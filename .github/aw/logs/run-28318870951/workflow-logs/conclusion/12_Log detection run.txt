@@ -1,0 +1,29 @@
+﻿2026-06-28T10:12:33.3434311Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-06-28T10:12:33.3435378Z with:
+2026-06-28T10:12:33.3441073Z   github-token: ***
+2026-06-28T10:12:33.3444320Z   script: const { setupGlobals } = require('/home/runner/work/_temp/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io, getOctokit);
+const { main } = require('/home/runner/work/_temp/gh-aw/actions/handle_detection_runs.cjs');
+await main();
+
+2026-06-28T10:12:33.3446929Z   debug: false
+2026-06-28T10:12:33.3447464Z   user-agent: actions/github-script
+2026-06-28T10:12:33.3448141Z   result-encoding: json
+2026-06-28T10:12:33.3449618Z   retries: 0
+2026-06-28T10:12:33.3450245Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-06-28T10:12:33.3450979Z env:
+2026-06-28T10:12:33.3451592Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:12:33.3452779Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 7cc20d9c19d6443a
+2026-06-28T10:12:33.3453604Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641549395
+2026-06-28T10:12:33.3454443Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-06-28T10:12:33.3455276Z   GH_AW_WORKFLOW_NAME: Servicing Repro Producer
+2026-06-28T10:12:33.3457025Z   GH_AW_WORKFLOW_SOURCE_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/blob/main/.github/workflows/servicing-repro-producer.md
+2026-06-28T10:12:33.3459440Z   GH_AW_RUN_URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318870951
+2026-06-28T10:12:33.3460760Z   GH_AW_DETECTION_CONCLUSION: 
+2026-06-28T10:12:33.3461381Z   GH_AW_DETECTION_REASON: 
+2026-06-28T10:12:33.3462173Z ##[endgroup]
+2026-06-28T10:12:33.4902921Z Detection conclusion: 
+2026-06-28T10:12:33.4904510Z Detection reason: 
+2026-06-28T10:12:33.4905352Z Workflow name: Servicing Repro Producer
+2026-06-28T10:12:33.4906919Z Run URL: https://github.com/jeffhandley/dotnet-runtime-servicing-release-manager/actions/runs/28318870951
+2026-06-28T10:12:33.4947318Z Detection conclusion is "", no issue comment needed

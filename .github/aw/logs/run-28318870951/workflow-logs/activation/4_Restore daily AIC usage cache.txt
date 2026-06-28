@@ -1,0 +1,15 @@
+﻿2026-06-28T10:11:13.5655735Z ##[group]Run actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae
+2026-06-28T10:11:13.5656683Z with:
+2026-06-28T10:11:13.5657328Z   key: agentic-workflow-usage-servicingreproproducer-28318870951
+2026-06-28T10:11:13.5658268Z   restore-keys: agentic-workflow-usage-servicingreproproducer-
+2026-06-28T10:11:13.5660121Z   path: /tmp/gh-aw/agentic-workflow-usage-cache.jsonl
+2026-06-28T10:11:13.5660844Z   enableCrossOsArchive: false
+2026-06-28T10:11:13.5661398Z   fail-on-cache-miss: false
+2026-06-28T10:11:13.5661920Z   lookup-only: false
+2026-06-28T10:11:13.5662390Z env:
+2026-06-28T10:11:13.5662840Z   GH_AW_MAX_DAILY_AI_CREDITS: 5000
+2026-06-28T10:11:13.5663508Z   GITHUB_AW_OTEL_TRACE_ID: 1c5a07ae801b1b49b68535e5c1a426e9
+2026-06-28T10:11:13.5664266Z   GITHUB_AW_OTEL_PARENT_SPAN_ID: 33bce7cd8d07cf1f
+2026-06-28T10:11:13.5665775Z   GITHUB_AW_OTEL_JOB_START_MS: 1782641473363
+2026-06-28T10:11:13.5666473Z ##[endgroup]
+2026-06-28T10:11:13.9134199Z Cache not found for input keys: agentic-workflow-usage-servicingreproproducer-28318870951, agentic-workflow-usage-servicingreproproducer-
